@@ -1,0 +1,184 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+de-CH:
+  javascripts:
+    timeago:
+      prefixAgo: vor
+      suffixAgo: ''
+      suffixFromNow: ab jetzt
+      prefixFromNow: i
+      inPast: jede Moment
+      seconds: weniger als einere Minute
+      minute: öpe ere Minute
+      minutes:
+        one: einere Minute
+        other: "%d Minute"
+      hour: öpe einere Stund
+      hours:
+        one: öpe enere Stund
+        other: öpe %d Stunde
+      day: eim Tag
+      days:
+        one: eim Tag
+        other: "%d Täg"
+      month: öpe eim Monet
+      months:
+        one: eim Monet
+        other: "%d Mönet"
+      year: öpe eim Johr
+      years:
+        one: eim Johr
+        other: "%d Johr"
+      wordSeparator: " "
+    confirm_dialog: Bisch sicher?
+    delete: Lösche
+    ignore: Ignoriere
+    report:
+      prompt: 'Bitte en Grund aageh:'
+      prompt_default: zB. astössige Inhalt.
+      name: Melde
+      status:
+        created: D'Meldig isch erfolgriich erstellt worde.
+        exists: Die Meldig existiert scho
+    ignore_user: De Benutzer ignoriere?
+    ignore_failed: Benutzer ignoriere isch fehlgschlage
+    and: und
+    comma: ","
+    edit: bearbeite
+    no_results: Kei Ergebnis gfunde.
+    contacts:
+      add_contact: Kontakt hinzuefüege
+      remove_contact: Kontakt entferne
+      error_add: "<%= name %> het nöd chöne zum Aspekt hinzuegfüegt werde."
+      error_remove: "<%= name %> het nöd chöne vom Aspekt entfernt werde."
+    my_activity: Mini Aktivitätä
+    my_stream: Stream
+    my_aspects: Mini Aspekt
+    publisher:
+      near_from: Gschickt i de Nöchi vo <%= location %>
+      option: Antwort
+      add_option: Antwort hinzuefüege
+      question: Frog
+      mention_success: Erflogrich <%= names %> erwähnt
+    bookmarklet:
+      post_something: Erstell en Biitrag i diaspora*
+      post_submit: Biitrag wird übermittlet...
+      post_success: Teilt! Popup-Fenster wird etz zuegmacht...
+    aspect_dropdown:
+      add_to_aspect: Kontakt hinzuefüege
+      select_aspects: Aspekt uswählä
+      all_aspects: Ali Aspekt
+      stopped_sharing_with: Du hesch mit <%= name %> ufghöhrt z'teile.
+      started_sharing_with: Du hesch aagfange mit <%= name %> z'teile!
+      error: Teile mit <%= name %> isch fehlgschlage. Ignoriersch du das Individuum?
+      error_remove: "<%= name %> us dim Aspekt entferne het nöd klappet :("
+      toggle:
+        one: I eim Aspekt
+        other: I <%= count %> Aspekt
+    show_more: Meh aazeige
+    failed_to_post_message: Biitrag absende isch fehlgschlage!
+    failed_to_remove: Enferne vom Biitrag isch fehlgschlage!
+    comments:
+      show: Ali Kommentär aazeige
+      hide: Kommentär verstecke
+      no_comments: Kei Kommentär bis etz.
+    reshares:
+      successful: De Biitrag isch erfolgriich wiitergseit worde.
+      post: De Biitrag vo <%= name %> wiitersägä?
+    aspect_navigation:
+      select_all: Ali aawähle
+      deselect_all: Ali abwähle
+      no_aspects: Kei Aspekt usgwählt
+      add_an_aspect: "+ Aspekt hinzuefüege"
+    getting_started:
+      hey: Hey, <%= name %>!
+      no_tags: Hey, du folgsch no kei Tags! Trotzdem wiitermache?
+      alright_ill_wait: Ok, ich warte.
+      preparing_your_stream: Din persönliche Stream wird vorbereitet...
+    photo_uploader:
+      upload_photos: Fotis ufelade
+      looking_good: OMG, du gsesch super us!
+      completed: "<%= file %> ueglade"
+      error: En Fehler isch bim ufelade vo <%= file %> passiert
+      invalid_ext: "{file} het e ungültigi Dateiendig. Erlaubt sind nur: {extensions}"
+      size_error: "{file} isch z'gross, di maximali Grössi isch {sizeLimit}."
+      empty: "{file} isch läär bitte wähl d'Datei nomol uus."
+    tags:
+      wasnt_that_interesting: Ok gseht us als wär <%= tagName %> doch ned so interessant...
+    people:
+      not_found: "...niemer isch gfunde worde."
+    profile:
+      bio: Beschriibig
+      location: Ort
+      gender: Gschlächt
+      born: Geburi
+      photos: Fotis
+      posts: Biiträg
+    notifications:
+      mark_read: Als glese markiere
+      mark_unread: Als unglese markiere
+    stream:
+      hide: Verstecke
+      public: Öffentlich
+      limited: Begrenzt
+      like: Gfallt mer
+      unlike: Gfallt mer nüme
+      reshare: Wiitersägä
+      comment: Kommentiere
+      original_post_deleted: Original-Biitrag vom Verfasser glöscht.
+      show_nsfw_post: Biitrag aazeige
+      show_nsfw_posts: Alli aazeige
+      hide_nsfw_posts: 'Versteck #nsfw Biiträg'
+      follow: Folge
+      unfollow: Nüm folge
+      via: via <%= provider %>
+      likes:
+        zero: Niemertem gfällt da
+        one: Öpperem gfällt da
+        other: "<%= count %> Lüüt gfällt da"
+      reshares:
+        one: Ein Reshare
+        other: "<%= count %> Reshares"
+      comments:
+        one: ein Kommentar
+        other: "<%= count %> Kommentär"
+      more_comments:
+        one: Ein zuesätzliche Kommentar aazeige
+        other: "<%= count %> zuesätzlichi Kommentär aazeige"
+      followed_tag:
+        title: "#tags dene du folgsch"
+        add_a_tag: Täg hinzuefüge
+        follow: Folge
+      tags:
+        follow: 'Folg #<%= tag %>'
+        following: 'Du folgsch #<%= tag %>'
+        stop_following: 'Hör uf #<%= tag %> z''folge'
+    header:
+      home: Home
+      profile: Profil
+      contacts: Kontäkt
+      settings: Iistellige
+      help: Hilf
+      admin: Admin
+      log_out: Abmelde
+      notifications: Benochrichtigunge
+      conversations: Nochrichte
+      search: Sueche
+      recent_notifications: Chürzlichi Benochrichtigunge
+      mark_all_as_read: Ali als glese markiere
+      view_all: Alli aazeige
+      close: Schlüsse
+    viewer:
+      reshared: Wiitergseit
+    poll:
+      vote: Abstimme
+      result: Ergebnis
+      count:
+        one: Ei Stimm bis etz
+        other: "<%=count%> Stimme bis etz"
+      show_result: Ergebnis aazeige
+      close_result: Ergebnis usblende

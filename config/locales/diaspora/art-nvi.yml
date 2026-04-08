@@ -1,0 +1,153 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+art-nvi:
+  settings: Sìfkeytok
+  profile: Txin
+  account: Ngeyä Diaspora
+  privacy: Le'aw 'awpoä Sìfkeytok
+  _services: Hìte'e
+  _applications: Lapo aydiaspora
+  ok: Tam
+  cancel: Ftang
+  delete: "'aku"
+  username: Tstxo
+  email: Ikran lì'u
+  are_you_sure: Nga lu law srak?
+  are_you_sure_delete_account: Nga lu law tsnì new tspivang ngeyä Diasporati srak? fìkem ke laytem mawkrr!
+  fill_me_out: Pamrel si mì oe
+  public: Frapo tsun tsive'a fì'u
+  search: Fwew
+  find_people: 'Run suteti fu #säsulìnit'
+  more: nì'ul
+  all_aspects: Nìwotx Aypongu
+  no_results: Ke rìmun.
+  _contacts: Eylan
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            person:
+              invalid: lu kxeyey
+  admins:
+    stats:
+      go: salew
+  aspects:
+    destroy:
+      success: "%{name}l 'ìlmaku fìtsengeta."
+    seed:
+      family: Soaia
+      work: Tìkangkem
+      friends: Eylan
+    index:
+      donate: Tìng
+      welcome_to_diaspora: Zola'u nìprrte' ne Diaspora ma %{name}!
+      introduce_yourself: Fì'u lu ngeyä payfya. Nga mäpuwìntxu.
+      new_here:
+        title: Zola'u nìprrte' ma sute amip
+        follow: Sutx %{link}it ulte zola'u nìprrte' sute amip ne Diaspora*!
+        learn_more: nume nì'ul
+      help:
+        need_help: fngo' srungit srak?
+        have_a_question: "... %{link} srak?"
+        tag_question: tìpawn
+        find_a_bug: "... tìng oeti %{link}ur"
+        tag_bug: tìngäzìk
+        feature_suggestion: "... %{link} tìmok srak?"
+        tag_feature: "'u amip"
+  contacts:
+    index:
+      start_a_conversation: Ngal sngä'i tìpängkxoti
+      title: Eylan
+      my_contacts: Oeyä Eylan
+      all_contacts: Nìwotx Eylan
+  conversations:
+    index:
+      no_messages: Kea upxare
+      inbox: "'Upxare tsenge"
+    show:
+      reply: "'eyng"
+      replying: "'ereyng..."
+    new:
+      send: fpe'
+      sending: fpere'
+    create:
+      sent: "'Upxare fpìme'"
+      fail: kxeyey 'upxare
+  invitations:
+    new:
+      language: Lì'fya
+  layouts:
+    header:
+      profile: Txin
+      settings: Sìfkeytok
+      logout: Hum
+  notifications:
+    index:
+      and: ulte
+  notifier:
+    single_admin:
+      subject: "'Upxare teri ngeyä Diaspora:"
+  people:
+    person:
+      thats_you: Fì'u nga lu!
+    profile_sidebar:
+      bio: teri oe
+      location: Kelku
+      gender: fnepe tokx
+      born: ftxozä
+  photos:
+    destroy:
+      notice: Relìl 'aìmku
+  profiles:
+    edit:
+      your_name: ngeyä tstxo
+      first_name: tstxo nì'awve
+      last_name: tstxo asyen
+      your_birthday: Ngeyä sngä'itrr
+      your_location: ngeyä tsenge
+      your_photo: ngeyä rel
+  shared:
+    invitations:
+      invite_your_friends: pawm ngeyä eylanti fìtseng
+      by_email: ìlä email
+    stream_element:
+      via: ìlä %{link}
+  streams:
+    aspects_stream: Aypengu
+    mentioned_stream: "@plltxole"
+    followed_tags_stream: "#samutx sìn"
+    mentions:
+      title: "@plltxole"
+    followed_tag:
+      follow: Sutx
+    multi:
+      title: Payfya
+    aspects:
+      title: Oeyä Aypongu
+    activity:
+      title: Oeyä Tìn
+  users:
+    edit:
+      edit_account: Latem ngeyä Diaspora
+      change: Latem
+      your_email: Ngeyä Ikran lì'u
+      change_email: latem ngeyä Ikran lì'u
+      change_password: Latem ngeyä ftemlì'u
+      new_password: Ftemlì'u amip
+      current_password: Lefkrr ftemlì'u
+      current_password_expl: nga fpxäkìm fìftemlì'uhu...
+      character_minimum_expl: zene livu to pukap ngim
+      change_language: latem lì'fyati
+      close_account_text: "'aku diasporati"
+    privacy_settings:
+      title: Le'aw 'awpoä Sìfkeytok
+    getting_started:
+      well_hello_there: Tse, kaltxì tsatseng!
+      who_are_you: Pesu nga lu
+    update:
+      language_changed: lì'fyal lìmatem

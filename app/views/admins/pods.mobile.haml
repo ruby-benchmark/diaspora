@@ -1,0 +1,7 @@
+%h2
+  = t(".pod_network")
+
+.alert.alert-warning
+  != t("error_messages.mobile_not_available",
+    desktop_link: link_to(t("error_messages.desktop_view_link"),
+    toggle_mobile_path))

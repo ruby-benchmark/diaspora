@@ -1,0 +1,823 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+tr:
+  settings: Ayarlar
+  profile: Profil
+  account: Hesap
+  privacy: Gizlilik
+  _services: Servisler
+  _applications: Uygulamalar
+  _help: Yardım
+  ok: Tamam
+  cancel: İptal Et
+  delete: Sil
+  username: Kullanıcı Adı
+  email: E-posta
+  are_you_sure: Emin misin?
+  are_you_sure_delete_account: Hesabını kapatmak istediğinden emin misin? Bu işlemi geri alamazsın!
+  fill_me_out: Beni doldur
+  public: Genel
+  limited: Sınırlı
+  search: Ara
+  nsfw: NSFW
+  find_people: 'Kişi ve #tag bul'
+  more: Daha fazla
+  all_aspects: Tüm Yönler
+  no_results: Sonuç Bulunamadı
+  _contacts: Kişiler
+  _terms: Kurallar
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            person:
+              invalid: geçersiz.
+            username:
+              taken: önceden alınmış.
+              invalid: geçersiz. Sadece harf, sayı ve alt çizgi.
+            email:
+              taken: önceden alınmış.
+        person:
+          attributes:
+            diaspora_handle:
+              taken: önceden alınmış.
+        contact:
+          attributes:
+            person_id:
+              taken: bu kullanıcının irtibatlarında eşsiz olmalıdır.
+        reshare:
+          attributes:
+            root_guid:
+              taken: Bu iyi, değil mi? Zaten bu gönderiyi tekrar paylaştın!
+        poll_participation:
+          attributes:
+            poll:
+              already_participated: Bu oylamada zaten oyunuz var!
+  error_messages:
+    helper:
+      correct_the_following_errors_and_try_again: Alttaki yanlıșları düzeltin ve tekrar deneyin.
+  admins:
+    admin_bar:
+      pages: Sayfalar
+      user_search: Kullanıcı Arama
+      weekly_user_stats: Haftalık Kullanıcı İstatistikleri
+      pod_stats: Pod İstatistikleri
+      report: Raporlar
+      sidekiq_monitor: Sidekiq göstergesi
+    user_search:
+      you_currently:
+        zero: "%{link} için bir davetiniz kalmadı"
+        other: "%{link} için %{count} davetiye daha var"
+      add_invites: davetiye ekle
+      close_account: Hesabı kapat
+      are_you_sure: Hesabı kapatmak istediğinize emin misiniz?
+      account_closing_scheduled: "%{name} hesabı birkaç dakika içinde kapanacak."
+      email_to: E-posta ile Davet
+      under_13: 13'ün altındaki kullanıcıları göster (COPPA)
+      users:
+        zero: "%{count} kullanıcı bulundu"
+        other: "%{count} kullanıcı bulundu"
+    user_entry:
+      id: kimlik
+      guid: GUID
+      diaspora_handle: diaspora* kaydı
+      account_closed: Hesap kapandı
+      nsfw: "#nsfw"
+      unknown: Bilinmiyor
+      'yes': Evet
+      'no': Hayır
+    weekly_user_stats:
+      current_server: Şu andaki sunucu tarihi %{date}
+      amount_of:
+        zero: 'bu haftaki kullanıcı sayısı: yok'
+        other: 'bu haftaki kullanıcı sayısı: %{count}'
+    stats:
+      week: Hafta
+      2weeks: 2 Hafta
+      month: Ay
+      daily: Günlük
+      usage_statistic: Kullanıcı İstatistikleri
+      go: git
+      display_results: "%{segment} dan sonuçlar gösteriyor"
+      posts:
+        zero: "%{count} gönderi"
+        other: "%{count} gönderi"
+      comments:
+        zero: "%{count} yorum"
+        other: "%{count} yorum"
+      shares:
+        zero: "%{count} paylaşım"
+        other: "%{count} paylaşım"
+      users:
+        zero: "%{count} kişi"
+        other: "%{count} kişi"
+      current_segment: "%{post_day} gününden şu andaki bölüm ortalama kullanıcı başına %{post_yest} gönderi."
+      50_most: En popüler 50 etiket
+      tag_name: 'Etiket Adı: %{name_tag} Sayı: %{count_tag}'
+  aspects:
+    edit:
+      confirm_remove_aspect: Bu yönü silmek istediğinden emin misin?
+      rename: yeniden adlandır
+      aspect_list_is_visible: yön listesi yöndeki diğer kişilere gösteriliyor
+      aspect_list_is_not_visible: yön listesi yöndeki diğer kişilere gösterilmiyor
+      update: güncelle
+      updating: güncelleniyor
+    no_contacts_message:
+      you_should_add_some_more_contacts: Daha fazla kişi eklemelisin!
+      try_adding_some_more_contacts: Daha fazla kişi arayabilir ya da davet edebilirsin.
+      or_spotlight: Ya da %{link} ile paylaşabilirsin
+      community_spotlight: topluluk gönderileri
+    aspect_listings:
+      add_an_aspect: "+ Yeni yön ekle"
+    destroy:
+      success: "%{name} başarıyla silindi."
+      failure: "%{name} boş değil, silinemedi."
+    update:
+      success: Yönünüz, %{name}, başarıyla düzeltildi.
+      failure: "%{name} yönünün ismi çok uzundu ve kaydedilmedi."
+    add_to_aspect:
+      failure: Yöne kişi ekleme başarısız.
+      success: Kişi başarıyla yöne eklendi.
+    seed:
+      family: Aile
+      work: İş
+      acquaintances: Tanıdıklar
+      friends: Arkadaşlar
+    index:
+      donate: Bağış yap
+      keep_pod_running: "%{pod}u hızlı çalıştırmaya devam edin ve sunucularına aylık bir bağışla kahve ikram edin."
+      welcome_to_diaspora: Diaspora'ya Hoş Geldin, %{name}!
+      introduce_yourself: Bu sizin akışınızdır. Atla ve kendini tanıt.
+      new_here:
+        title: Yeni Kişilerle Tanış
+        follow: "%{link} bağlantısını tıkla ve yeni diaspora* kullanıcılarıyla tanış!"
+        learn_more: Daha fazla bilgi
+      help:
+        need_help: Yardıma mı ihtiyacın var?
+        here_to_help: Diaspora topluluğu burada!
+        do_you: 'Seçim:'
+        have_a_question: "... bir %{link} mu sormak istiyorsun?"
+        tag_question: soru
+        find_a_bug: "... bulduğun %{link} mı var?"
+        tag_bug: hata
+        feature_suggestion: "... bir %{link} önerin var mı?"
+        tag_feature: işlev
+        tutorials_and_wiki: "%{tutorial} & %{wiki}: İlk adımlarınız için yardım."
+        tutorial_link_text: Öğreticiler
+        any_problem: Bir sorun var mı?
+        contact_podmin: Podunuzun yöneticisiyle ilişkiye geçin!
+        mail_podmin: Podmin e-postası
+      services:
+        heading: Servisleri ilişkilendir
+        content: 'Diaspora''ya aşağıdaki hizmetleri bağlayabilirsin:'
+    aspect_stream:
+      stay_updated: Güncel Kalın
+      stay_updated_explanation: Ana akışınızda takip ettiğiniz kişiler, takip ettiğiniz etiketler ve topluluk üyelerinin gönderileri bulunur.
+      make_something: Bir şeyler yapın
+  aspect_memberships:
+    destroy:
+      success: Kişi Yön'den başarıyla kaldırıldı
+      failure: Yön'den kişi kaldırılamadı
+      no_membership: Bu Yön'de seçilen kişi bulamadı
+      invalid_statement: Çifte kayıt yapılamadı.
+  bookmarklet:
+    heading: Diaspora yer işareti
+    post_something: Diaspora'ya bir şey gönder
+    explanation: Diaspora'ya istediğin her yerden gönderi yapmak için %{link} bağlantısını yer imlerine ekle.
+  color_themes:
+    dark_green: Koyu yeşil
+    egyptian_blue: Mısır mavisi
+    magenta: Macenta
+    original: Asıl gri
+    original_white: Asıl beyaz arkaplan
+  comments:
+    new_comment:
+      comment: Yorum yaz
+      commenting: Yorumlanıyor...
+  contacts:
+    index:
+      start_a_conversation: Bir iletişim başlatın
+      title: Kişiler
+      no_contacts: Birkaç kişi eklemen gerekir gibi görünüyor!
+      no_contacts_message: "%{community_spotlight}'ni ziyaret et"
+      community_spotlight: Topluluk Haberleri
+      my_contacts: Kişilerim
+      all_contacts: Tüm Kişiler
+      only_sharing_with_me: Benimle paylaşım yapan
+    spotlight:
+      community_spotlight: Topluluk Gönderileri
+      suggest_member: Bir üye önerin.
+  conversations:
+    index:
+      conversations_inbox: Yazışmalar — Gelen kutusu
+      new_conversation: Yeni yazışma
+      no_messages: mesaj yok
+      inbox: Gelen Kutusu
+    show:
+      reply: yanıtla
+      replying: Yanıtlanıyor...
+      hide: Konuşmayı gizle ve sustur
+      delete: iletişimi sil ya da engelle
+    new:
+      to: kime
+      subject: konu
+      send: Gönder
+      sending: Gönderiliyor...
+    create:
+      sent: Mesaj gönderildi
+      fail: Geçersiz mesaj
+    new_conversation:
+      fail: Geçersiz mesaj
+    destroy:
+      delete_success: Konuşma başarıyla silindi
+  date:
+    formats:
+      fullmonth_day: "%B %d"
+      birthday: "%B %d"
+      birthday_with_year: "%B %d %Y"
+  help:
+    title_header: Yardım
+    tutorials: öğreticiler
+    tutorial: öğretici
+    irc: IRC
+    wiki: wiki
+    markdown: Not düş
+    here: burada
+    foundation_website: diaspora vakfı web sitesi
+    third_party_tools: üçüncü taraf araçları
+    getting_started_tutorial: "'Başlangıç' öğretim dizisi"
+    getting_help:
+      title: Yardım almak
+      getting_started_q: İmdat! Başlamak için bana biraz temel yardım gerekiyor!
+      getting_started_a: Şanslısınız. Proje sayfalarımızdaki %{tutorial_series} deneyin. Böylece adım adım kayıt sürecini tamamlayacak ve diaspora* hakkındaki tüm temel bilgileri öğreneceksiniz.
+      get_support_q: Eğer sorum SSS'da yanıtlanmamışsa ne yapayım? Daha başka nereden destek alabilirim?
+      get_support_a_website: "%{link} bağlantımıza bakın"
+      get_support_a_tutorials: "%{tutorials} belgelerimizi deneyin"
+      get_support_a_wiki: "%{link} arayın"
+      get_support_a_irc: bize %{irc} kanalında katılın (Canlı sohbet)
+      get_support_a_hashtag: "%{question} etiketini kullanarak diaspora* üzerinde açık bir gönderiyle sorun"
+    account_and_data_management:
+      title: Hesap ve veri yönetimi
+      move_pods_q: Tohumumu (hesabımı) başka bir poda nasıl taşırım?
+      move_pods_a: İleride tohumunuzu bir poddan diğerine aktarabileceksiniz, ancak şimdilik bu mümkün değil. Her zaman yeni bir hesap açıp, kişileri yeni tohumunuzdaki bakışlara ekleyip, karşınızdaki kişilerden de aynını yapmalarını isteyebilirsiniz.
+      download_data_q: Tohumum(hesabım)daki tüm veriyi indirebilir miyim?
+      download_data_a: Evet. Hesap sekmesinde veriyi indirmek için iki düğme var.
+      close_account_q: Tohumumu(hesabımı) nasıl silerim?
+      close_account_a: Ayarlar sayfanızın sonuna gidin ve Hesabımı Kapat butonuna tıklayın.
+      data_visible_to_podmin_q: Pod yöneticisi ne kadar bilgime erişebiliyor?
+      data_visible_to_podmin_a: Podlar *arası* iletişim her zaman SSL ve diaspora*nın kendi aktarım şifresi ile şifrelenir, ancak pod içinde saklı olan veri şifresizdir. İsterse, podunuzun veri tabanı yöneticisi (genelde podu çalıştıran kişi uğraşır) tüm profil verinize ve (kullanıcı verilerini saklayan diğer sitelerde de olduğu gibi) tüm gönderilerinize erişebilir. Kendi podunuzu çalıştırmak daha fazla mahremiyet sağlar çünkü o zaman veri tabanı erişimini de siz denetlersiniz.
+      data_other_podmins_q: Diğer podların yöneticileri bilgimi görebiliyor mu?
+      data_other_podmins_a: Bir kez başka bir poddaki biriyle paylaştıktan sonra, onunla paylaştığınız gönderiler ve profil verinizin bir kopyası o podda da saklanır, ve haliyle o podun veri tabanı yöneticisi de ona erişebilir. Bir gönderi ya da profil verisini sildiğinizde diğer podlardan da kendiliğinden silinirler.
+    aspects:
+      title: Cepheler
+      what_is_an_aspect_q: Cephe nedir?
+      what_is_an_aspect_a: Cepheler diaspora* da kişileri gruplamanın bir yoludur. Bir Cephe dünyaya gösterdiğiniz yüzlerden biridir. İş yerinizde veya ailenizde ya da üyesi olduğunuz kulüpteki arkadaşlarınız için kim olduğunuz olabilir.
+      who_sees_post_q: Bir Cephe'ye gönderi gönderdiğimde onu kimler görür?
+      who_sees_post_a: Sınırlı gönderi yaparsanız, yalnızca o bakış(lar)a koyduğunuz kişilere görünür olacaktır. Bunun dışındakiler, gönderinizi açmadığınız sürece hiçbir şekilde onu göremeyeceklerdir. Yalnızca genel gönderiler hiçbir bakışa koymadığınız kişilere açıktır.
+      contacts_know_aspect_q: Bağlantılarım onları hangi Cephe'lere koyduğumu bilebilir mi?
+      contacts_know_aspect_a: Hayır. Bakışın adını hiçbir şekilde göremezler.
+      person_multiple_aspects_q: Birini birden çok bakışa ekleyebilir miyim?
+      person_multiple_aspects_a: Evet. Kişiler sayfasına gidin ve kişilerime tıklayın. Her biri için sağdaki menüyü kullanarak, istediğiniz kadar çok bakışa ekleyip istediğiniz kadarından çıkarabilirsiniz. Profil sayfasındaki bakış seçicisine tıklayarak da bunu yapabilirsiniz. Hatta, imleci adının üzerine götürdüğünüzde çıkan 'kartı' kullanarak da aynı şeyi yapabilirsiniz.
+      remove_notification_q: Birini kimi yönlerden çıkarırsam bundan haberleri olur mu?
+      remove_notification_a: Hayır.
+      change_aspect_of_post_q: Bir gönderiyi paylaştıktan sonra onu gören hedef bakışları değiştirebilir miyim?
+      change_aspect_of_post_a: Hayır, ama aynı içerikte başka bir gönderi hazırlayıp bunu farklı bir bakış yönünde gönderebilirsiniz.
+      post_multiple_aspects_q: Aynı anda birden çok bakışa gönderebilir miyim?
+      post_multiple_aspects_a: Evet. Gönderirken, bakışları seçmek üzere bakış seçicisini kullanın. Gönderiniz seçtiğiniz tüm bakışlara görünür olacaktır. Bakışları ayrıca kenar çubuğu üzerinden de seçebilirsiniz. Gönderdiğinizde, seçtiğiniz bakış(lar) yeni bir gönderi yazarken kendiliğinden belirecektir.
+      restrict_posts_i_see_q: Gördüğüm gönderileri sadece belli bakışlara  kısıtlayabilir miyim?
+      restrict_posts_i_see_a: Evet. Kenar çubuğundaki Bakışlarım'a tıklayın ve seçiminizi değiştirmek için ilgili bakışlara tıklayın. Yalnızca seçili bakışlardan gelen gönderiler size görünür olacak.
+      rename_aspect_q: Bakışın adını değiştirebilir miyim?
+      rename_aspect_a: Evet. Bakışlar listesinde yeniden adlandırmak istediğiniz bakışın üzerine gelip yandaki kaleme tıklayın. Gözüken kutuda 'yeniden adlandır' ı tıklayın.
+      delete_aspect_q: Yön nasıl silinir?
+      delete_aspect_a: Akış görünümündeki kenar çubuğundan "Yönlerim"e tıkla ve silmek istediğin yönleri işaretle, ya da erişimlerim sayfasından ilgili yönü seçip çöp simgesine tıkla.
+    mentions:
+      title: Anılmalar
+      what_is_a_mention_q: '"Birisini anmak" nedir?'
+      what_is_a_mention_a: Bahis, bir kişinin profiline gönderide yaptığınız bir bağlantıdır. Bahsettiğiniz kişiye, söz konusu gönderide bahsedildiği bildirilir.
+      how_to_mention_q: Gönderi yaparken birisini nasıl anabilirim?
+      how_to_mention_a: "@ yazın ve kullanıcının adını yazmaya başlayın. Açılır menü, seçiminizi kolaylaştırmak üzere belirecektir. Yalnızca bir bakışa eklediğiniz kişiden bahsedebilirsiniz."
+      mention_in_comment_q: Bir yorumun içinde birisini anabilir miyim?
+      mention_in_comment_a: 0.7.0.0 sürümünden beri evet. Yorumlarda da, gönderilerde olduğu gibi "@" işaretiyle adı belirtip adını yazarak bahis oluşturabilirsiniz. Sınırlı bir gönderide yalnızca daha önceden etkileşimde bulunmuş kişilerden bahsedebilirsiniz.
+      see_mentions_q: Benim anıldığım gönderileri görmenin bir yolu var mı?
+      see_mentions_a: Evet. Ana sayfanızın sol sütunundaki "Anılmalar"ı tıklayın.
+    pods:
+      title: Podlar
+      what_is_a_pod_q: Pod nedir?
+      what_is_a_pod_a: 'Pod diaspora* yazılımını çalıştıran ve diaspora* ağına bağlı bir sunucudur. Bitkilerin tohum saplarının uçlarına, sunucuların kullanıcı sayısı açısından, benzediği için bu ad verilmiştir. Bir çok pod vardır. Diğer podlardan arkadaşlar ekleyebilir ve onlarla haberleşebilirsiniz. (diasora*yı bir e-mektup sağlayıcısına benzetebilirsiniz: Açık podlar, özel podlar, hatta biraz çaba ile kendiniz bile bir pod açabilirsiniz).'
+      find_people_q: Poda henüz katıldım, paylaşacak birilerine nasıl ulaşacağım?
+      find_people_a: 'Kenar çubuğundaki e-mektup bağlantısına tıklayın. İlgi alanlarınızı paylaşan kişileri #etiketler ile takip edin, ve onlardan ilgilendiğiniz şeyler gönderenleri bir bakışa ekleyin. Genel bir gönderide #buradayeniyim diye bağırın.'
+      use_search_box_q: Birisini arama kutusu aracılığıyla nasıl bulabilirim?
+      use_search_box_a: Eğer tam diaspora* kimliğini (yani, kullaniciadi@pod) biliyorsanız, o kimlikle aratabilirsiniz. Aynı podda iseniz sadece kullanıcı adı ile de aratabilirsiniz. Bir diğer seçenek de (ekranda görünen) profil adı ile aratmaktır. Eğer ilkinde işe yaramazsa, tekrar deneyin.
+    posts_and_posting:
+      title: Gönderiler
+      stream_full_of_posts_q: Niçin akışım tanımadığım ve paylaşmadığım kişilerin gönderileriyle dolu?
+      stream_full_of_posts_a1: 'Akışınız üç türlü gönderiden meydana gelir:'
+      stream_full_of_posts_li1: 'Paylaştığınız kişilerin gönderileri, ki onlar da iki türlüdür: genel gönderiler ve parçası olduğunuz bir yönde gönderilen sınırlı gönderiler. Bunları kaldırmak için, onlarla paylaşmayı kesin.'
+      stream_full_of_posts_li2: İzlediğiniz etiketleri içeren genel gönderiler. Bunları kaldırmak için, ilgili etiketi izlemeyi bırakın.
+      stream_full_of_posts_li3: Halka açık gönderiler topluluğun gözü önüne çıkarılır. Bu öne çıkarmayı ayarlarınızın Hesap sekmesinden kapatabilirsiniz.
+      hide_posts_q: Gönderilerimi nasıl gizlerim?
+      hide_posts_a: Fareyi gönderinin üzerinde getirdiğinizde sağ tarafta X belirir. Ona tıkladığınızda gönderiyi gizleyip bildirimleri susturmuş olursunuz. Ancak bu, gönderenin profilini ziyaret ettiğinizde gönderiyi görmenizi engellemez.
+      character_limit_q: En fazla kaç karakter gönderebilirim?
+      character_limit_a: 65,535 karakter. Yani, Twitter'da izin verilenden 65,395 daha fazla karakter! ;)
+      char_limit_services_q: Gönderimi uzunluk sınırı olan bir bağlı servise gönderdiğimde uzun gönderilerime ne olur?
+      char_limit_services_a: O halde, göndereceğiniz diğer hizmetin uzunluk sınırına uygun yazmanızı öneririz. Aşmanız halinde, metin orada kırpılacak, ve diaspora* gönderisine bir bağlantı verilecektir. Gönderinizi kısa tutmaya yardımcı olmak için bağlı hizmetin uzunluk sınırına kalan değer(Tumblr için 1000, Twitter için 140) gönderi sırasında hatırlatılacaktır.
+      format_text_q: Gönderilerimi nasıl biçimlendirebilirim(kalın, İtalik, vs.)?
+      format_text_a: "%{markdown} sistemini kullanarak. Tüm Markdown sözdizimine %{here} erişebilirsiniz. Önizleme düğmesinin yardımı dokunur, böylece paylaşmadan önce nasıl görüneceğine bakabilirsiniz."
+      insert_images_q: Gönderilere nasıl görüntü eklerim?
+      insert_images_a: Ufak kamera simgesine tıklayarak bunu yapabilirsiniz. Başka bir görüntü yüklemek için kamera simgesine tekrar tıklayabilir veya birden fazlasını tek seferde yükleyebilirsiniz.
+      insert_images_comments_q: Yorumlara resim ekleyebilir miyim?
+      size_of_images_q: Gönderi ve yorumlardaki resimleri nasıl boyutlandırabilirim?
+      size_of_images_a: Yapamazsınız. Resimler kendiliğinden akış genişliğine uyacak şekilde boyutlandırılırlar. Markdown içinde resim boyutunu belirleyecek bir kod yoktur.
+      embed_multimedia_q: Bir gönderiye video, ses ya da başka bir içerik nasıl eklerim?
+      embed_multimedia_a: 'Genelde URL''yi yapıştırmanız gömme işleminin gerçekleşmesi için yeterli olur: YouTube, Vimeo, SoundCloud, Flickr ve birkaç site daha desteklenir. diaspora* bunu oEmbed yardımıyla gerçekleştirir. Her an yeni sitelere açığız. Basit göndermeyi unutmayın: tam bağlantılar:kısaltma servisler kulllanmayın; temel URL''den sonra ?#&!= kullanmayın; ve önizlemeyi görebilmek için bir süre bekleyin.'
+    private_posts:
+      title: Özel gönderiler
+      can_comment_q: Özel gönderimi kim beğenebilir ya da ona yorum yazabilir?
+      can_comment_a: Yalnızca belirttiğiniz bakış içindeki diaspora* kullanıcıları gönderinizi beğenebilir ya da yorum yazabilir.
+      can_reshare_q: Özel gönderimi kim paylaşabilir?
+      can_reshare_a: Hiç kimse. Özel gönderiler yeniden paylaşılamaz, ancak diaspora* nın kopyala-yapıştır koruması yoktur.
+    public_posts:
+      title: Genel gönderiler
+    resharing_posts:
+      title: Gönderileri yeniden paylaşmak
+      reshare_public_post_aspects_q: Genel bir gönderiyi belli bakışlarla yeniden paylaşabilir miyim?
+      reshare_public_post_aspects_a: Hayır, onları yeniden paylaştığınızda kendiliğinden genel gönderi olarak paylaşılırlar. Belirli bakışlarla paylaşmak için, kopyala-yapıştır yöntemini kullanabilirsiniz. diaspora* nın kopyala-yapıştır koruması yoktur.
+      reshare_private_post_aspects_q: Özel bir gönderiyi yeniden paylaşabilir miyim?
+      reshare_private_post_aspects_a: Hayır, bu mümkün değildir. Böyle bir şey, gönderenin, yalnızca belirli bir kitle ile paylaşmak niyetine ters düşerdi.
+    sharing:
+      title: Paylaşım
+      see_old_posts_q: Birisini bir bakışa eklediğimde, benim daha önce oraya gönderdiklerimi görebilir mi?
+      see_old_posts_a: Hayır. Sadece o bakıştaki yeni gönderileri görebilirler. O (ve diğerleri) eski genel gönderilerinizi profil sayfasında ve ayrıca akışta görebilirler.
+    tags:
+      title: Etiketler
+      what_are_tags_for_q: Etiketler ne işe yarar?
+      what_are_tags_for_a: Etiketler gönderileri, genellikle konularına göre, sınıflandırmanın bir yoludur. Bir etiketi aratarak onu içeren tüm görebileceğiniz gönderileri (genel ve özel) bulabilirsiniz. Bu belli bir konu ile ilgilenenlerin onunla ilgili genel gönderileri bulabilmesini sağlar.
+      tags_in_comments_q: Yorumları etiketleyebilir miyim, yoksa bu gönderilere özgü bir şey mi?
+      tags_in_comments_a: Bir yoruma eklenen etiket, etiketin sayfasına bir bağlantı üretecektir, ancak o gönderi (ve yorumunu) o sayfada göstertmeyecektir. Bu yalnızca gönderi etiketlerinde çalışır.
+    keyboard_shortcuts:
+      title: Klavye kısayolları
+      keyboard_shortcuts_q: Hangi klavye kısayollarını kullanabilirim?
+      keyboard_shortcuts_a1: 'Akış görünümünde bunları kullanabilirsin:'
+      keyboard_shortcuts_li1: j - sonraki gönderiye atla
+      keyboard_shortcuts_li2: k - önceki gönderiye atla
+      keyboard_shortcuts_li3: c - bu gönderiye yorum yaz
+      keyboard_shortcuts_li4: l - bu gönderiyi beğen
+    miscellaneous:
+      title: Çeşitli
+      photo_albums_q: Fotoğraf ve video albümleri var mı?
+      photo_albums_a: Henüz değil. Ama, birisinin yüklediği resimlerini profil sayfasındaki Fotoğraflar sekmesinden görebilirsin.
+      diaspora_app_q: Android ve iOS için diaspora* uygulamaları var mı?
+      diaspora_app_a: Toplıluk üyelerince çeşitli Android uygulamaları geliştirilmektedir. Bazıları çoktan terk edlimiş ve mevcut diaspora* yazılımına uygun değildir. Bunlardan çok bir şey beklemeyin. Şu an için bir iOS uygulaması yok. diaspora*ya mobilden erişmenin en iyi yolu bir tarayıcı, çünkü mobil siteyi tüm cihazlarda, işlevselliği henüz tam olmamakla birlikte, düzgün çalışacak şekilde tasarladık.
+  invitations:
+    create:
+      sent: 'Davetiyeler şu adeslere gönderildi: %{emails}'
+      rejected: 'Bu e-posta adreslerinde sorun oluştu:'
+      no_more: Başka davetiyeniz yok.
+      empty: En az bir e-posta adresi girin.
+      note_already_sent: Davetiyeler %{emails}ne gönderilmiştir.
+    new:
+      language: Dil
+      invite_someone_to_join: Diaspora'ya birilerini davet et!
+      comma_separated_plz: ''
+      send_an_invitation: Bir davet yolla
+      sending_invitation: Davet gönderiliyor...
+      paste_link: Arkadaşlarınızı Diaspora*'ya davet etmek için bu bağlantıyı paylaşın, ya da bağlantıyı onlara direk eposta olarak atın.
+      codes_left:
+        zero: Bu kodda hiç davetiye kalmadı
+        other: Bu kodda %{count} davetiye kaldı
+  layouts:
+    header:
+      profile: Profil
+      settings: Ayarlar
+      logout: Çıkış yap
+      code: kod
+    application:
+      powered_by: 'GELİŞTİREN: DIASPORA*'
+      whats_new: neler yeni?
+      public_feed: "%{name} için Genel Diaspora* Beslemesi"
+      back_to_top: Sayfa başına dön
+      source_package: kaynak kodu paketini indir
+  notifications:
+    started_sharing:
+      zero: "%{actors} sizinle paylaşıma başladı."
+      one: "%{actors} sizinle paylaşıma başladı."
+      two: "%{actors} sizinle paylaşıma başladı."
+      few: "%{actors} sizinle paylaşıma başladı."
+      many: "%{actors} sizinle paylaşıma başladı."
+      other: "%{actors} sizinle paylaşıma başladı."
+    private_message:
+      zero: "%{actors} ileti gönderdi."
+      other: "%{actors} ileti gönderdi."
+    comment_on_post:
+      zero: "%{actors} %{post_link} gönderinizi yorumladı."
+      other: "%{actors} %{post_link} gönderinizi yorumladı."
+    also_commented:
+      zero: "%{actors} %{post_author} kişisinin %{post_link}sini yorumladı."
+      other: "%{actors} %{post_author} kişisinin %{post_link}sini yorumladı."
+    mentioned:
+      zero: "%{actors} bir %{post_link} içinde seni andı."
+      other: "%{actors} bir %{post_link} içinde seni andı."
+    liked:
+      zero: "%{actors} senin %{post_link} gönderini beğendi."
+      other: "%{actors} senin %{post_link} gönderini beğendi."
+    reshared:
+      zero: "%{actors} %{post_link} gönderinizi paylaştı."
+      other: "%{actors} %{post_link} gönderinizi paylaştı"
+    also_commented_deleted:
+      zero: "%{actors} silinmiş gönderinize yorum yazdı."
+      one: "%{actors} silinmiş gönderinize yorum yazdı."
+      two: "%{actors} silinmiş gönderinize yorum yazdı."
+      few: "%{actors} silinmiş gönderinize yorum yazdı."
+      many: "%{actors} silinmiş gönderinize yorum yazdı."
+      other: "%{actors} silinmiş gönderinize yorum yazdı."
+    liked_post_deleted:
+      zero: "%{actors} silinmiş gönderinizi beğendi."
+      other: "%{actors} silinmiş gönderinizi beğendi.."
+    reshared_post_deleted:
+      zero: "%{actors} silinen gönderiyi tekrar paylaştı."
+      other: "%{actors} silinen gönderiyi tekrar paylaştı."
+    mentioned_deleted:
+      zero: "%{actors} silinmiş gönderide senden bahsetti."
+      other: "%{actors} silinmiş gönderide senden bahsetti."
+    index:
+      notifications: Bildirimler
+      mark_all_as_read: Tümünü okundu olarak işaretle
+      mark_all_shown_as_read: Gösterilenlerin hepsini okudum
+      mark_read: Okundu
+      mark_unread: Okunmadı olarak işaretle
+      show_all: Tümünü göster
+      show_unread: Okunmamışları göster
+      all_notifications: Tüm bildirimler
+      also_commented: Bunlar da yorumladı
+      and_others:
+        zero: ve başka hiç kimse
+        other: ve %{count} diğer kişi
+      and: ve
+  notifier:
+    a_post_you_shared: gönderi
+    email_sent_by_diaspora: Bu e-posta %{pod_name} tarafından gönderildi. Bu gibi e-postalar almak istemiyorsanız,
+    click_here: buraya tıklayın
+    hello: Merhaba %{name}!
+    thanks: Teşekkürler,
+    to_change_your_notification_settings: tıklayarak bildirim ayarlarınızı değiştirebilirsiniz
+    single_admin:
+      subject: 'Diaspora hesabınız hakkında bir mesaj:'
+      admin: Diaspora yöneticiniz
+    started_sharing:
+      subject: "%{name} Diaspora*'da seninle paylaşıma başladı"
+      sharing: sizinle paylaşıma başladı!
+      view_profile: "%{name} kişisinin profilini görüntüle"
+    comment_on_post:
+      reply: "%{name}'in gönderisini yanıtla ya da görüntüle >"
+    mentioned:
+      subject: "%{name} Diaspora*'da sizi andı"
+    private_message:
+      reply_to_or_view: Yanıtla ya da konuşmayı görüntüle >
+    liked:
+      liked: "%{name} gönderini beğendi"
+      view_post: Gönderiyi görüntüle >
+    reshared:
+      reshared: "%{name} gönderini tekrar paylaştı"
+      view_post: Gönderiyi görüntüle>
+    confirm_email:
+      subject: Lütfen yeni e-mail adresini %{unconfirmed_email} etkinleştir
+      click_link: 'Yeni e-mail adresini %{unconfirmed_email} etkinleştirmek için şu bağlantıya tıkla:'
+    report_email:
+      type:
+        post: gönderi
+        comment: yorum
+      subject: Yeni %{type} ağır dil olarak işaretlendi
+      body: |-
+        İyi günler,
+
+        %{id} kimliğine sahip %{type} saldırgan olarak raporlanmıştır.
+
+        [%{url}][1]
+
+        Olabildiğince çabuk şekilde incelemeniz rica olunur.
+
+        Saygılar,
+
+        diaspora* elektronik mektup robotu
+
+        [1]: %{url}
+    export_failure_email:
+      subject: Sayın %{name}, verinizi kaybettiğimiz için özür dileriz.
+    invited_you: "%{name} sizi Diaspora*'ya davet etti."
+    invite:
+      message: |-
+        Merhaba!
+
+        Diaspora*'ya davet edildiniz!
+
+        Başlamak için bu kısayolu tıklayınız
+
+        [%{invite_url}][1]
+
+
+        Sevgilerle,
+
+        Diaspora* e-posta robotu!
+
+        [1]: %{invite_url}
+    remove_old_user:
+      subject: diaspora* hesabınız, kullanılmadığı için kapatılma kuyruğuna alındı
+      body: |-
+        Merhaba,
+
+        %{after_days} gündür hesabınızı kullanmadığınızı gördük. %{pod_url} hesabınızı, podun verimli çalışması için kapatmak istiyoruz.
+
+        diaspora* topluluğunun bir parçası olduğunuz için teşekkür ederiz, halen kullanmak isterseniz, hesabınızı henüz kapatmadık. %{remove_after} gününe kadar girerseniz hesabınız açık kalacak. Son baktığınızdan dolayı etraf epey değişti, belki birkaç iyileştirme görebilirsiniz. #etiketler yardımıyla yeni içerikler bulabilirsiniz.
+
+        Girmek isterseniz: %{login_url} Giriş bilgilerinizi unuttuysanız, bu bağlantıdan bir hatırlatma isteyebilirsiniz.
+
+        Yeniden görüşmek dileğiyle,
+
+        diaspora* e-mektup robotu
+  people:
+    person:
+      thats_you: Bu sensin!
+    index:
+      results_for: arama sonuçları
+      no_results: Hey! Bir şeyi araman lazım.
+      couldnt_find_them: Aradığını bulamadın mı?
+      search_handle: Arkadaşlarınızı bulmak için kullaniciadi@pod biçimindeki diaspora* kimliklerini kullanın.
+      send_invite: Hâlâ mı bir şey yok? Birilerini davet edin!
+      no_one_found: "...ve hiç kimse bulunamadı."
+      searching: aranıyor, biraz sabırlı olun...
+      looking_for: "%{tag_link} ile etiketlenmiş gönderileri mi arıyorsun?"
+    show:
+      has_not_shared_with_you_yet: "%{name} seninle henüz bir şey paylaşmamış!"
+      does_not_exist: Kişi yok!
+      closed_account: Bu hesap kapatılmıştır.
+    profile_sidebar:
+      bio: hakkında
+      location: yer
+      gender: cinsiyet
+      born: doğum günü
+    add_contact:
+      invited_by: tarafından davet edildin
+  photos:
+    create:
+      runtime_error: Fotoğraf yüklenmesinde hata oluştu. Emniyet kemerin takılı olduğudan emin misin?
+      integrity_error: Fotoğraf yükleme başarısız oldu. Gerçekten bir fotoğraf mıydı?
+      type_error: Fotoğraf yüklemesi başarısız oldu. Bir görüntünün eklendiğinden emin misin?
+    destroy:
+      notice: Fotoğraf silindi.
+    new_profile_photo:
+      upload: Yeni bir profil fotoğrafı yükle!
+  posts:
+    presenter:
+      title: "%{name} 'den bir gönderi"
+    show:
+      photos_by:
+        zero: "%{author} tarafından fotoğraf yok"
+        other: "%{author} tarafından %{count} fotoğraf"
+      reshare_by: "%{author} tarafından tekrar paylaşım"
+  report:
+    title: Raporlara bakış
+    post_label: "<b>Gönderi</b>: %{title}"
+    comment_label: "<b>Yorum</b>:<br>%{data}"
+    reported_label: "%{person} <b>raporladı</b>"
+    reason_label: 'Sebep:'
+    review_link: İnceledim
+    delete_link: Öğeyi sil
+    confirm_deletion: Öğeyi silmek istediğinizden emin misiniz?
+    not_found: Öğe bulunamadı. Kullanıcı tarafından silinmiş olabilir.
+    status:
+      failed: Bir şeyler yanlış gitti
+  profiles:
+    edit:
+      your_name: Adın
+      first_name: Ad
+      last_name: Soyad
+      your_gender: Cinsiyetin
+      your_birthday: Doğum günün
+      your_tags: Kendini 5 kelime ile anlat
+      your_tags_placeholder: "#diaspora #ironing #kittens #music gibi"
+      your_bio: Hakkında
+      your_location: Bulunduğun yer
+      your_photo: Fotoğrafın
+      update_profile: Profili Güncelle
+      allow_search: Diaspora aramaları ile bulunmana izin ver
+      nsfw_explanation: İ2GD('iş için güvenli değil') diaspora* nın çalışma esnasında görüntülenmesi sakıncalı olabilecek içerik için özdenetimli topluluk standardıdır. Böyle şeyleri sık paylaşacaksanız bunu işaretleyin böylece gerçekten bunu görmek istemeyenler akışlarından bunları gizleyebilsinler.
+      nsfw_explanation2: 'Eğer bu seçeneği tercih etmediyseniz lütfen bu tür malzemeyi her paylaştığınızda #nsfw etiketini ekleyin.'
+      nsfw_check: Paylaştığım herşeyi İ2GD olarak işaretle
+    update:
+      updated: Profil güncellendi
+      failed: Profil güncellemesi başarısız
+  registrations:
+    new:
+      enter_email: Bir e-posta girin
+      enter_username: Bir kullanıcı adı seçin (sadece harfler, rakamlar ve alt çizgi)
+      enter_password: Bir parola girin (en az 6 karakter)
+      enter_password_again: Daha önce olduğu gibi aynı parolayı girin.
+      sign_up: KAYDOL
+      email: E-POSTA
+      username: KULLANICI ADI
+      password: PAROLA
+      password_confirmation: PAROLA ONAYI
+      submitting: Gönderiliyor...
+      terms: Bir hesap oluşturarak %{terms_link}'teki koşulları kabul etmiş sayılırsınız.
+      terms_link: hizmet koşulları
+    create:
+      success: Diaspora'ya katıldınız!
+    invalid_invite: Gönderdiğiniz davetiye bağlantısı artık geçerli değil!
+  reshares:
+    reshare:
+      reshared_via: 'üzerinden yeniden paylaşıldı:'
+      reshare_confirmation: Tekrar paylaş %{author} - %{text}?
+      deleted: Gönderi yazarı tarafından silindi.
+    comment_email_subject: "%{resharer}, %{author} kişisinin gönderisini tekrar paylaştı"
+  services:
+    index:
+      disconnect: bağlantıyı kes
+      logged_in_as: olarak bağlandınız
+      really_disconnect: "%{service} ile bağlantı kesilsin mi?"
+      edit_services: Servisleri düzenle
+      services_explanation: Hizmetlere bağlanmak, gönderilerinizi Diaspora'da yazdığınız sırada yayınlama olanağı verir.
+    create:
+      success: Doğrulama başarılı.
+      failure: Kimlik doğrulama başarısız oldu.
+      already_authorized: "%{diaspora_id} diaspora kimliği bulunan bir kullanıcı zaten %{service_name} hesabına izin verdi."
+      read_only_access: Erişim düzeyi sadece okumaya izin veriyor, lütfen daha sonra tekrar onaylanmayı deneyin.
+    destroy:
+      success: Doğrulama başarılı bir şekilde kaldırıldı.
+    failure:
+      error: hizmete bağlanırken hata oluştu
+  blocks:
+    create:
+      success: 'Pekâlâ, akışında bu kullanıcıyı bir daha görmeyeceksin. #silencio!'
+      failure: 'Bu kullanıcıyı görmezden gelemedim.  #evasion'
+    destroy:
+      success: 'Bakalım ne diyecekler! #sayhello'
+      failure: 'Bu kullanıcıyı görmezden gelmeyi kaldıramadım.  #evasion'
+  shared:
+    aspect_dropdown:
+      toggle:
+        zero: Yönüne ekle
+        other: "%{count} yönde"
+    publisher:
+      formatWithMarkdown: Gönderilerinizi biçimlendirmek için Markdown( %{markdown_link} ) kullanabilirsiniz
+      posting: Gönderiliyor...
+      share: Paylaş
+      get_location: Konumunu ayarla
+      whats_on_your_mind: Ne düşünüyorsun?
+      discard_post: Gönderiyi sil
+      new_user_prefill:
+        newhere: YeniyimBurada
+        hello: 'Hey herkes, Ben #%{new_user_tag}. '
+        i_like: 'İlgimi çeken şunlardır: %{tags}.'
+        invited_by: 'Davet için teşekkürler, '
+      poll:
+        add_a_poll: Oylama ekle
+    invitations:
+      invites: Davetiyeler
+      invite_your_friends: Arkadaşlarını davet et
+      by_email: E-posta ile
+      share_this: Bu e-posta yoluyla bağlantı, blog ya da favori sosyal ağını paylaş!
+    public_explain:
+      control_your_audience: Hedef Kitle Kontrolü
+      new_user_welcome_message: "#hashtag ile gönderilerinizi sınıflandırabilir veya ilgi alanlarını paylaşan kişileri bulabilirsiniz. @Bahset kişiler ile iletişim kurmak için harika bir yoldur."
+      visibility_dropdown: Açılan menüden gönderinizin görünürlüğünü değiştirebilirsiniz. (İlk olarak Genel yapmanızı öneririz.)
+      title: Bağlı hizmetler
+      share: Paylaş
+      outside: Genel mesajlar, Diaspora dışından da görünür.
+      logged_in: "%{service} servisine bağlandınız."
+      manage: bağlı servisleri yönetin
+      atom_feed: Atom beslemesi
+    stream_element:
+      via: "%{link} ile"
+      via_mobile: cepten
+  status_messages:
+    new:
+      mentioning: 'Bahseden: %{person}'
+    too_long: '{"other"=>"durum mesajları %{count} karakterden az olmalıdır.", "zero"=>"durum mesajları %{count} karakterden az olmalıdır."}'
+  stream_helper:
+    no_more_posts: Akışın sonuna ulaştınız.
+    no_posts_yet: Gönderi yok.
+  tags:
+    show:
+      tagged_people:
+        zero: "%{tag} ile hiç kimse etiketlenmedi"
+        other: "%{count} kişi %{tag} ile etiketlendi"
+      follow: 'Takip et: #%{tag}'
+      stop_following: 'Takibi Durdur #%{tag}'
+      none: Boş etiketi yoktur!
+  streams:
+    community_spotlight_stream: Topluluk Spotlight
+    aspects_stream: Yönler
+    mentioned_stream: "@Bahsedenler"
+    followed_tags_stream: "#Takip Edilen Etiketler"
+    mentions:
+      title: "@Bahsedenler"
+    comment_stream:
+      title: Yorumlanan gönderiler
+    like_stream:
+      title: İğnelenenler akışı
+    followed_tag:
+      title: "#Takip Edilen Etiketler"
+      add_a_tag: Etiket ekle
+      follow: Takip Et
+    tags:
+      title: 'Gönderi etiketlendi: %{tags}'
+    public:
+      title: Genel Aktiviteler
+    multi:
+      title: Göz at
+    aspects:
+      title: Yönlerin
+    activity:
+      title: Etkinliklerim
+    liked:
+      title: mesajlar gibi
+    commented:
+      title: yorumladı mesajlar
+  users:
+    edit:
+      edit_account: Hesap düzenle
+      change: Değiştir
+      your_handle: Diaspora kimliğin
+      your_email: E-posta
+      change_email: E-posta değiştir
+      email_awaiting_confirmation: Etkinleştirme bağlantısını %{unconfirmed_email} adresine gönderdik. Bu bağlantıyı izleyip yeni adresi etkinleştirmediğin sürece önceki %{email} adresini kullanmaya devam edeceğiz.
+      change_password: Parolamı değiştir
+      new_password: Yeni parola
+      current_password: Mevcut parola
+      current_password_expl: giriş yaptığınız...
+      character_minimum_expl: en az 6 harfli olmalı
+      change_language: Dili değiştir
+      close_account_text: Hesabı Kapat
+      stream_preferences: Akış Tercihleri
+      show_community_spotlight: Topluluk Spotlight akışınızda gösterilsin mi?
+      show_getting_started: Başlarken etkin
+      following: İzleme ayarları
+      auto_follow_back: Seni izleyen birini otomatik olarak izle
+      auto_follow_aspect: 'Otomatik olarak izlenen kişiler için yön:'
+      receive_email_notifications: E-posta bildirimi gönder...
+      started_sharing: "...birisi benimle birşey paylaştığında?"
+      mentioned: "...benden bahsedildiğinde?"
+      liked: "...birisi gönderimi iğnelediğinde?"
+      reshared: "...birisi benim gönderimi tekrar paylaştığında?"
+      comment_on_post: "...birisi gönderine yorum yazdığında?"
+      also_commented: "...birisi gönderime yorum yazdığında?"
+      private_message: "...özel mesaj aldığında?"
+      download_export: Profilimi indir
+      request_export: Profil verimi iste
+      export_data: Bilgilerimi Dışarı taşı
+      close_account:
+        dont_go: Hey, gitme lütfen!
+        make_diaspora_better: Diaspora'yı daha da iyi yapmamıza yardım etmeni isteriz, dolayısıyla hesabı kapatmak yerine bize yardımcı olmanı tercih ederiz. Hesabı gerçekten kapatmak istiyorsan, bundan sonra olacakları dikkatine sunarız.
+        mr_wiggles: Ayrılırsan bay Wiggles üzülecek
+        what_we_delete: Tüm gönderilerini ve profil verilerini mümkün olduğu kadar çabuk sileceğiz. Yorumların kalacak ve Diaspora kimliğin ile ilişik olacaktır.
+        locked_out: Oturumdan çıkacak ve hesabına tekrar giriş yapamayacaksın.
+        lock_username: Bu, geri gelmek istersen bulunması için kullanıcı ismini kilitleyecektir.
+        no_turning_back: Şu anda, geri almak mümkün değildir.
+    privacy_settings:
+      title: Gizlilik Ayarları
+      ignored_users: Gözardı Edilen Kullanıcılar
+      stop_ignoring: Görmezden gelmeye son ver
+    destroy:
+      success: Hesabın kilitlendi.  Hesabını kapatmamızın tamamlanması 20 dakika alabilir.  Diaspora'yı denediğin için teşekkür ederiz.
+      no_password: Hesabını kapatmak için lütfen güncel parolanı gir.
+      wrong_password: Girilen parola güncel parola ile uyumsuz.
+    getting_started:
+      well_hello_there: Merhaba!
+      community_welcome: Diaspora topluluğunda seni aramızda görmekten mutluyuz!
+      awesome_take_me_to_diaspora: Harika! Diaspora* Git
+      who_are_you: Sen kimsin?
+      what_are_you_in_to: Ne yapıyorsun?
+      hashtag_explanation: Etiketler, hakkında konuşmak ve ilgi alanlarını takip etmenize izin verir. Ayrıca yeni insanları Diaspora üzerinde bulmak için harika bir yoldur.
+      hashtag_suggestions: 'Sevdiğiniz etiketleri takip etmeyi deneyin #resim, #film, #gif, vb.'
+    update:
+      password_changed: Parola Değişti
+      password_not_changed: Parola değiştirilemedi
+      language_changed: Dil değişti
+      language_not_changed: Dil değişikliği başarısız
+      settings_updated: Ayarlar güncellendi
+      settings_not_updated: Ayarları güncelleme başarısız.
+      email_notifications_changed: E-posta bildirimleri değişti
+      unconfirmed_email_changed: E-posta değişti. Aktivasyon gerekli.
+      unconfirmed_email_not_changed: E-posta değişikliği başarısız oldu
+      follow_settings_changed: İzleme ayarları değiştirildi
+      follow_settings_not_changed: İzleme ayarlarının değiştirilmesi başarısız oldu.
+    public:
+      does_not_exist: "%{username} kullanıcısı bulunmamaktadır!"
+    confirm_email:
+      email_confirmed: E-posta %{email} doğrulandı
+      email_not_confirmed: E-posta doğrulanamadı. Yanlış bağlantı olabilir mi?
+  will_paginate:
+    previous_label: "&laquo; önceki"
+    next_label: sonraki &raquo;
+  simple_captcha:
+    placeholder: Resimdeki değeri girin
+    label: 'Kutudaki kodu yazın:'
+    message:
+      default: Gizli Kod resimle uyuşmuyor
+      user: Gizli Resim ve kod farklıydı
+      failed: İnsan olduğunuz doğrulanamadı

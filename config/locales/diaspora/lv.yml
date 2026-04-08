@@ -1,0 +1,138 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+lv:
+  settings: Iestatījumi
+  profile: Profils
+  account: Konts
+  privacy: Privātums
+  _services: Servisi
+  _applications: Lietotnes
+  ok: Labi
+  cancel: Atcelt
+  delete: Dzēst
+  username: Lietotājvārds
+  email: E-pasts
+  are_you_sure: Vai esi pārliecināts?
+  are_you_sure_delete_account: Vai tiešām vēlaties slēgt savu kontu? To nevarēs atjaunot!
+  fill_me_out: Aizpildi mani
+  public: Publisks
+  limited: Ierobežota piekļuve
+  search: Meklēt
+  find_people: 'Meklēt cilvēkus vai #birkas'
+  more: Vairāk
+  all_aspects: Visas grupas
+  no_results: Nekas netika atrasts.
+  _contacts: Kontakti
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            person:
+              invalid: nav derīgs.
+            username:
+              taken: ir aizņemts.
+              invalid: nav derīgs. Ir atļauti tikai burti, cipari un apakšsvītras.
+            email:
+              taken: ir aizņemts.
+        person:
+          attributes:
+            diaspora_handle:
+              taken: ir aizņemts.
+        contact:
+          attributes:
+            person_id:
+              taken: ir jābūt unikālam starp lietotāja kontaktiem.
+        reshare:
+          attributes:
+            root_guid:
+              taken: Baigi labais, jā? Tu jau esi dalījies ar šo ierakstu!
+  error_messages:
+    helper:
+      correct_the_following_errors_and_try_again: Izlabojiet sekojošās kļūdas un mēģiniet vēlreiz.
+  aspects:
+    edit:
+      confirm_remove_aspect: Vai jūs tiešām vēlaties dzēst šo grupu?
+      rename: pārsaukt
+      aspect_list_is_visible: Kontakti šajā grupā var redzēt viens otru.
+      aspect_list_is_not_visible: Kontakti šajā grupā neredz viens otru.
+      update: atjaunot
+      updating: atjauno
+    no_contacts_message:
+      you_should_add_some_more_contacts: Pievieno vairāk cilvēku!
+      try_adding_some_more_contacts: Tu vari meklēt vai uzaicināt vairāk cilvēku.
+      or_spotlight: Vai arī tu vari dalīties ar saiti %{link}
+      community_spotlight: Kopienas uzmanībā
+    aspect_listings:
+      add_an_aspect: "+ Pievienot grupu"
+    destroy:
+      success: "%{name} tika veiksmīgi noņemta."
+      failure: "%{name} nav tukša un to nevar noņemt."
+    update:
+      success: Grupa %{name} tika veiksmīgi labota.
+      failure: Grupas %{name} nosaukums ir pārāk garš, lai to saglabātu.
+    add_to_aspect:
+      failure: Nesanāca pievienot kontaktu grupai.
+      success: Kontakts veiksmīgi pievienots grupai.
+    seed:
+      family: Ģimene
+      work: Darbs
+      acquaintances: Paziņas
+      friends: Draugi
+    index:
+      donate: Ziedot
+      welcome_to_diaspora: Laipni lūgti diaspora*, %{name}!
+      introduce_yourself: Šī ir tava plūsma. Sāk rakstīt un iepazīstini ar sevi.
+      new_here:
+        title: Sveicināti, jaunie lietotāji
+        follow: Seko %{link} un sveicini jaunos lietotājus diaspora*!
+        learn_more: Lasīt vairāk
+      help:
+        need_help: Nepieciešama palīdzība?
+        here_to_help: Diaspora* kopiena tev palīdzēs!
+        do_you: 'Ja tev ir:'
+        have_a_question: "... %{link}?"
+        tag_question: jautājums
+        find_a_bug: "... zināma %{link}?"
+        tag_bug: kļūda
+        feature_suggestion: "... %{link}?"
+        tag_feature: uzlabojums
+      services:
+        heading: Pieslēgt servisus
+        content: 'Tu vari pieslēgt šādus servisus savam diaspora* profilam:'
+  aspect_memberships:
+    destroy:
+      success: Persona tika veiksmīgi noņemta no grupas
+      failure: Neizdevās noņemt personu no grupas
+  comments:
+    new_comment:
+      comment: Komentēt
+      commenting: Komentē...
+  contacts:
+    index:
+      start_a_conversation: Sākt sarunu
+      title: Kontakti
+      all_contacts: Visi kontakti
+  conversations:
+    index:
+      inbox: Ienākošās
+    show:
+      reply: atbildēt
+      replying: Atbild...
+      delete: Dzēst un bloķēt sarunu
+    new:
+      to: Adresāts
+      subject: Virsraksts
+      send: Sūtīt
+      sending: Sūta...
+    create:
+      sent: Ziņa aizsūtīta
+  invitations:
+    create:
+      sent: 'Ielūgumi ir aizsūtīt: %{emails}'
+    new:
+      language: Valoda

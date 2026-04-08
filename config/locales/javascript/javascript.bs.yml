@@ -1,0 +1,139 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+bs:
+  javascripts:
+    timeago:
+      prefixAgo: prije
+      suffixAgo: prije
+      suffixFromNow: od sada
+      prefixFromNow: u
+      seconds: manje od minute
+      minute: oko minute
+      minutes:
+        other: "%d minuta"
+      hour: oko sat
+      hours:
+        other: oko %d sati
+      day: dan
+      days:
+        other: "%d dana"
+      month: oko mjesec
+      months:
+        other: "%d mjeseci"
+      year: oko godina
+      years:
+        other: "%d godina"
+    confirm_dialog: Jeste sigurni?
+    delete: Izbriši
+    ignore: Ignoriši
+    ignore_user: Ignoriši ovog korisnika?
+    and: i
+    comma: ","
+    edit: Uredi
+    my_activity: Moja Aktivnost
+    my_stream: Tok
+    my_aspects: Moji Aspekti
+    publisher:
+      near_from: 'Objavljeno sa: <%= location %>'
+    aspect_dropdown:
+      add_to_aspect: Dodaj kontakt
+      select_aspects: Izaberi aspekte
+      all_aspects: Svi aspekti
+      stopped_sharing_with: Zaustavili ste dijeljenje sa <%= name %>.
+      started_sharing_with: Započeli ste dijeljenje sa <%= name %>.
+      error: Nije uspjelo početi dijeljenje sa <%= name %>.  Da li ih ignorišete?
+      error_remove: Nije bilo moguće izbrisati <%= name %> sa aspekta :(
+      toggle:
+        zero: "<%= count %> aspekata"
+        one: U <%= count %> aspektu
+        few: U <%= count %> aspekta
+        many: U <%= count %> aspekata
+        other: U <%= count %> aspektima
+    show_more: pokaži više
+    failed_to_post_message: Neuspješno objavljivanje poruke!
+    comments:
+      show: pokaži sve komentare
+      hide: sakrij komentare
+      no_comments: Još uvijek nema komentara.
+    reshares:
+      successful: Objava je uspješno ponovo dijeljenja!
+      post: Ponovo dijeli objavu od <%= name %>?
+    aspect_navigation:
+      select_all: Označi sve
+      deselect_all: Odznači sve
+      no_aspects: Ni jedan aspekt nije označen
+      add_an_aspect: "+ Dodaj jedan aspekt"
+    getting_started:
+      hey: Hej, <%= name %>!
+      no_tags: Hej, niste pratili ni jednu oznaku!  Ipak nastaviti?
+      alright_ill_wait: Dobro, čekat ću.
+      preparing_your_stream: Pripremam vaš personalizirani tok...
+    photo_uploader:
+      looking_good: Bože, izgledate fenomenalno!
+      completed: "<%= file %> završeno"
+      invalid_ext: "{file} ima nevažeću ekstenziju. Samo {extensions} su dozvoljene."
+      size_error: "{file} je prevelika, maksimalna veličina datoteke je {sizeLimit}."
+      empty: "{file} je prazna, molimo izabarite datoteke ponovo bez toga."
+    tags:
+      wasnt_that_interesting: 'Uredu, pretpostavljam da #<%= tagName %> nije bilo tako interesantno...'
+    people:
+      not_found: i niko nije pronađen...
+    stream:
+      hide: Sakrij
+      public: Javno
+      limited: Ograničeno
+      like: Sviđa mi se
+      unlike: Skini sviđanje
+      reshare: Ponovo dijeli
+      comment: Komentar
+      original_post_deleted: Originalna objava izbrisana od autora.
+      show_nsfw_post: Pokaži objavu
+      show_nsfw_posts: Pokaži sve
+      hide_nsfw_posts: 'Sakrij #nsfw objave'
+      follow: Prati
+      unfollow: Skini praćenje
+      likes:
+        zero: "<%= count %> Sviđanja"
+        one: "<%= count %> Sviđanje"
+        few: "<%= count %> Sviđanja"
+        many: "<%= count %> Sviđanja"
+        other: "<%= count %> Sviđanja"
+      reshares:
+        zero: "<%= count %> Ponovnih dijeljenja"
+        one: "<%= count %> Ponovno dijeljenje"
+        few: "<%= count %> Ponovna dijeljenja"
+        many: "<%= count %> Ponovnih dijeljenja"
+        other: "<%= count %> Ponovnih dijeljenja"
+      more_comments:
+        zero: Pokaži <%= count %> više komentara
+        one: Pokaži <%= count %> više komentar
+        few: Pokaži <%= count %> više komentara
+        many: Pokaži <%= count %> više komentara
+        other: Pokaži <%= count %> više komentara
+      followed_tag:
+        title: "#Praćene Oznake"
+        add_a_tag: Dodaj oznaku
+        follow: Pratite
+      tags:
+        follow: 'Pratite #<%= tag %>'
+        following: 'Pratite #<%= tag %>'
+        stop_following: 'Zaustavljeno Prać<%= tag %>enje #'
+    header:
+      home: Početna
+      profile: Profil
+      contacts: Kontakti
+      settings: Postavke
+      admin: Administrator
+      log_out: Odjava
+      notifications: Obavijesti
+      search: Pretraga
+      recent_notifications: Skorašnje Obavijesti
+      mark_all_as_read: Označi sve kao pročitano
+      view_all: Pogledaj sve
+      close: zatvori
+    viewer:
+      reshared: Ponovo dijeljeno

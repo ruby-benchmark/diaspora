@@ -1,0 +1,95 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+id:
+  javascripts:
+    timeago:
+      prefixAgo: ''
+      suffixAgo: yang lalu
+      suffixFromNow: dari sekarang
+      prefixFromNow: ''
+      seconds: kurang dari semenit
+      minute: sekitar satu menit
+      minutes:
+        other: "%d menit"
+      hour: sekitar sejam
+      hours:
+        other: sekitar %d jam
+      day: sehari
+      days:
+        other: "%d hari"
+      month: sekitar sebulan
+      months:
+        other: "%d tahun"
+      year: sekitar setahun
+      years:
+        other: "%d tahun"
+    confirm_dialog: Anda yakin ?
+    delete: Menghapus
+    ignore: Abaikan
+    my_activity: Aktifitas Saya
+    my_stream: Stream
+    aspect_dropdown:
+      add_to_aspect: Tambahkan kontak
+      select_aspects: Pilih salah satu aspek
+      all_aspects: Semua aspek
+      stopped_sharing_with: Anda berhenti berbagi dengan <%= name %>
+      started_sharing_with: Anda mulai berbagi dengan <%= name %> !
+      error: Tidak bisa berbagi dengan <%= name %>. Apakah anda mengabaikan mereka ?
+      toggle:
+        zero: Dalam <%= count %> Hal
+        other: Dalam <%= count %> Hal
+    show_more: Tampilkan lebih banyak lagi
+    failed_to_post_message: Gagal memposting pesan!
+    comments:
+      show: tampilkan semua komentar
+      hide: sembunyikan komentar
+    aspect_navigation:
+      select_all: Pilih semua
+      deselect_all: Batalkan semua pilihan
+      no_aspects: Tak ada apapun yang di pilih
+    getting_started:
+      hey: Hey, <%= name %>!
+      no_tags: Hey, anda belum mengikuti 'tags' apapun! Lanjutkan ?
+      alright_ill_wait: Baiklah, Saya akan menunggu
+      preparing_your_stream: Mempersiapkan 'stream' personalisasi anda
+    photo_uploader:
+      looking_good: Puji Tuhan, anda terlihat luar biasa!
+    tags:
+      wasnt_that_interesting: 'OK, sepertinya #<%= tagName %> tidak terlalu menarik...'
+    stream:
+      hide: Sembunyikan
+      public: Publik
+      limited: Terbatas
+      like: Suka
+      unlike: Tidak Suka
+      reshare: Sebarkan/Bagikan Lagi
+      comment: Komentar
+      original_post_deleted: Posting asli di hapus oleh penulis.
+      show_nsfw_post: Tampilkan
+      show_nsfw_posts: Tampilkan semua
+      hide_nsfw_posts: 'Sembunyikan #nsfw'
+      follow: Ikuti
+      unfollow: Berhenti ikuti
+      likes:
+        zero: "<%= count %> Likes"
+        one: "<%= count %> Like"
+        two: "<%= count %> Likes"
+        few: "<%= count %> Likes"
+        many: "<%= count %> Likes"
+        other: "<%= count %> Likes"
+      reshares:
+        zero: "<%= count %> Reshares"
+        one: "<%= count %> Reshare"
+        two: "<%= count %> Reshares"
+        few: "<%= count %> Reshares"
+        many: "<%= count %> Reshares"
+        other: "<%= count %> Reshares"
+      more_comments:
+        zero: Tampilkan <%= count %> komentar
+        other: Tampilkan <%= count %> komentar
+    header:
+      search: 'Temukan nama orang atau #tags'

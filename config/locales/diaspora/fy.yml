@@ -1,0 +1,90 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+fy:
+  settings: Ynstellingen
+  profile: Profyl
+  account: Akkount
+  privacy: Privacy
+  _applications: Tapassingen
+  ok: Okee
+  cancel: Annulearje
+  delete: Fuortsmite
+  username: Brûkersnamme
+  email: E-mail
+  are_you_sure: Bisto wis?
+  public: Iepenbier
+  search: Sykje
+  nsfw: Net Feilich Foar Wurk
+  find_people: 'Minsken of #labels Sykje'
+  more: Mear
+  no_results: Gjin Risseltaten Fûn
+  _contacts: Kontakten
+  aspects:
+    edit:
+      update: fernij
+      updating: fernije
+    seed:
+      family: Famylje
+      work: Wurk
+      acquaintances: Bekenden
+      friends: Freonen
+    index:
+      welcome_to_diaspora: Wolkom by Diaspora, %{name}!
+      new_here:
+        title: Wolkom Nije Brûkers
+        learn_more: Lês mear
+      help:
+        have_a_question: "... in %{link} hawwe?"
+        tag_question: fraach
+        find_a_bug: "... in %{link} fine?"
+  comments:
+    new_comment:
+      comment: Reaksje
+      commenting: Reagearje...
+  contacts:
+    index:
+      title: Kontakten
+      all_contacts: Alle Kontakten
+  conversations:
+    index:
+      no_messages: gjin berjochten
+      inbox: Ynbox
+    show:
+      reply: reagearje
+      replying: Reagearje...
+    new:
+      to: oan
+      subject: ûnderwerp
+      send: Ferstjoere
+      sending: Ferstjoere...
+    create:
+      sent: Berjocht ferstjoerd
+  date:
+    formats:
+      fullmonth_day: "%d %B"
+      birthday: "%d %B"
+      birthday_with_year: "%d %B %Y"
+  invitations:
+    new:
+      language: Taal
+      invite_someone_to_join: Immen útnoadigje foar Diaspora!
+      send_an_invitation: In útnoeging ferstjoere
+  layouts:
+    header:
+      profile: Profyl
+      settings: Ynstellingen
+      logout: Útlogge
+      code: koade
+    application:
+      powered_by: MEA MOOGLIK MAKKE TROCH DIASPORA*
+  notifier:
+    a_post_you_shared: in berjocht.
+    click_here: klik hjirre
+    hello: Guoi %{name}
+    thanks: Tige Tank,
+    reshared:
+      view_post: Toan berjocht >

@@ -1,0 +1,12 @@
+.row
+  .col-md-12
+    %h3
+      = t(".ignored_users")
+
+    - if @blocks.length.zero?
+      %p
+        = t(".no_user_ignored_message")
+    - else
+      #blocked_people
+        - @blocks.each do |block|
+          = render partial: "blocked_person", locals: {block: block, person: block.person}

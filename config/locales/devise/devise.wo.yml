@@ -1,0 +1,30 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+wo:
+  devise:
+    mailer:
+      reset_password_instructions:
+        change: Soppil sama baatujàll
+      welcome: Dalal-jàmm %{username}!
+      hello: Na nga def %{username}?
+    passwords:
+      edit:
+        change_password: Soppil sama baatujàll
+      new:
+        forgot_password: Fatte nga sa baatujàll?
+    sessions:
+      new:
+        login: Xammeeku
+        username: Turu Jëfandikukat
+        password: Baatujàll
+        sign_in: Xammeeku
+        remember_me: Fattaliku ma
+    shared:
+      links:
+        sign_in: Xammeeku
+        sign_up: Sos am sàq
+        forgot_your_password: Fatte nga sa baatujàll?

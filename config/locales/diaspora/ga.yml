@@ -1,0 +1,137 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+ga:
+  settings: Sainroghanna
+  profile: Próifíl
+  account: Cuntas
+  privacy: Príobháideachas
+  _services: Seirbhísí
+  _applications: Feidhmchláir
+  ok: OK
+  cancel: Cealaigh
+  delete: Scrios
+  username: Ainm úsáideora
+  email: Ríomhphoist
+  are_you_sure: An bhfuil tú cinnte?
+  are_you_sure_delete_account: An bhfuil tú cinnte go dteastaíonn uait do chuntas a dhúnadh? Ní féidir é seo a chealaigh!
+  fill_me_out: Líon amach
+  public: Poiblí
+  limited: Teoranta
+  search: Cuardaigh
+  nsfw: NSFW
+  more: Níos mó
+  all_aspects: Gach gnéithe
+  no_results: Níl Torthaí Aimsithe
+  _contacts: Teagmhálacha
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            person:
+              invalid: neamhbhailí.
+            username:
+              taken: glacadh cheana.
+              invalid: neamhbhailí. Tá ach litreacha, uimhreacha agus béim ceadaithe.
+            email:
+              taken: glacadh cheana.
+        person:
+          attributes:
+            diaspora_handle:
+              taken: glacadh cheana.
+  aspects:
+    edit:
+      rename: athainmnigh
+      update: uasdátaigh
+      updating: nuashonrú
+    seed:
+      family: Gaolmhara
+      work: Obair
+      friends: Cháirde
+    index:
+      new_here:
+        learn_more: Breis eolais
+      help:
+        need_help: Cabhair?
+        tag_bug: fabht
+        tag_feature: gné
+  contacts:
+    index:
+      title: Teagmhálacha
+      community_spotlight: Spotsolas Pobail
+      my_contacts: Mo Theagmhálacha
+      all_contacts: Gach Teagmhálacha
+    spotlight:
+      community_spotlight: Spotsolas Pobail
+  conversations:
+    index:
+      inbox: post isteach
+    show:
+      reply: freagair
+    new:
+      to: le
+      subject: ábhar
+      send: Seol
+  invitations:
+    new:
+      language: Teanga
+  layouts:
+    header:
+      settings: Sainroghanna
+      logout: Logáil amach
+      code: cód
+    application:
+      back_to_top: Barr
+  notifications:
+    index:
+      notifications: Fógraí
+      and_others:
+        zero: agus gan ceann eile
+        one: agus ceann eile
+        two: "%{count} chinn"
+        other: "%{count} gcinn"
+      and: agus
+  notifier:
+    hello: Haileo %{name}!
+    thanks: Maith agat,
+    single_admin:
+      admin: Do riarthóir Diaspóra
+    started_sharing:
+      view_profile: Féach ar próifíl %{name}
+    liked:
+      view_post: Féach ar post >
+    reshared:
+      view_post: Féach ar post >
+  people:
+    person:
+      thats_you: Is leatsa!
+    profile_sidebar:
+      location: Suíomh
+      gender: Inscne
+      born: Breithlá
+  photos:
+    destroy:
+      notice: Griangraf scriosta.
+  profiles:
+    edit:
+      your_name: D'ainm
+      first_name: Ainm baiste
+      last_name: Sloinne
+      your_gender: D'inscne
+      your_birthday: Do bhreithlá
+      your_photo: Do ghriangraf
+  registrations:
+    new:
+      enter_email: Seoladh ríomhphoist
+      sign_up: CLÁRÚCHÁN
+      email: RÍOMHPHOIST
+      username: AINM ÚSAIDEOIR
+      password: PASFHOCAL
+      password_confirmation: PASFHOCAL DAINGNITHE
+  users:
+    edit:
+      your_email: Do ríomhphoist

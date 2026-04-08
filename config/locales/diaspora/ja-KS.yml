@@ -1,0 +1,138 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+ja-KS:
+  ok: よっしゃ
+  cancel: やめとく
+  delete: ほかす
+  are_you_sure: ほんまにええの？
+  are_you_sure_delete_account: ほんまにアカウントを削除してええの? この操作を取り消すことはできへん！
+  fill_me_out: 記入してみな
+  no_results: 何も見つからへん
+  _contacts: ツレ
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            username:
+              taken: 既に使われてるんで。
+            email:
+              taken: 既に使われてるんで。
+        person:
+          attributes:
+            diaspora_handle:
+              taken: 既に使われてるんで。
+        contact:
+          attributes:
+            person_id:
+              taken: このユーザーの他の連絡先と重複しちゃあかん。
+        reshare:
+          attributes:
+            root_guid:
+              taken: えっ？  すでにこの投稿をわけわけしてるで！
+  errors:
+    messages:
+      content_type_whitelist_error: あなたは%{content_type}ファイルをアップロードしちゃアカン
+      content_type_blacklist_error: あなたは%{content_type}ファイルをアップロードしちゃアカン
+  admins:
+    user_search:
+      users:
+        zero: ユーザーが見つからへん
+        other: "%{count}人のユーザーが見つかった"
+    user_entry:
+      'yes': ええ
+      'no': いや
+    stats:
+      comments:
+        zero: つっこみなし
+        other: つっこみ %{count}件
+      shares:
+        zero: わけわけなし
+        other: わけわけ %{count}件
+  aspects:
+    edit:
+      confirm_remove_aspect: ほんまにこのアスペクトを削除してええの?
+    index:
+      keep_pod_running: 毎月の寄付で、%{pod}の高速実行を維持し、サーバー、彼らのコーヒー、修正を買うぜ！
+  bookmarklet:
+    post_something: ダイアスポラにつぶやく
+  comments:
+    new_comment:
+      comment: つっこむ
+      commenting: つっこみ投稿中…
+  contacts:
+    index:
+      title: ツレたち
+  conversations:
+    index:
+      no_messages: メッセージなし
+  help:
+    sharing:
+      title: わけわけ
+  likes:
+    create:
+      error: ええやん！に失敗した。
+    destroy:
+      error: ええやん！の取消に失敗した。
+  notifications:
+    comment_on_post:
+      other: "%{actors}さんが投稿%{post_link}につっこんだで。"
+    also_commented:
+      other: "%{actors}さんも%{post_author}さんの投稿%{post_link}につっこんだで。"
+    mentioned_in_comment:
+      other: "%{actors} が、投稿 %{post_link} に <a href='%{comment_path}'>つっこみ</a> でメンションしたで。"
+    liked:
+      other: "%{actors}さんが投稿%{post_link}にええやん！と言うてたで。"
+    also_commented_deleted:
+      other: "\"%{actors}さんが削除された投稿につっこんだで。"
+    liked_post_deleted:
+      other: "%{actors}さんが削除された投稿にええやん！て言うてたで。"
+    mentioned_in_comment_deleted:
+      other: "%{actors} が、削除したつっこみでメンションしたで。"
+    index:
+      comment_on_post: 投稿につっこむ
+      liked: ええやん！した
+      reshared: わけわけした
+  notifier:
+    liked:
+      liked: "%{name}さんが、あなたの投稿にええやん！て言うてたで"
+      limited_post: "%{name} さんが、あなたの限定公開の投稿にええやん！て言うてたで"
+  api:
+    openid_connect:
+      authorizations:
+        new:
+          bad_request: クライアント ID またはリダイレクト URI が見つからへん
+          client_id_not_found: client_id %{client_id} のクライアント、リダイレクト URI %{redirect_uri} が見つからへん
+        destroy:
+          fail: ID %{id} の許可を取り消すことができへんかった
+  people:
+    index:
+      no_results: キーワードを入れないと検索できへんや！
+      no_one_found: "…1人も見つからへんかった。"
+  posts:
+    show:
+      reshare_by: "%{author}さんがわけわけ"
+  reshares:
+    reshare:
+      reshare_confirmation: "%{author}さんの投稿をわけわけしたろか?"
+  blocks:
+    create:
+      success: 'OK、そのユーザーは再度ストリームに表示されへん。 #silencio!'
+      failure: 'このユーザーを無視できへんかった。 #evasion'
+    destroy:
+      failure: 'このユーザーの無視を解除できへんかった。 #evasion'
+  shared:
+    public_explain:
+      share: わけわけ
+  streams:
+    comment_stream:
+      title: つっこみを入れた投稿
+    liked:
+      title: ええやん！した投稿
+  users:
+    edit:
+      liked: あなたの投稿をええやん！したとき

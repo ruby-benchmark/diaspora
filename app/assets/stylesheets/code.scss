@@ -1,0 +1,16 @@
+code { white-space: normal; }
+
+pre {
+  overflow-x: auto;
+  white-space: pre;
+  code { white-space: pre; }
+}
+
+// For inline-code inside links, let's force the color to the default link
+// color to make them be recognizable as links.
+p a {
+  code,
+  pre {
+    color: $link-color;
+  }
+}

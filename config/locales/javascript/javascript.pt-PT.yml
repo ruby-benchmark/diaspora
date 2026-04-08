@@ -1,0 +1,267 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+pt-PT:
+  javascripts:
+    timeago:
+      prefixAgo: ''
+      suffixAgo: ''
+      suffixFromNow: a partir de agora
+      prefixFromNow: ''
+      seconds: menos de um minuto
+      minute: cerca de um minuto
+      minutes:
+        one: 1 minuto
+        other: "%d minutos"
+      hour: cerca de uma hora
+      hours:
+        one: cerca de 1 hora
+        other: cerca de %d horas
+      day: um dia
+      days:
+        one: 1 dia
+        other: "%d dias"
+      month: cerca de um mês
+      months:
+        one: 1 mês
+        other: "%d meses"
+      year: cerca de um ano
+      years:
+        one: 1 ano
+        other: "%d anos"
+    cancel: Cancelar
+    confirm_dialog: Tem a certeza?
+    create: Criar
+    delete: Eliminar
+    ignore: Ignorar
+    report:
+      prompt: Por favor, insira um motivo
+      prompt_default: por exemplo, conteúdo ofensivo
+      name: Comunicar
+      status:
+        created: O relatório foi criado com sucesso
+        exists: O relatório já existe
+    ignore_user: Ignorar este utilizador?
+    hide_post: Ocultar esta publicação?
+    hide_post_failed: Não foi possível ocultar esta publicação
+    remove_post: Remover esta publicação?
+    and: e
+    comma: ","
+    edit: Editar
+    show_all: Mostrar tudo
+    admins:
+      dashboard:
+        up_to_date: O seu servidor está atualizado!
+        outdated: O seu servidor está desatualizado.
+    admin:
+      pods:
+        pod: Servidor
+        ssl: SSL
+        ssl_enabled: SSL ativado
+        ssl_disabled: SSL desativado
+        added: Adicionado
+        status: Estado
+        states:
+          unchecked: Não verificado
+          no_errors: CONFIRMAR
+          dns_failed: Resolução de nome (DNS) falhou
+          net_failed: A tentativa de ligação falhou
+          ssl_failed: A ligação segura (SSL) falhou
+          http_failed: A ligação HTTP falhou
+          version_failed: Não é possível obter a versão do software
+        actions: Ações
+        offline_since: 'off-line desde:'
+        last_check: 'última verificação:'
+        more_info: Mostrar mais informação
+        check: realizar teste de ligação
+        recheck:
+          success: O servidor acabou de ser novamente verificado.
+          failure: A verificação não foi efetuada.
+        follow_link: abrir hiperligação num navegador
+        no_info: De momento, não existe informação adicional disponível
+        server_software: 'Software do servidor:'
+        response_time: 'Tempo de resposta:'
+        ms:
+          one: "<%= count %>ms"
+          other: "<%= count %>ms"
+        unknown: desconhecido
+        not_available: indisponível
+    aspects:
+      name: Nome
+      create:
+        add_a_new_aspect: Adicionar um novo aspeto
+        success: O seu novo aspeto <%= name %> foi criado
+        failure: A criação do aspeto falhou.
+    errors:
+      connection: Não é possível ligar ao servidor.
+    contacts:
+      add_contact: Adicionar contacto
+      remove_contact: Remover contacto
+      error_add: Não foi possível adicionar <%= name %> ao aspeto :(
+      error_remove: Não foi possível remover <%= name%> do aspeto :(
+      search_no_results: Não foram encontrados contactos
+    my_activity: A minha atividade
+    my_stream: Fluxo
+    my_aspects: Os meus aspetos
+    publisher:
+      near_from: 'Publicado em: <%= location %>'
+      option: Responder
+      add_option: Adicionar uma resposta
+      question: Pergunta
+      markdown_editor:
+        preview: Pré-visualizar
+        write: Escrever
+        tooltips:
+          bold: Negrito
+          italic: Itálico
+          insert_link: Inserir hiperligação
+          insert_image: Inserir imagem
+          preview: Pré-visualizar mensagem
+          write: Editar mensagem
+          cancel: Cancelar mensagem
+          code: Inserir código
+        texts:
+          strong: texto negrito
+          italic: texto itálico
+          code: código aqui
+    bookmarklet:
+      post_something: Publicar no diaspora*
+      post_submit: A submeter a publicação...
+    aspect_dropdown:
+      add_to_aspect: Adicionar contacto
+      select_aspects: Selecionar grupos
+      all_aspects: Todos os grupos
+      updating: a atualizar...
+      mobile_row_checked: "<%= name %> (remover)"
+      mobile_row_unchecked: "<%= name %> (adicionar)"
+      stopped_sharing_with: Deixou de partilhar com <%= name %>.
+      started_sharing_with: Começou a partilhar com <%= name %>!
+      error: Não foi possível começar a partilhar com <%= name %>. Está a ignorá-los?
+      error_remove: Não foi possível remover <%= name %> do aspeto :(
+      toggle:
+        zero: Selecione os grupos
+        one: Em <%=count %> grupo
+        other: Em <%=count %> grupos
+    show_more: Mostrar mais
+    failed_to_post_message: Falhou ao publicar a mensagem!
+    failed_to_remove: Não foi possível remover a entrada!
+    comments:
+      show: Mostrar todos os comentários
+      hide: Ocultar comentários
+    reshares:
+      successful: A publicação foi repartilhada com sucesso!
+      post: Voltar a partilhar a publicação de <%= name %>?
+    aspect_navigation:
+      select_all: Selecionar todos
+      deselect_all: Desmarcar todos
+      no_aspects: Nenhuns aspectos selecionados
+      add_an_aspect: "+ Adicionar um aspeto"
+    getting_started:
+      hey: Olá, <%= name %>!
+      no_tags: Olá, não está a seguir quaisquer etiquetas! Mesmo assim, continuar?
+      alright_ill_wait: Tudo bem, eu irei aguardar.
+      preparing_your_stream: A preparar o seu fluxo personalizado...
+    photo_uploader:
+      upload_photos: Enviar as fotografias
+      looking_good: OMD, tu estás fantástico(a)!
+      completed: "<%= file %> concluído"
+      invalid_ext: O {file} tem uma extensão inválida. Só são permitidas as extensões {extensions}.
+      size_error: O {file} é muito grande, o tamanho máximo do ficheiro é {sizeLimit}.
+      empty: O {file} não tem dados, por favor, selecione novamente os ficheiros, sem este.
+    tags:
+      wasnt_that_interesting: 'Ok, eu suponho que #<%= tagName %> não era assim tão interessante...'
+    people:
+      not_found: e ninguém foi encontrado...
+      mention: Menção
+      message: Mensagem
+      edit_my_profile: Editar o meu perfil
+    profile:
+      edit: Editar
+      add_some: Adicionar algum
+      you_have_no_tags: Não tem etiquetas!
+      bio: Biografia
+      location: Localização
+      gender: Sexo
+      born: Aniversário
+      photos: Fotografias
+      posts: Publicações
+    notifications:
+      mark_read: Marcar como lida
+      mark_unread: Marcar como não lida
+    stream:
+      hide: Ocultar
+      public: Público
+      limited: Limitado
+      like: Gostar
+      unlike: Não gostar
+      reshare: Voltar a Partilhar
+      comment: Comentar
+      original_post_deleted: Publicação original eliminada pelo autor.
+      show_nsfw_post: Mostrar publicação
+      show_nsfw_posts: Mostrar tudo
+      hide_nsfw_posts: 'Ocultar publicações #nsfw'
+      follow: Seguir
+      unfollow: Anular Seguir
+      enable_post_notifications: Ativar notificações para esta publicação
+      disable_post_notifications: Desativar notificações para esta publicação
+      permalink: Ligação permanente
+      via: via <%= provider %>
+      likes:
+        zero: "<%= count %> gosto"
+        one: "<%= count %> gosto"
+        other: "<%= count %> gostos"
+      reshares:
+        zero: "<%= count %> repartilhas"
+        one: "<%= count %> repartilha"
+        other: "<%= count %> repartilhas"
+      more_comments:
+        zero: Mostrar mais <%= count %> comentários
+        one: Mostrar mais <%= count %> comentário
+        other: Mostrar mais <%= count %> comentários
+      followed_tag:
+        title: "#Etiquetas Seguidas"
+        add_a_tag: Adicionar uma etiqueta
+        follow: Seguir
+      tags:
+        follow: 'Seguir #<%= tag %>'
+        following: 'A Seguir #<%= tag %>'
+        stop_following: 'Parar de seguir #<%= tag %>'
+        stop_following_confirm: 'Deixar de seguir #<%= tag %>'
+        follow_error: 'Não foi possível seguir #<%= tag %> :('
+        stop_following_error: 'Não foi possível deixar de seguir #<%= tag %> :('
+    header:
+      home: 'Inicio '
+      profile: Perfil
+      contacts: 'Contactos '
+      settings: Definições
+      help: Ajuda
+      admin: Administrador
+      moderator: Moderador
+      log_out: Sair
+      toggle_navigation: Alternar navegação
+      notifications: Notificações
+      conversations: Conversações
+      search: Procurar
+      recent_notifications: Notificações recentes
+      mark_all_as_read: Marcar tudo como lido
+      view_all: Ver tudo
+      close: Fechar
+    viewer:
+      reshared: Repartilhado
+    poll:
+      vote: Votar
+      original_post: publicação original
+      result: Resultado
+      count:
+        one: 1 voto até agora
+        other: "<%=count%> votos até agora"
+      answer_count:
+        zero: 0 votos
+        one: 1 voto
+        other: "<%=count%> votos"
+      show_result: Mostrar resultado
+      close_result: Ocultar resultado
+      your_vote: O seu voto

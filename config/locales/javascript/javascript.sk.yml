@@ -1,0 +1,205 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+sk:
+  javascripts:
+    timeago:
+      prefixAgo: ''
+      suffixAgo: ''
+      suffixFromNow: ''
+      prefixFromNow: ''
+      seconds: pred menej ako minútou
+      minute: asi pred minútou
+      minutes:
+        other: pred %d minútami
+      hour: asi pred hodinou
+      hours:
+        other: asi pred %d hodinami
+      day: včera
+      days:
+        other: pred %d dňami
+      month: asi pred mesiacom
+      months:
+        other: pred %d mesiacmi
+      year: asi pred rokom
+      years:
+        other: pred %d rokmi
+    confirm_dialog: Určite?
+    delete: Odstrániť
+    ignore: Ignorovať
+    report:
+      prompt: 'Prosím, uveďte dôvod:'
+      prompt_default: urážajúci obsah
+      name: Správa
+      status:
+        created: Úspešne si vytvoril(a) správu
+        exists: Správa už existuje
+    ignore_user: Ignorovať tohto používateľa?
+    and: a
+    comma: ","
+    edit: Upraviť
+    errors:
+      connection: K serveru sa nedá pripojiť.
+    my_activity: Moja aktivita
+    my_stream: Nástenka
+    my_aspects: Moje kategórie
+    publisher:
+      near_from: Odoslané z obce:<%= location %>
+      option: Možnosť <%= nr %>
+      add_option: Pridať možnosť
+      question: Otázka
+      markdown_editor:
+        preview: Ukážka
+        tooltips:
+          bold: Tučné písmo
+          italic: Kurzíva
+          heading: Nadpis
+          insert_link: Vložiť odkaz
+          insert_image: Vložiť obrázok
+          insert_ordered_list: Vložiť očíslovaný zoznam
+          insert_unordered_list: Vložiť zoznam bez čísel
+          quote: Vložiť citát
+          code: Vložiť kód
+        texts:
+          strong: text tučným písmom
+          italic: text kurzívou
+          heading: text nadpisu
+          insert_link_description_text: sem zadaj popis odkazu
+          insert_link_help_text: Sem vlož odkaz
+          insert_image_description_text: sem zadajte popis obrázka
+          insert_image_help_text: Sem vlož obrázok
+          insert_image_title: sem zadaj titulok obrázka
+          list: sem text zoznamu
+          quote: sem text citátu
+    bookmarklet:
+      post_something: Poslať na diasporu*
+      post_submit: Posiela sa príspevok...
+      post_success: Odoslané! Vyskakovacie okno sa zatvára...
+    aspect_dropdown:
+      add_to_aspect: Pridať kontakt
+      select_aspects: Vyber si kategórie
+      all_aspects: Všetky kategórie
+      updating: prebieha aktualizácia...
+      stopped_sharing_with: "<%= name %> bol(a) vymazaný (-á) z tvojich kontaktov."
+      started_sharing_with: "<%= name %> bol(a) pridaný (-á) do tvojich kontaktov!"
+      error: "<%= name %> sa nedá pridať do tvojich kontaktov. Neignoruješ ho (ju)?"
+      error_remove: "<%= name %> sa nedá odstrániť z kategórie :("
+      toggle:
+        zero: Vyber si kategórie
+        one: V <%= count %> kategórii
+        few: V <%= count %> kategóriách
+        other: V(o) <%= count %>kategóriách
+    show_more: Zobraziť viac
+    failed_to_post_message: Správu sa nepodarilo poslať!
+    comments:
+      show: Zobraziť všetky komentáre
+      hide: Skryť komentáre
+      no_comments: Ešte tu nie sú žiadne príspevky.
+    reshares:
+      successful: Tento príspevok si úspešne znova ukázal(a) priateľom!
+      post: Znova ukázať priateľom príspevok, ktorý napísal(a) <%= name %>?
+    aspect_navigation:
+      select_all: Označiť všetky
+      deselect_all: Odznačiť všetky
+      no_aspects: Nevybral(a) si žiadne kategórie
+      add_an_aspect: "+ Pridať kategóriu"
+    getting_started:
+      hey: Hej, <%= name %>!
+      no_tags: Hej, nesleduješ žiadne značky!  Chceš aj tak pokračovať?
+      alright_ill_wait: V poriadku, počkám.
+      preparing_your_stream: Pripravuje sa tvoja upravená nástenka...
+    photo_uploader:
+      upload_photos: Nahrať fotky
+      looking_good: No teda, vyzeráš super!
+      completed: "<%= file %> hotovo"
+      error: Pri nahrávaní súboru<%= file %> sa vyskytla chyba
+      invalid_ext: Súbor {file} má neplatnú príponu. Povolené sú len prípony {extensions}.
+      size_error: Súbor {file} je príliš veľký, maximálna povolená veľkosť je {sizeLimit}.
+      empty: Súbor {file} je prázdny; vyber, prosím, znova všetky súbory okrem tohto.
+    tags:
+      wasnt_that_interesting: 'OK, značka #<%= tagName %> asi vôbec nebola zaujímavá.'
+    people:
+      not_found: "...a nikto sa nenašiel."
+    profile:
+      born: Narodeniny
+    notifications:
+      mark_read: Označiť ako prečítané
+      mark_unread: Označiť ako neprečítané
+    stream:
+      hide: Schovať
+      public: Verejný
+      limited: Súkromný
+      like: Páči sa mi to
+      unlike: Už sa mi to nepáči
+      reshare: Znova sa podeliť
+      comment: Okomentovať
+      original_post_deleted: Pôvodný príspevok odstránil jeho autor.
+      show_nsfw_post: Zobraziť príspevok
+      show_nsfw_posts: Zobraziť všetky
+      hide_nsfw_posts: 'Schovať príspevky #nsfw'
+      follow: Sledovať
+      unfollow: Nesledovať
+      disable_post_notifications: Neposielať oznamy o tomto príspevku
+      via: cez <%= provider %>
+      likes:
+        zero: "<%= count %> ľuďom sa to páči"
+        one: "<%= count %> človeku sa to páči"
+        few: "<%= count %> ľuďom sa to páči"
+        other: "<%= count %> ľuďom sa to páči"
+      reshares:
+        zero: "<%= count %> opätovných zdieľaní"
+        one: "<%= count %> opätovné zdieľanie"
+        few: "<%= count %> opätovné zdieľania"
+        other: "<%= count %> opätovných zdieľaní"
+      comments:
+        zero: "<%= count %> komentárov"
+        one: "<%= count %> komentár"
+        few: "<%= count %> komentáre"
+        other: "<%= count %> komentárov"
+      more_comments:
+        zero: Zobraziť ďalších <%= count %> komentárov
+        one: Zobraziť ešte <%= count %> komentár
+        few: Zobraziť ďalšie <%= count %> komentáre
+        other: Zobraziť ďalších <%= count %> komentárov
+      followed_tag:
+        title: "#Sledované značky"
+        add_a_tag: Pridať značku
+        follow: Sledovať
+      tags:
+        follow: 'Sledovať #<%= tag %>'
+        following: 'Sleduje(š) #<%= tag %>'
+        stop_following: 'Prestať sledovať #<%= tag %>'
+    header:
+      home: Úvodná stránka
+      profile: Profil
+      contacts: Kontakty
+      settings: Nastavenia
+      help: Pomoc
+      admin: Administrátor
+      log_out: Odhlásiť sa
+      notifications: Oznamy
+      conversations: Rozhovory
+      search: Vyhľadať
+      recent_notifications: Najnovšie oznamy
+      mark_all_as_read: Označiť všetky ako prečítané
+      view_all: Zobraziť všetko
+      close: zatvoriť
+    viewer:
+      reshared: Znova ukázané
+    poll:
+      vote: Hlasovať
+      result: Výsledok
+      count:
+        one: zatiaľ <%=count%> hlas
+        few: zatiaľ <%=count%> hlasy
+        other: zatiaľ <%=count%> hlasov
+      answer_count:
+        zero: 0 hlasov
+        one: 1 hlas
+        few: "<%=count%> hlasy"
+        other: "<%=count%> hlasov"
+      show_result: Zobraziť výsledok
+      close_result: Skryť výsledok

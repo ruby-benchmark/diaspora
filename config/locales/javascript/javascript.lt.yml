@@ -1,0 +1,105 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+lt:
+  javascripts:
+    timeago:
+      prefixAgo: ''
+      suffixAgo: prieš
+      suffixFromNow: nuo dabar
+      prefixFromNow: ''
+      seconds: mažiau nei 1 min.
+      minute: maždaug 1 min.
+      minutes:
+        other: "%d min."
+      hour: maždaug1 val.
+      hours:
+        other: maždaug %d val.
+      day: 1 d.
+      days:
+        other: "%d d."
+      month: maždaug 1 mėn.
+      months:
+        other: "%d mėn."
+      year: maždaug 1 m.
+      years:
+        other: "%d m."
+    confirm_dialog: Ar Jūs tuo įsitikinęs?
+    delete: Ištrinti
+    ignore: Ignoruoti
+    my_activity: Mano veikla
+    my_stream: Srautas
+    aspect_dropdown:
+      add_to_aspect: Pridėti prie kontaktų
+      select_aspects: Pasirinkti kategorijas
+      all_aspects: Visos kategorijos
+      stopped_sharing_with: Jūs sustabdėte dalijimąsi su <%= name %>
+      started_sharing_with: Jūs pradėjote dalijimąsi su <%= name %>!
+      error: Negalima pradėti dalijimosi su <%= name %>. Gal įjungtas ignoravimas?
+      toggle:
+        zero: Pasirinkite kategorijas
+        one: "<%= count %> kategorijoje"
+        few: "<%= count %> kategorijose"
+        other: "<%= count %> kategorijų"
+    show_more: Rodyti daugiau
+    failed_to_post_message: Nepavyko išsiųsti žinutės!
+    comments:
+      show: Rodyti visus komentarus
+      hide: Slėpti komentarus
+    aspect_navigation:
+      select_all: Pasirinkti viską
+      deselect_all: Nesirinkti nieko
+      no_aspects: Nepasirinkta nei viena kategorija
+    getting_started:
+      hey: Sveiki, <%= name %>!
+      no_tags: Labas, Jūs nieko nesekate! Visitiek tęsti?
+      alright_ill_wait: Suprantama, aš galiu palaukti!
+      preparing_your_stream: Ruošiamas Jūsų Srautas...
+    photo_uploader:
+      looking_good: Wow, Jūs atrodote nuostabiai!
+    tags:
+      wasnt_that_interesting: 'Na gerai, greičiausiai #<%= tagName%> tai nebuvo taip įdomu...'
+    stream:
+      hide: Slėpti
+      public: viešas
+      limited: Ribotas
+      like: Mėgti
+      unlike: Nemėgti
+      reshare: Pasidalinti
+      comment: Komentuoti
+      original_post_deleted: Įrašą ištrynė jo autorius.
+      show_nsfw_post: Rodyti įrašą
+      show_nsfw_posts: Rodyti viską
+      hide_nsfw_posts: 'Slėpti #nsfw įrašus'
+      follow: Sekti
+      unfollow: Nesekti
+      likes:
+        zero: "<%= count %> mėgstančių"
+        one: "<%= count %> mėgstantis"
+        few: "<%= count %> mėgstantys"
+        other: "<%= count %> mėgstančių"
+      reshares:
+        zero: Dalijasi <%= count %>
+        one: Dalijasi <%= count %>
+        few: Dalijasi <%= count %>
+        other: Dalijasi <%= count %>
+      more_comments:
+        zero: Rodyti <%= count %> komentarų
+        one: Rodyti dar <%= count %> komentarą
+        few: Rodyti dar <%= count %> komentarus
+        other: Rodyti dar <%= count %> komentarų
+    header:
+      home: Pradžia
+      profile: Anketa
+      contacts: Kontaktai
+      settings: Nustatymai
+      admin: Administruoti
+      log_out: Atsijungti
+      notifications: Įspėjimai
+      search: Paieška
+      recent_notifications: Naujausi įspėjimai
+      mark_all_as_read: Pažymėti viską kaip skaitytą
+      view_all: Rodyti viską

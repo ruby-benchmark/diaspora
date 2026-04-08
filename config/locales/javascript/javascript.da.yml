@@ -1,0 +1,328 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+da:
+  javascripts:
+    timeago:
+      prefixAgo: før
+      suffixAgo: siden
+      suffixFromNow: fra nu
+      prefixFromNow: om
+      inPast: når som helst
+      seconds: mindre end et minut
+      minute: ca. et minut
+      minutes:
+        one: 1 minut
+        other: "%d minutter"
+      hour: ca. en time
+      hours:
+        one: omkring en time
+        other: omkring %d timer
+      day: en dag
+      days:
+        one: 1 dag
+        other: "%d dage"
+      month: ca. en måned
+      months:
+        one: 1 måned
+        other: "%d måneder"
+      year: ca. et år
+      years:
+        one: 1 år
+        other: "%d år"
+      wordSeparator: " "
+    cancel: Annuller
+    confirm_dialog: Er du sikker?
+    confirm_unload: Bekræft venligst at du ønsker at forlade denne side - data, du har indtastet, vil ikke blive gemt.
+    create: Opret
+    delete: Slet
+    ignore: Ignorer
+    report:
+      prompt: 'Vær venlig at give en grund:'
+      prompt_default: f.eks. stødende indhold
+      name: Anmeld
+      status:
+        created: Der blev lavet en rapport
+        exists: Der eksisterer allerede en rapport
+    ignore_user: Ignorer denne bruger?
+    ignore_failed: Kan ikke ignorere denne bruger
+    hide_post: Skjul dette indlæg?
+    hide_post_failed: Kan ikke skjule indlæg
+    remove_post: Fjern dette indlæg?
+    unblock_failed: Det lykkedes ikke at afblokere denne bruger
+    and: og
+    comma: ","
+    edit: Rediger
+    no_results: Ingen resultater fundet
+    show_all: Vis alle
+    admins:
+      dashboard:
+        up_to_date: Din pod er opdateret!
+        outdated: Din pod er ikke opdateret.
+        compare_versions: Den seneste Diaspora udgave er <%= latestVersion %>, og din pod kører <%= podVersion %>.
+        error: Ude af stand til at bestemme den seneste Diaspora-version.
+    admin:
+      pods:
+        pod: Pod
+        ssl: SSL
+        ssl_enabled: SSL er slået til
+        ssl_disabled: SSL er slået fra
+        added: Tilføjet
+        status: Status
+        states:
+          unchecked: Ikke markeret
+          no_errors: OK
+          dns_failed: Name resolution (DNS) fejlede
+          net_failed: Tilslutningsforsøg fejlede
+          ssl_failed: Sikker forbindelse (SSL) fejlede
+          http_failed: HTTP tilslutning fejlede
+          version_failed: Ude af stand til at hente software version
+          unknown_error: Der er sket en uspecificeret fejl under checket
+        actions: Handlinger
+        offline_since: 'offline siden:'
+        last_check: 'seneste check:'
+        more_info: vis mere information
+        check: lav en tilslutningstest
+        recheck:
+          success: Pod-serveren er blevet markeret igen.
+          failure: Checket blev ikke gennemført.
+        follow_link: åben link i browser
+        no_info: Ingen yderligere information til rådighed på dette tidspunkt
+        server_software: 'Server software:'
+        response_time: 'Svartid:'
+        ms:
+          one: "<%= count %>ms"
+          other: "<%= count %>ms"
+        unknown: ukendt
+        not_available: ikke tilgængelig
+        unchecked:
+          one: Der er stadig en pod der slet ikke er blevet checket.
+          other: Der er stadig <%= count %> pod-servere der slet ikke er blevet checket.
+        version_failed:
+          one: Der er en pod der ikke har versions-info (en gammel pod, eller en uden node-info).
+          other: Der er <%= count %> poder der ikke har versions-info (en gammel pod, eller en uden node-info).
+        errors:
+          one: 'Forbindelses-testen viser fejl på en pod. '
+          other: 'Forbindelses-testen viser fejl på <%= count %> pod-servere. '
+    aspects:
+      name: Navn
+      create:
+        add_a_new_aspect: Tilføj et nyt aspekt
+        success: Aspektet <%= name %> er blevet oprettet
+        failure: Fejl under oprettelse af aspektet.
+    errors:
+      connection: Kan ikke forbinde til serveren.
+    contacts:
+      add_contact: Tilføj kontakt
+      remove_contact: Fjern kontakt
+      error_add: Kunne ikke tilføje <%= name %> til aspektet :(
+      error_remove: Kunne ikke fjerne <%= name %> fra aspektet :(
+      search_no_results: Ingen kontakter fundet
+    my_activity: Min aktivitet
+    my_stream: Strøm
+    my_aspects: Mine aspekter
+    publisher:
+      near_from: 'Sendt fra: <%= location %>'
+      option: Svar
+      add_option: Tilføj et svar
+      question: Spørgsmål
+      markdown_editor:
+        preview: Forhåndsvisning
+        write: Skriv
+        tooltips:
+          bold: Fed
+          italic: Kursiv
+          heading: Overskrift
+          insert_link: Indsæt link
+          insert_image: Indsæt billede
+          insert_ordered_list: Indsæt ordnet liste
+          insert_unordered_list: Indsæt uordnet liste
+          preview: Forhåndsvisning af besked
+          write: Rediger besked
+          cancel: Annuller besked
+          quote: Indsæt citat
+          code: Indsæt kode
+        texts:
+          strong: fed tekst
+          italic: tekst i kursiv
+          heading: Overskriftstekst
+          insert_link_description_text: skriv link-beskrivelse her
+          insert_link_help_text: Indsæt link her
+          insert_image_description_text: skriv billedbeskrivelse her
+          insert_image_help_text: indsæt billed-link her
+          insert_image_title: skriv billedtitel her
+          list: listetekst her
+          quote: citattekst her
+          code: kode her
+      mention_success: "<%= names %> blev omtalt."
+    bookmarklet:
+      post_something: Lav et indlæg på Diaspora
+      post_submit: Indsender indlæg ...
+      post_success: Det er indsendt! lukker popup vinduet ...
+    aspect_dropdown:
+      add_to_aspect: Tilføj kontakt
+      select_aspects: Vælg aspekter
+      all_aspects: Alle aspekter
+      updating: opdaterer ...
+      mobile_row_checked: "<%= name %> (fjern)"
+      mobile_row_unchecked: "<%= name %> (tilføj)"
+      stopped_sharing_with: Du deler ikke længere med <%= name %>.
+      started_sharing_with: Du er begyndt at dele med <%= name %>!
+      error: Kunne ikke begynde at dele med <%= name %>. Ignorerer du vedkommende?
+      error_remove: Kunne ikke fjerne <%= name %> fra aspektet. :(
+      toggle:
+        one: I <%= count %> aspekt
+        other: I <%= count %> aspekter
+    show_more: Vis mere
+    failed_to_post_message: Kunne ikke indsende besked!
+    failed_to_remove: Det lykkedes ikke at fjerne indlægget!
+    comments:
+      show: Vis alle kommentarer
+      hide: Skjul kommentarer
+      no_comments: Der er endnu ingen kommentarer.
+    reshares:
+      successful: Indlægget er blevet videredelt!
+      post: Videredel <%= name %>s indlæg?
+    aspect_navigation:
+      select_all: Vælg alle
+      deselect_all: Fravælg alle
+      no_aspects: Ingen valgte aspekter
+      add_an_aspect: "+ Tilføj et aspekt"
+    getting_started:
+      hey: Hej <%= name %>!
+      no_tags: Du har ikke fulgt nogen tags! Vil du fortsætte alligevel?
+      alright_ill_wait: Okay, jeg venter.
+      preparing_your_stream: Forbereder din personlige strøm...
+    photo_uploader:
+      upload_photos: Upload fotografier
+      looking_good: Du ser virkelig pæn ud!
+      completed: "<%= file %> fuldført."
+      error: Der er opstået et problem med at lægge filen <%= file %> op.
+      invalid_ext: "{file} har en ugyldig filtype. Kun {extensions} er tilladt."
+      size_error: "{file} er for stor. Maksimal filstørrelse er {sizeLimit}."
+      empty: "{file} er tom. Vælg venligst filer igen uden den."
+    tags:
+      wasnt_that_interesting: 'OK, #<%= tagName %> var ikke var så spændende alligevel ...'
+    people:
+      not_found: Og ingen blev fundet ...
+      mention: Nævn
+      message: Besked
+      edit_my_profile: Rediger min profil
+      stop_ignoring: Hold op med at ignorere
+      helper:
+        is_sharing: "<%= name %> deler med dig"
+        is_not_sharing: "<%= name %> deler ikke med dig"
+    profile:
+      edit: Rediger
+      add_some: Tilføj nogen
+      you_have_no_tags: Du har ingen tags!
+      bio: Biografi
+      location: Sted
+      gender: Køn
+      born: Fødselsdag
+      photos: Fotos
+      posts: Indlæg
+    conversation:
+      create:
+        no_recipient: Husk at tilføje en modtager!
+      new:
+        no_contacts: Du skal tilføje en eller flere kontakter før du kan starte en samtale.
+    notifications:
+      mark_read: Marker som læst
+      mark_unread: Marker som ulæst
+      new_notifications:
+        one: Du har <%= count %> ulæst notifikation
+        other: Du har <%= count %> ulæste notifikationer
+    stream:
+      hide: Skjul
+      public: Offentlig
+      limited: Begrænset
+      like: Synes om
+      unlike: Synes ikke om
+      reshare: Videredel
+      comment: Kommenter
+      original_post_deleted: Oprindeligt indlæg er slettet af forfatteren
+      show_nsfw_post: Vis indlæg
+      show_nsfw_posts: Vis alle
+      hide_nsfw_posts: 'Skjul #nsfw indlæg'
+      follow: Følg
+      unfollow: Følg ikke
+      enable_post_notifications: Slå notifikationer til for dette indlæg
+      disable_post_notifications: Slå notifikationer fra for dette indlæg
+      permalink: Permalink
+      via: via <%= provider %>
+      no_posts_yet: Der er endnu ikke nogen indlæg at vise.
+      likes:
+        zero: "<%= count %> synes om dette"
+        one: "<%= count %> synes om dette"
+        two: "<%= count %> synes om dette"
+        few: "<%= count %> synes om dette"
+        many: "<%= count %> synes om dette"
+        other: "<%= count %> synes om dette"
+      reshares:
+        zero: "<%= count %> videredelinger"
+        one: "<%= count %> videredeling"
+        two: "<%= count %> videredelinger"
+        few: "<%= count %> videredelinger"
+        many: "<%= count %> videredelinger"
+        other: "<%= count %> videredelinger"
+      comments:
+        zero: "<%= count %> kommentarer"
+        one: "<%= count %> kommentar"
+        other: "<%= count %> kommentarer"
+      more_comments:
+        zero: Vis <%= count %> ekstra kommentarer
+        one: Vis <%= count %> ekstra kommentar
+        two: Vis <%= count %> ekstra kommentarer
+        few: Show <%= count %> flere kommentarer
+        many: Show <%= count %> flere kommentarer
+        other: Vis <%= count %> ekstra kommentarer
+      followed_tag:
+        title: "#Fulgte tags"
+        add_a_tag: Tilføj et tag
+        follow: Følg
+      tags:
+        follow: 'Følg #<%= tag %>'
+        following: 'Følger #<%= tag %>'
+        stop_following: 'Hold op med at følge #<%= tag %>'
+        stop_following_confirm: 'Ophør med at følge #<%= tag %>'
+        follow_error: 'Kunne ikke følge #<%= tag %>'
+        stop_following_error: 'Kunne ikke ophøre med at følge #<%= tag %>'
+    header:
+      home: Hjem
+      profile: Profil
+      contacts: Kontakter
+      settings: Indstillinger
+      help: Hjælp
+      admin: Admin
+      moderator: Moderator
+      log_out: Log ud
+      toggle_navigation: Slå navigation til/fra
+      switch_to_touch_optimized_mode: Skift til touch-optimeret tilstand
+      notifications: Meddelelser
+      conversations: Samtaler
+      search: Søg
+      recent_notifications: Seneste notifikationer
+      mark_all_as_read: Marker alle som læst
+      view_all: Se alle
+      close: Luk
+    viewer:
+      reshared: Videredelt
+    poll:
+      vote: Stem
+      go_to_original_post: Du kan deltage i denne afstemning på <%= original_post_link %>.
+      original_post: det oprindelige indlæg
+      result: Resultat
+      count:
+        one: "<%=count%> stemme, indtil nu"
+        other: "<%=count%> stemmer, indtil nu"
+      answer_count:
+        zero: 0 stemmer
+        one: 1 stemme
+        other: "<%=count%> stemmer"
+      show_result: Vis resultat
+      close_result: Gem resultat
+      your_vote: Din stemme

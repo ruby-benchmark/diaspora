@@ -1,0 +1,139 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+wo:
+  settings: Tànneef
+  profile: Xibaar yu la Ñeel
+  privacy: Mbóot
+  ok: Ayca
+  username: Turu Jëfandikukat
+  email: Email
+  search: Seetal
+  admins:
+    admin_bar:
+      pages: Xët yi
+    stats:
+      week: Ayubés
+      2weeks: 2i Ayubés
+      month: Weer
+      go: dem
+  aspects:
+    seed:
+      family: Waakër
+      work: Ligéey
+      friends: Xarit
+    index:
+      welcome_to_diaspora: Dalal-jàmm ci Diaspora, %{name}!
+      new_here:
+        title: Dalal-jàmm Jëfandikukat yu Bees
+        follow: Toppal ci %{link} te wax dalal-jàmm ci jëfandikukat yu bees ci Diaspora*!
+      help:
+        need_help: Soxla Nga Ndimbal?
+        here_to_help: Mbooloo mu Diaspora fii nekk!
+        do_you: Danga
+        have_a_question: "... am %{link}?"
+        tag_question: laaj
+        find_a_bug: "... fekk %{link}?"
+        any_problem: Am Nga Jafejafe?
+  bookmarklet:
+    heading: Bookmarklet
+  contacts:
+    index:
+      no_contacts_message: Xoolal %{community_spotlight}
+  conversations:
+    new:
+      to: ci
+  invitations:
+    new:
+      language: Làkk
+  layouts:
+    header:
+      profile: Xibaar yu la Ñeel
+      settings: Tànneef
+      logout: Génnu
+    application:
+      whats_new: lu bees?
+  notifications:
+    index:
+      and: ak
+  notifier:
+    click_here: cuqal fii
+    hello: Na nga def %{name}?
+    thanks: Jërëjëf,
+    started_sharing:
+      view_profile: Xoolal xibaar yu %{name} ñeel
+  people:
+    person:
+      thats_you: Yow la!
+    profile_sidebar:
+      location: dëkk
+      born: besu judd
+  profiles:
+    edit:
+      your_name: Sa tur
+      first_name: Tur bi
+      last_name: Sant wi
+      your_birthday: Sa besu judd
+      your_tags_placeholder: 'ni #film #muus #tukki #jàngalekat #newyork'
+      your_location: Sa dëkk
+      your_photo: Sa nataal
+  registrations:
+    new:
+      enter_email: Duggal email
+      sign_up: SOS AM SÀQ
+      email: EMAIL
+      username: TURU JËFANDIKUKAT
+      password: BAATUJÀLL
+  blocks:
+    destroy:
+      success: 'Ayca nu gis liñu wax! #nuyu'
+  shared:
+    publisher:
+      whats_on_your_mind: Lu bees?
+      new_user_prefill:
+        newhere: BeesNaaFii
+        hello: 'Na ngeen def? %{new_user_tag}. '
+    invitations:
+      by_email: Ci email
+    public_explain:
+      share: Bokkal
+      logged_in: Danga xammeeku ci %{service}
+    stream_element:
+      via: cib %{link}
+  tags:
+    show:
+      follow: 'Toppal #%{tag}'
+      stop_following: 'Bul Topp #%{tag}'
+  streams:
+    like_stream:
+      title: Seyaanu Bëggukaay yi
+    followed_tag:
+      follow: Toppal
+    multi:
+      title: Seyaan
+  users:
+    edit:
+      change: Soppil
+      your_handle: Sa limu Diaspora
+      your_email: Sa email
+      change_email: Soppil email
+      change_password: Soppil baatujàll
+      new_password: Baatujàll bu bees
+      current_password: Baatujàll bi fi nekk
+      current_password_expl: bi xammeeku ak...
+      change_language: Soppil làkk
+      stream_preferences: Tànneefi Seyaan
+      following: Tànneefi Topp
+    privacy_settings:
+      title: Tànneefi Mbóot
+    getting_started:
+      well_hello_there: Asalaamu aleykum! Na nga def?
+      awesome_take_me_to_diaspora: Baax na! Indi ma ci Diaspora*
+      who_are_you: Kan nga?
+      what_are_you_in_to: Loo bëgg?
+    update:
+      password_changed: Baatujàll dafa soppi. Léegi danga mën xammeeku ak sa baatujàll bu bees.
+      language_changed: Làkk dafa soppi

@@ -1,0 +1,117 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+sl:
+  javascripts:
+    timeago:
+      prefixAgo: ''
+      suffixAgo: nazaj
+      suffixFromNow: od zdaj
+      prefixFromNow: ''
+      seconds: pred manj kot minuto
+      minute: pred približno minuto
+      minutes:
+        other: pred %d minutami
+      hour: pred približno uro
+      hours:
+        other: pred približno %d urami
+      day: včeraj
+      days:
+        other: pred %d dnem
+      month: pred približno mesecem
+      months:
+        other: pred %d meseci
+      year: pred približno letom dni
+      years:
+        other: pred %d leti
+    confirm_dialog: Ste prepričani
+    delete: Izbriši
+    ignore: Ne meni se
+    my_activity: Moja dejavnost
+    my_stream: Tok
+    aspect_dropdown:
+      add_to_aspect: Dodaj stik
+      select_aspects: Izberi poglede
+      all_aspects: Vsi pogledi
+      stopped_sharing_with: Prenehali ste deliti z <%= name %>.
+      started_sharing_with: Začeli ste deliti z <%= name %>!
+      error: Ne morem začeti deliti s <%= name %>. Ali jih prezirate?
+      toggle:
+        zero: Izberite vidik
+        one: V <%= count %> vidiku
+        two: V <%= count %> vidikih
+        few: V <%= count %> vidikih
+        other: V <%= count %> vidikih
+    show_more: pokaži več
+    failed_to_post_message: Objava ni uspela!
+    comments:
+      show: prikaži vse komentarje
+      hide: skrij komentarje
+    reshares:
+      successful: Objavo ste uspešno ponovno delili!
+      post: Ponovno deli objavo osebe <%= name %>?
+    aspect_navigation:
+      select_all: Izberi vse
+      deselect_all: Odstrani izbiro
+      no_aspects: Noben pogled ni izbran
+    getting_started:
+      hey: Hej, <%= name %>!
+      no_tags: Hej, niste sledili nobeni oznaki! Vseeno nadaljuj?
+      alright_ill_wait: V redu, bom počakal.
+      preparing_your_stream: Pripravljanje vašega osebnega toka ...
+    photo_uploader:
+      looking_good: OMG, izgledaš super!
+    tags:
+      wasnt_that_interesting: 'V redu, mislim, da zaznamek #<%= tagName %> ni bil tako zanimiv ...'
+    people:
+      not_found: nikogar ni bilo mogoče najti ...
+    stream:
+      hide: Skrij
+      public: Javno
+      limited: Omejeno
+      like: Všeč mi je
+      unlike: Ni mi všeč
+      reshare: Ponovno deli
+      comment: Mnenje
+      original_post_deleted: Avtor je izbrisal izvirno objavo.
+      show_nsfw_post: Prikaži objavo
+      show_nsfw_posts: Prikaži vse
+      hide_nsfw_posts: Skrij objave NSFW (Ni varno za službo)
+      follow: Sledi
+      unfollow: Ne sledi več
+      likes:
+        zero: Nikomur ni to všeč
+        one: "<%= count %> je to všeč"
+        two: "<%= count %> je to všeč"
+        few: "<%= count %> je to všeč"
+        other: "<%= count %> je to všeč"
+      reshares:
+        zero: "<%= count %> ponovnih deljenj"
+        one: "<%= count %> ponovno deljenje"
+        two: "<%= count %> ponovni deljenji"
+        few: "<%= count %> ponovna deljenja"
+        other: "<%= count %> ponovnih deljenj"
+      more_comments:
+        zero: Prikaži <%= count %> mnenj
+        one: Prikaži <%= count %> mnenje
+        two: Prikaži <%= count %> mnenji
+        few: Prikaži <%= count %> mnenja
+        other: Prikaži <%= count %> mnenj
+    header:
+      home: Domov
+      profile: Profil
+      contacts: Stiki
+      settings: Nastavitve
+      admin: Skrbnik
+      log_out: Odjava
+      notifications: Obvestila
+      search: Išči
+      recent_notifications: Nedavna obvestila
+      mark_all_as_read: Označi vse kot prebrano
+      view_all: Prikaži vse
+      close: zapri
+    viewer:
+      reshared: Ponovno deljeno

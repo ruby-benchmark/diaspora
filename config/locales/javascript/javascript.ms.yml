@@ -1,0 +1,163 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+ms:
+  javascripts:
+    timeago:
+      prefixAgo: javascripts:timeago:prefixAgo
+      suffixAgo: lalu
+      suffixFromNow: dari sekarang
+      prefixFromNow: javascripts:timeago:prefixFromNow
+      seconds: kurang daripada satu minit
+      minute: kira-kira satu minit
+      minutes:
+        other: "%d minit"
+      hour: kira-kira sejam
+      hours:
+        other: kira-kira %d jam
+      day: sehari
+      days:
+        other: "%d hari"
+      month: kira-kira sebulan
+      months:
+        other: "%d bulan"
+      year: kira-kira setahun
+      years:
+        other: "%d tahun"
+    confirm_dialog: Anda pasti?
+    confirm_unload: Sila sahkan bahawa anda mahu meninggalkan halaman ini - data yang telah anda masukkan tidak akan disimpan.
+    report:
+      prompt: 'Sila sertakan alasan:'
+      prompt_default: kandungan yang menyinggung
+      name: Lapor
+      status:
+        created: Laporan itu sudah wujud
+        exists: Laporan itu sudah wujud
+    ignore_user: Abaikan pengguna ini?
+    ignore_failed: Tidak boleh mengabaikan pengguna ini
+    unblock_failed: Pembuangan sekatan pengguna ini telah gagal
+    and: dan
+    comma: ","
+    edit: Edit
+    no_results: Tiada Hasil Dijumpai
+    contacts:
+      add_contact: Tambah kenalan
+      remove_contact: Buang kenalan
+      error_add: Tidak dapat menambah <%= name %> kepada aspek :(
+      error_remove: Tidak dapat membuang <%= name %> dari aspek :(
+    my_aspects: Aspek-aspek saya
+    publisher:
+      near_from: 'Diposkan dari: <%= location %>'
+      option: Jawapan
+      add_option: Tambah jawapan
+      question: Soalan
+    bookmarklet:
+      post_something: Pos kepada diaspora*
+      post_submit: Menghantar pos...
+      post_success: Diposkan! Menutup tetingkap popup...
+    aspect_dropdown:
+      add_to_aspect: Tambah kenalan
+      select_aspects: Pilih kenalan
+      all_aspects: Semua aspek
+      stopped_sharing_with: Anda telah berhenti berkongsi dengan <%= name %>.
+      started_sharing_with: Anda telah mula berkongsi dengan <%= name %>!
+      error: Tidak dapat berkongsi dengan <%= name %>.  Adakah anda mengabaikan mereka?
+      error_remove: Tidak dapat mengeluarkan <%= name %> daripada aspek :(
+      toggle:
+        zero: Pilih aspek
+        other: dalam <%= count %> aspek
+    show_more: tunjuk lagi
+    failed_to_post_message: Gagal untuk pos mesej!
+    failed_to_remove: Gagal membuang entri!
+    comments:
+      show: tunjuk semua komen
+      hide: sembunyi komen
+      no_comments: Tiada komen lagi.
+    reshares:
+      successful: Pos berjaya dikongsi semula!
+      post: Kongsi semula catatan <%= name %>?
+    aspect_navigation:
+      select_all: Pilih semua
+      deselect_all: menyahpilih semua
+      no_aspects: Tiada aspek yang dipilih
+      add_an_aspect: "+ Tambah aspek"
+    getting_started:
+      hey: Hei, <%= name %>!
+      no_tags: Hei, anda tidak mengikuti mana-mana tag! Teruskan juga?
+      alright_ill_wait: Baiklah, saya akan tunggu.
+      preparing_your_stream: Menyediakan strim peribadi anda...
+    photo_uploader:
+      looking_good: "Wah, anda nampak hebat! \n"
+      completed: "<%= file %> selesai"
+      error: Berlaku masalah semasa memuat naik fail <%= file %>
+      invalid_ext: "{file} mempunyai sambungan tidak sah. Hanya {extensions} dibenarkan."
+      size_error: "{file} terlalu besar, saiz fail maksimum ialah {sizeLimit}"
+      empty: "{file} kosong, sila pilih fail sekali lagi tanpanya."
+    tags:
+      wasnt_that_interesting: 'OK, saya mengandaikan #<%= tagName %> tidak semua yang menarik...'
+    people:
+      not_found: "...dan tiada orang yang dijumpai."
+      message: Mesej
+      edit_my_profile: Edit profil saya
+      stop_ignoring: Berhenti mengabaikan
+      helper:
+        is_sharing: "<%= name %> berkongsi dengan anda"
+        is_not_sharing: "<%= name %> tidak berkongsi dengan anda"
+    profile:
+      edit: edit
+      add_some: tambah beberapa
+      you_have_no_tags: anda tidak mempunyai tag!
+      location: Lokasi
+      gender: Jantina
+      born: Hari Lahir
+      photos: Gambar
+      posts: Pos
+    notifications:
+      mark_read: Tanda sudah dibaca
+      mark_unread: Tanda belum dibaca
+    stream:
+      via: melalui <%= provider %>
+      likes:
+        zero: "<%= count %> Likes"
+        one: "<%= count %> Like"
+        two: "<%= count %> Likes"
+        few: "<%= count %> Likes"
+        many: "<%= count %> Likes"
+        other: "<%= count %> Likes"
+      reshares:
+        zero: "<%= count %> Reshares"
+        one: "<%= count %> Reshare"
+        two: "<%= count %> Reshares"
+        few: "<%= count %> Reshares"
+        many: "<%= count %> Reshares"
+        other: "<%= count %> Reshares"
+      more_comments:
+        zero: Show <%= count %> more comments
+        one: Show <%= count %> more comment
+        two: Show <%= count %> more comments
+        few: Show <%= count %> more comments
+        many: Show <%= count %> more comments
+        other: Show <%= count %> more comments
+      followed_tag:
+        title: 'Tag #Diikuti'
+        add_a_tag: Tambah tag
+        follow: Ikuti
+      tags:
+        follow: 'Ikuti #<%= tag %>'
+        following: 'Mengikuti #<%= tag %>'
+        stop_following: 'Berhenti Mengikuti #<%= tag %>'
+    header:
+      help: Bantuan
+      conversations: Perbualan
+      search: 'Find people or #tags'
+      close: tutup
+    poll:
+      vote: Undi
+      result: Keputusan
+      count:
+        other: "<%=count%> undi setakat ini"
+      show_result: Paparkan keputusan
+      close_result: Sembunyikan keputusan

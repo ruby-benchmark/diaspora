@@ -1,0 +1,459 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+ka:
+  settings: პარამეტრები
+  profile: პროფილი
+  account: ანგარიში
+  privacy: კონფიდენციალურობა
+  _services: მომსახურებები
+  _applications: აპლიკაციები
+  ok: OK
+  cancel: გაუქმება
+  delete: წაშლა
+  username: მომხმარებლის სახელი
+  email: ელ-ფოსტა
+  are_you_sure: დარწმუნებული ხართ?
+  are_you_sure_delete_account: დარწმუნებული ხართ რომ თქვენი ანგარიშის დახურვა გსურთ? ამის დაბრუნება შეუძლებელია!
+  fill_me_out: შევსება
+  public: საჯაროდ
+  limited: შეზღუდული
+  search: ძებნა
+  nsfw: 18+
+  find_people: 'იპოვეთ ადამიანები ან #ტეგები'
+  more: მეტი
+  all_aspects: ყველა ასპექტი
+  no_results: შედეგი ვერ მოიძებნა
+  _contacts: კონტაქტები
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            person:
+              invalid: არასწორია.
+            username:
+              taken: უკვე დაკავებულია.
+              invalid: არასწორია. დაშვებულია მხოლოდ ასოების, ციფრების და ტირეების გამოყენება.
+            email:
+              taken: უკვე დაკავებულია.
+        person:
+          attributes:
+            diaspora_handle:
+              taken: უკვე დაკავებულია.
+        contact:
+          attributes:
+            person_id:
+              taken: უნდა იყოს უნიკალური ამ მომხმარებლის კონტაქტებს შორის.
+        reshare:
+          attributes:
+            root_guid:
+              taken: ასეთი მაგარია?  თქვენ უკვე გააზიარეთ ეს პოსტი!
+  error_messages:
+    helper:
+      correct_the_following_errors_and_try_again: გამოასწორეთ შემდეგი შეცდომები და ხელახლა ცადეთ.
+  admins:
+    stats:
+      50_most: 50 ყველაზე პოპულარული თაგი
+      tag_name: 'თაგი: <b>%{name_tag}</b> Count: <b>%{count_tag}</b>'
+  aspects:
+    edit:
+      confirm_remove_aspect: დარწმუნებული ხართ რომ ამ ასპექტის წაშლა გსურთ?
+      rename: გადარქმევა
+      aspect_list_is_visible: ასპექტის სია ხილულია ამ ასპექტში მყოფთათვის
+      aspect_list_is_not_visible: ასპექტის სია დამალულია ამ ასპექტში მყოფთათვის.
+      update: განახლება
+      updating: ნახლდება
+    no_contacts_message:
+      you_should_add_some_more_contacts: თქვენ უნდა დაამატოთ მეტი კონტაქტი!
+      try_adding_some_more_contacts: თქვენ შეგიძლიათ მოძებნოთ ან მოიწვიოთ მეტი კონტაქტი.
+      or_spotlight: ან თქვენ შეგიძლიათ გააზიაროთ %{link}-ის გამოყენებით
+      community_spotlight: ყურადღების ცენტრში
+    aspect_listings:
+      add_an_aspect: "+ ასპექტის დამატება"
+    destroy:
+      success: "%{name} წარმატებით წაიშალა."
+      failure: "%{name} ცარიელი არ არის და მას ვერ წაშლით."
+    update:
+      success: თქვენი ასპექტი, %{name}, წარმატებით დარედაქტირდა.
+      failure: თქვენს ასპექტს, %{name}, აქვს ძალიან დიდი სახელი და არ შეიძლება მისი შენახვა
+    add_to_aspect:
+      failure: კონტაქტის ასპექტში დამატება ჩაიშალა.
+      success: კონტაქტი წარმატებით დაემატა ასპექტში.
+    seed:
+      family: ოჯახი
+      work: სამსახური
+      acquaintances: ნაცნობები
+      friends: მეგობრები
+    index:
+      donate: ფულის შეწირვა
+      introduce_yourself: ეს არის შენი გვერდი.  წარადგინე შენი თავი.
+      new_here:
+        title: მიესალმე ახალ მომხმარებლებს
+        follow: გაყევი %{link} და მიესალმე აახალ დიასპორა*-ს მომხმარებლებს
+        learn_more: მეტის გაგება
+      help:
+        need_help: გესაჭიროებათ დახმარება?
+        here_to_help: დიასპორას საზოგადოება აქ არის!
+        do_you: 'თქვენ:'
+        have_a_question: გააქვს %{link}?
+        tag_question: შეკითხვა
+        find_a_bug: "... იპოვეთ %{link}?"
+        tag_bug: შეცდომა
+        feature_suggestion: "... გაქვთ %{link} რჩევა?"
+        tag_feature: ფუნქცია
+      services:
+        heading: სერვისებთან დაკავშირება
+        content: 'დიასპორაში შეგიძლია დაუკავშირდე შემდეგ სერვისებს:'
+    aspect_stream:
+      stay_updated: იყავი ინფორმირებული
+      stay_updated_explanation: შენ გვერდზე არის შენი კონტაქტები, ტაგები რომლებსაც მიყვები და პოსტები საზოგადოების კრეატიული წევრებისგან.
+  aspect_memberships:
+    destroy:
+      success: პერსონა წარმატებით ამოიშალა ასპექტიდან
+      failure: პერსონის ასპექტიდან ამოშლა ვერ მოხერხდა
+      no_membership: ამორჩეული პერსონა ვერ მოიძებნა ამ ასპექტში
+  bookmarklet:
+    heading: სანიშნე
+    post_something: გამოაქვეყნე დიასპორაზე
+    explanation: გამოაქვეყნე დიასპორაზე ნებისმიერი ადგილიდან ამ ბმულის ჩანიშვნით  =>%{link}.
+  comments:
+    new_comment:
+      comment: კომენტარი
+      commenting: დაკომენტარება
+  contacts:
+    index:
+      start_a_conversation: დაიწყე საუბარი
+      title: კონტაქტები
+      no_contacts: მგონი კიდევ რამოდენიმე კონტაქტის დამატება გჭირდება
+      no_contacts_message: ნახე %{community_spotlight}
+      community_spotlight: საზოგადოების ყურადღების ცენტრში
+      my_contacts: ჩემი კონტაქტები
+      all_contacts: ყველა კონტაქტი
+      only_sharing_with_me: აზიარებს მხოლოდ ჩემთან
+    spotlight:
+      community_spotlight: Community Spotlight
+  conversations:
+    index:
+      no_messages: წერილები არ არის
+      inbox: შემოსული
+    show:
+      reply: პასუხი
+      replying: მიმდინარეობს პასუხის გაცემა...
+      delete: წაშალე და დაბლოკე საუბარი
+    new:
+      to: ვის
+      subject: თემა
+      send: გაგზავნა
+      sending: იგზავნება...
+    create:
+      sent: წერილი გაგზავნილია
+      fail: არასწორი წერილი
+  date:
+    formats:
+      fullmonth_day: "%B %d"
+      birthday: "%B %d"
+      birthday_with_year: "%B %d%Y"
+  invitations:
+    create:
+      sent: 'მოსაწვევები გაგზავნილია: '
+      rejected: 'შემდეგ ელ-ფოსტებს აქვთ პრობლემა: '
+      no_more: თქვენ ამოგეწურათ მოსაწვევები.
+    new:
+      language: ენა
+      invite_someone_to_join: მოიწვიე ვინმე რომ შემოუერთდეს დიასპორას!
+      send_an_invitation: მოწვევის გაგზავნა
+  layouts:
+    header:
+      profile: პროფილი
+      settings: პარამეტრები
+      logout: გამოსვლა
+      code: კოდი
+    application:
+      powered_by: POWERED BY DIASPORA*
+      whats_new: რა არის ახალი?
+      public_feed: Public Diaspora Feed for %{name}
+      back_to_top: დასაწყისში დაბრუნება
+  notifications:
+    started_sharing:
+      zero: "%{actors} started sharing with you."
+      one: "%{actors} started sharing with you."
+      two: "%{actors} started sharing with you."
+      few: "%{actors} started sharing with you."
+      many: "%{actors} started sharing with you."
+      other: "%{actors} started sharing with you."
+    private_message:
+      zero: "%{actors} sent you a message."
+      one: "%{actors} sent you a message."
+      two: "%{actors} sent you a message."
+      few: "%{actors} sent you a message."
+      many: "%{actors} sent you a message."
+      other: "%{actors} sent you a message."
+    comment_on_post:
+      zero: "%{actors} commented on your %{post_link}."
+      one: "%{actors} commented on your %{post_link}."
+      two: "%{actors} commented on your %{post_link}."
+      few: "%{actors} commented on your %{post_link}."
+      many: "%{actors} commented on your %{post_link}."
+      other: "%{actors} commented on your %{post_link}."
+    also_commented:
+      zero: "%{actors} also commented on %{post_author}'s %{post_link}."
+      one: "%{actors} also commented on %{post_author}'s %{post_link}."
+      two: "%{actors} also commented on %{post_author}'s %{post_link}."
+      few: "%{actors} also commented on %{post_author}'s %{post_link}."
+      many: "%{actors} also commented on %{post_author}'s %{post_link}."
+      other: "%{actors} also commented on %{post_author}'s %{post_link}."
+    mentioned:
+      zero: "%{actors} have mentioned you in a %{post_link}."
+      one: "%{actors} has mentioned you in a %{post_link}."
+      two: "%{actors} have mentioned you in a %{post_link}."
+      few: "%{actors} have mentioned you in a %{post_link}."
+      many: "%{actors} have mentioned you in a %{post_link}."
+      other: "%{actors} have mentioned you in a %{post_link}."
+    liked:
+      zero: "%{actors} have liked your %{post_link}."
+      one: "%{actors} has liked your %{post_link}."
+      two: "%{actors} have liked your %{post_link}."
+      few: "%{actors} have liked your %{post_link}."
+      many: "%{actors} have liked your %{post_link}."
+      other: "%{actors} have liked your %{post_link}."
+    reshared:
+      zero: "%{actors} have reshared your %{post_link}."
+      one: "%{actors} has reshared your %{post_link}."
+      two: "%{actors} have reshared your %{post_link}."
+      few: "%{actors} have reshared your %{post_link}."
+      many: "%{actors} have reshared your %{post_link}."
+      other: "%{actors} have reshared your %{post_link}."
+    also_commented_deleted:
+      zero: "%{actors} commented on a deleted post."
+      one: "%{actors} commented on a deleted post."
+      two: "%{actors} commented on a deleted post."
+      few: "%{actors} commented on a deleted post."
+      many: "%{actors} commented on a deleted post."
+      other: "%{actors} commented on a deleted post."
+    liked_post_deleted:
+      zero: "%{actors} liked your deleted post."
+      one: "%{actors} liked your deleted post."
+      two: "%{actors} liked your deleted post."
+      few: "%{actors} liked your deleted post."
+      many: "%{actors} liked your deleted post."
+      other: "%{actors} liked your deleted post."
+    reshared_post_deleted:
+      zero: "%{actors} reshared your deleted post."
+      one: "%{actors} reshared your deleted post."
+      two: "%{actors} reshared your deleted post."
+      few: "%{actors} reshared your deleted post."
+      many: "%{actors} reshared your deleted post."
+      other: "%{actors} reshared your deleted post."
+    mentioned_deleted:
+      zero: "%{actors} mentioned you in a deleted post."
+      one: "%{actors} mentioned you in a deleted post."
+      two: "%{actors} mentioned you in a deleted post."
+      few: "%{actors} mentioned you in a deleted post."
+      many: "%{actors} mentioned you in a deleted post."
+      other: "%{actors} mentioned you in a deleted post."
+    index:
+      notifications: შეტყობინებები
+      mark_all_as_read: ყველას წაკითხულად მონიშვნა
+      and_others:
+        zero: and nobody else
+        one: and one more
+        two: and %{count} others
+        few: and %{count} others
+        many: and %{count} others
+        other: and %{count} others
+      and: და
+  notifier:
+    a_post_you_shared: პოსტი.
+    email_sent_by_diaspora: ეს წერილი გამოგზავნილი იქნა დიასპორას მიერ.  თუ გინდათ რომ აღარ მიიღოთ მსგავსი წერილი,
+    click_here: დააჭირეთ აქ
+    hello: გამარჯობა %{name}!
+    thanks: მადლობა,
+    to_change_your_notification_settings: რომ შეცვალოთ თქვენი შეტყობინების პარამეტრები
+    single_admin:
+      subject: 'შეტყობინება თქვენი დიასპორას ანგარიშის შესახებ:'
+      admin: თქვენი დიასპორას ადმინისტრატორი
+    started_sharing:
+      subject: "%{name} დაიწყო შენთან გაზიარება"
+      sharing: დაიწყო შენთან გაზიარება
+      view_profile: "%{name}-ს პროფილის ნახვა"
+    comment_on_post:
+      reply: უპასუხე ან ნახე %{name}-ს პოსტი >
+    mentioned:
+      subject: "%{name} გახსენა დიასპორაში*"
+    private_message:
+      reply_to_or_view: უპასუხე ან ნახე ეს საუბარი >
+    liked:
+      liked: "%{name} მოიწონა შენი პოსტი"
+      view_post: პოსტის ნახვა >
+    reshared:
+      reshared: "%{name} reshared your post"
+      view_post: პოსტის ნახვა >
+    confirm_email:
+      subject: გთხოვთ გაააქტიუროთ თქვენი ახალი ელ-ფოსტის მისამართი %{unconfirmed_email}
+      click_link: 'რომ გაააქტიუროთ თქვენი ახალი ელ-ფოსტის მისამართი %{unconfirmed_email}, გთხოვთ მიყვეთ ამ ბმულს:'
+  people:
+    person:
+      thats_you: ეს შენ ხარ!
+    index:
+      results_for: მოძებნე რეზულტატები
+      no_results: რამე უნდა მოძებნო!
+      no_one_found: "...და ვერავინ ვერ მოიძებნა."
+      looking_for: ეძებ %{tag_link} დათაგულ პოსტებს?
+    show:
+      has_not_shared_with_you_yet: "%{name} არ აქვს პოსტები შენთან გაზიარებული"
+      does_not_exist: პიროვნება არ არსებობს!
+      closed_account: ეს ანგარიში დახურულია.
+    profile_sidebar:
+      bio: ბიოგრაფია
+      location: მდებარეობა
+      gender: სქესი
+      born: დაბადების დღე
+  photos:
+    create:
+      runtime_error: ფოტოს ატვირთვა ვერ მოხერხდა.  დარწმუნებული ხარ რომ უსაფრთხოების ღვედები შეკრული გაქვს?
+      integrity_error: ფოტოს ატვირთვა ვერ მოხერხდა.  დარწმუნებული ხარ რომ სურათია?
+      type_error: ფოტოს ატვირთვა ვერ მოხერხდა.  დარწმუნებული ხარ რომ სურათი დაამატე?
+    destroy:
+      notice: სურათი წაშლილია.
+    new_profile_photo:
+      upload: ახალი პროფილის ფოტოს ატვირთვა!
+  posts:
+    show:
+      photos_by:
+        zero: No photos by %{author}
+        one: One photo by %{author}
+        two: Two photos by %{author}
+        few: "%{count} photos by %{author}"
+        many: "%{count} photos by %{author}"
+        other: "%{count} photos by %{author}"
+      reshare_by: თავიდან გამოქვეყნება by %{author}
+  profiles:
+    edit:
+      your_name: თქვენი სახელი
+      first_name: სახელი
+      last_name: გვარი
+      your_gender: თქვენი სქესი
+      your_birthday: თქვენი დაბადების თარიღი
+      your_tags: აღწერეთ თქვენი თავი 5 სიტყვით
+      your_tags_placeholder: 'მომწონს #ფილმები #კატები #მოგზაურობა # მასწავლებელი #მადრიდი'
+      your_bio: თქვენი ბიოგრაფია
+      your_location: თქვენი მდებარეობა
+      your_photo: თქვენი ფოტო
+      update_profile: პროფილის განახლება
+      allow_search: მიეცეს ხალხს დიასპორაში თქვენი მოძებნის საშუალება
+    update:
+      updated: პროფილი განახლდა
+      failed: პროფილის განახლება ვერ მოხერხდა
+  registrations:
+    new:
+      enter_email: შეიყვანეთ ელ-ფოსტა
+      enter_username: აირჩიე მომხმარებლის სახელი (მხოლოდ ასოები, ციფრები და ტირე)
+      enter_password: შეიყვანეთ პაროლი (მინიმუმ 6 სიმბოლო)
+      enter_password_again: შეივყანეთ იგივე პაროლი რაც წინაზე
+      username: მომხმარებლის სახელი
+      password: პაროლი
+    create:
+      success: თქვენ შეუერთდით დიასპორას!
+  reshares:
+    reshare:
+      reshared_via: თავიდან გაზიარება
+      reshare_confirmation: გსურს %{author}-ს პოსტის თავიდან გაზიარება?
+      deleted: ორიგინალი პოსტი წაშლილია ავტორის მიერ.
+    comment_email_subject: "%{resharer}'s reshare of %{author} პოსტი"
+  services:
+    index:
+      disconnect: გამოსვლა
+      logged_in_as: შესული ხარ როგორც
+      really_disconnect: გამოვიდე %{service} ?
+      edit_services: სერვისის დამატება
+    create:
+      success: აუტენტიფიკაცია წარმატებით დასრულდა.
+      failure: აუტენტიფიკაცია ვერ მოხერხდა.
+      already_authorized: A user with diaspora id %{diaspora_id} already authorized that %{service_name} account.
+    destroy:
+      success: აუტენტიფიკაცია წარმატებით წაიშალა
+    failure:
+      error: მოხდა შეცდომა ამ სერვისთან დაკავშირებისას
+  blocks:
+    create:
+      success: 'ვეღარ ნახავ ამ მომხმარებელს შენს გვერდზე. #silencio!'
+      failure: მე არ ვაიგნორებ ამ მომხმარებელს  #evasion
+  shared:
+    aspect_dropdown:
+      toggle:
+        zero: Add contact
+        one: In %{count} aspect
+        two: In %{count} aspects
+        few: In %{count} aspects
+        many: In %{count} aspects
+        other: In %{count} aspects
+    publisher:
+      posting: დაპოსტვა
+      share: გაზიარება
+      whats_on_your_mind: რას ფიქრობ ?
+      discard_post: წაშალე პოსტი
+      new_user_prefill:
+        newhere: ახალი
+        hello: 'ყველას მოგესალმებით, მე ვარ #%{new_user_tag}. '
+        i_like: 'მე მაინტერესებს %{tags}. '
+        invited_by: 'მადლობა მოწვევისთვის, '
+    invitations:
+      invites: მოსაწვევები
+      invite_your_friends: მოიწვიეთ თქვენი მეგობრები
+      by_email: ელ-ფოსტით
+      share_this: გააზიარე ეს ბმული ელ-ფოსტით, ბლოგით ან საყვარელი სოციალური ქსელით!
+    public_explain:
+      control_your_audience: აკონტროლე შენი აუდიენცია
+      new_user_welcome_message: 'გამოიყენე #ტაგები რომ დაახარისხო შენი პოსტები და იპოვო საერთო ინტერესების ხალხი.  აღნიშნე ხალხი სენ პოსტებში @აღნიშვნები'
+      visibility_dropdown: გამოიყენე ჩამოსაშლელი მენიუ რომ აირჩიო ვის ექნება პოსტის ნახვის საშუალება (ჩვენ გირჩევთ რომ პირველი პოსტი იყოს სახალხო)
+      title: Set up connected services
+      share: გაზიარება
+      outside: გამოქვეყნებული არა პირადი პოსტების ნახვა შესაძლებელი იქნება დიასპორას გარეშეც.
+      logged_in: შესული ხარ %{service} -ში
+      manage: manage connected services
+      atom_feed: Atom feed
+    stream_element:
+      via: via %{link}
+  status_messages:
+    new:
+      mentioning: 'Mentioning: %{person}'
+    too_long: '{"few"=>"please make your status messages less than %{count} characters", "many"=>"please make your status messages less than %{count} characters", "one"=>"please make your status messages less than %{count} character", "other"=>"please make your status messages less than %{count} characters", "two"=>"please make your status messages less than %{count} characters", "zero"=>"please make your status messages less than %{count} characters"}'
+  streams:
+    aspects:
+      title: Your Aspects
+  users:
+    edit:
+      edit_account: ანგარიშის რედაქტირება
+      change: შეცვლა
+      your_handle: თქვენი იდენტიფიკატორი Diaspora-ში
+      your_email: შენი ელ-ფოსტა
+      change_email: ელ-ფოსტის შეცვლა
+      change_password: პაროლის შეცვლა
+      new_password: ახალი პაროლი
+      current_password: მიმდინარე პაროლი
+      current_password_expl: რომლითაც შემოდიხართ...
+      character_minimum_expl: უნდა შეიცავდეს მინიმუმ ექვს სიმბოლოს
+      change_language: ენის შეცვლა
+      close_account_text: ანგარიშის დახურვა
+      stream_preferences: ნაკადის პარამეტრები
+      show_community_spotlight: გსურთ რეკომენდებული მომხმარებლების ნახვა ნაკადში?
+      close_account:
+        dont_go: ჰეი, გთხოვ არ წახვიდე!
+        what_we_delete: We delete all of your posts, profile data, as soon as humanly possible. Your comments will hang around, but be associated with your Diaspora Handle.
+        locked_out: თქვენ გამოხვალთ და თქვენი ანგარიში დაიბლოკება
+    privacy_settings:
+      title: კონფიდენციალურობის პარამეტრები
+      ignored_users: იგნორირებული მომხმარებლები
+      stop_ignoring: იგნორირების შეწყვეტა
+    destroy:
+      no_password: ანგარიშის დასახურდა გთხოვთ შეიყვანეთ თქვენი მიმდინარე პაროლი.
+      wrong_password: შეყვანილი პაროლი არ ემთხვევა თქვენს მიმდინარე პაროლს.
+    update:
+      password_changed: პაროლი შეიცვალა. თქვენ ახლა უკვე შეგიძლიათ თქვენი ახალი პაროლით შესვლა
+      language_changed: ენა შიეცვალა
+      language_not_changed: ენის შეცვლა ვერ მოხერხდა
+      unconfirmed_email_not_changed: ელ-ფოსტის შეცვლა ვერ მოხერხდა

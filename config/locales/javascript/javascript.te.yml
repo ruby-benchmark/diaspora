@@ -1,0 +1,203 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+te:
+  javascripts:
+    timeago:
+      prefixAgo: " "
+      suffixAgo: క్రితం
+      suffixFromNow: ఇప్పటి నుండి
+      prefixFromNow: ''
+      seconds: కొన్ని క్షణాల
+      minute: దాదాపు నిమిషం
+      minutes:
+        one: 1 నిమిషం
+        other: "%d నిమిషాలు"
+      hour: దాదాపు గంట
+      hours:
+        one: దాదాపు 1 గంట
+        other: దాదాపు %d గంటలు
+      day: ఒక రోజు
+      days:
+        one: 1 రోజు
+        other: "%d రోజులు"
+      month: దాదాపు నెల
+      months:
+        one: 1 నెల
+        other: "%d నెలలు"
+      year: దాదాపు సంవత్సరం
+      years:
+        one: 1 సంవత్సరం
+        other: "%d సంవత్సరాలు"
+    cancel: రద్దుచేయి
+    confirm_dialog: ఖచ్ఛితంగానా?
+    create: సృష్టించు
+    delete: తొలగించు
+    ignore: విస్మరించు
+    report:
+      prompt: 'దయచేసి ఒక కారణాన్ని ఇవ్వండి:'
+      prompt_default: ఉదా. హానికర విషయము
+      name: ఫిర్యాదుచేయండి
+      status:
+        created: ఫిర్యాదు విజయవంతంగా సృష్టించబడింది
+        exists: ఫిర్యాదు ఇదివరకే ఉంది
+    ignore_user: ఈ వాడుకరిని విస్మరించాలా?
+    hide_post: ఈ టపాను దాయాలా?
+    hide_post_failed: ఈ టపాను దాయలేకపోయాం
+    remove_post: ఈ టపాను తీసివేయాలా?
+    and: మరియు
+    edit: సవరించు
+    no_results: ఏ ఫలితాలు కనపడలేదు
+    admin:
+      pods:
+        status: స్థితి
+        states:
+          no_errors: సరే
+        actions: చర్యలు
+        not_available: అందుబాటులో లేదు
+    aspects:
+      name: పేరు
+      create:
+        add_a_new_aspect: ఒక కొత్త కోణాన్ని జతచేయి
+        success: మీ కొత్త కోణం <%= name %> సృష్టించబడింది
+        failure: కోణం సృష్టించుట విఫలమైంది.
+    contacts:
+      add_contact: పరిచయాన్ని జతచేయి
+      remove_contact: పరిచయాన్ని తీసివేయి
+      search_no_results: ఏ పరిచయాలు కనపడలేదు
+    my_activity: నా క్రియాశీలత
+    my_stream: ప్రవాహం
+    my_aspects: నా కోణాలు
+    publisher:
+      near_from: 'ఇక్కడి నుండి టపా వేసారు: <%= location %>'
+      option: సమాధానం
+      add_option: ఒక సమాధానాన్ని జతచేయి
+      question: ప్రశ్న
+      markdown_editor:
+        tooltips:
+          bold: బొద్దు
+          italic: వాలు
+    bookmarklet:
+      post_something: డయాస్పోరా*కు టపా వేయండి
+      post_submit: టపాను దాఖలుచేస్తున్నాము...
+      post_success: టపా వేయబడింది! పాపప్ కిటికీని మూసివేస్తున్నాం...
+    aspect_dropdown:
+      add_to_aspect: పరిచయాన్ని జతచేయి
+      select_aspects: కోణాలను ఎంచుకోండి
+      all_aspects: అన్ని కోణాలు
+      updating: నవీకరిస్తున్నాము...
+      mobile_row_checked: "<%= name %> తీసివేయి"
+      mobile_row_unchecked: "<%= name %> జతచేయి"
+      stopped_sharing_with: మీరు <%= name %> తో పంచుకోవడం ఆపివేసారు.
+      started_sharing_with: మీరు <%= name %>తో పంచుకోవడం ప్రారంభించారు!
+      error: "<%= name %>తో పంచుకోవడం వీలుకాదు. మీరు వారిని విస్మరిస్తారా?"
+      error_remove: కోణం నుండి <%= name %> తొలగించుట వీలుకాలేదు :(
+      toggle:
+        zero: Select aspects
+        one: In <%= count %> aspect
+        other: In <%= count %> aspects
+    show_more: ఇంకా చూపించు
+    failed_to_post_message: సందేశాన్ని పోస్టుచేయుటలో విఫలమైంది!
+    failed_to_remove: ప్రవేశాన్ని తొలగించుటలో విఫలమైంది!
+    comments:
+      show: అన్ని వ్యాఖ్యలను చూపించు
+      hide: వ్యాఖ్యలను దాయి
+      no_comments: ఇంకా ఏ వ్యాఖ్యలు లేవు.
+    aspect_navigation:
+      select_all: అన్నిటినీ ఎంచుకో
+      deselect_all: ఎంపిక మొత్తం రద్దుచేయి
+      no_aspects: ఏ కోణాలు ఎంచుకోలేదు
+      add_an_aspect: "+ కొత్త కోణాన్ని చేర్చండి"
+    getting_started:
+      hey: ఓయ్, <%= name %>!
+      alright_ill_wait: పరవాలేదు, నేను వేచివుంటాను.
+    photo_uploader:
+      looking_good: ఓరి దేవుడో, మీరు అద్భుతంగా కనిపిస్తున్నారు!
+      completed: "<%= file %> పూర్తయింది"
+    tags:
+      wasnt_that_interesting: 'సరే, #<%= tagName %> మొత్తం అంత ఆసక్తికరంగా లేదని నేను అనుకుంటున్నాను...'
+    people:
+      mention: పేర్కొను
+      message: సందేశం
+      edit_my_profile: నా ప్రవరను సవరించు
+      stop_ignoring: విస్మరించుటను ఆపివేయి
+      helper:
+        is_sharing: "<%= name %> మీతో పంచుకుంటున్నారు"
+        is_not_sharing: "<%= name %> మీతో పంచుకోవడం లేదు"
+    profile:
+      edit: సవరించు
+      add_some: ఇంకొన్ని చేర్చండి
+      you_have_no_tags: మీరు ఏ కొసలు జతచేయలేదు!
+      bio: స్వపరిచయం
+      location: స్థానము
+      gender: లింగము
+      born: పుట్టినరోజు
+      photos: ఛాయాచిత్రాలు
+      posts: టపాలు
+    notifications:
+      mark_read: చదివినట్టుగా గుర్తుపెట్టు
+      mark_unread: చదవనట్టుగా గుర్తుపెట్టు
+    stream:
+      hide: దాచు
+      public: బహిరంగం
+      limited: పరిమితం
+      like: ఇష్టం
+      unlike: అయిష్టం
+      reshare: మరలపంచుకొను
+      comment: వ్యాఖ్య
+      show_nsfw_post: టపాను చూపించు
+      show_nsfw_posts: అన్నీ చూపించు
+      follow: అనుసరించు
+      unfollow: అనుసరించవద్దు
+      enable_post_notifications: ఈ టపాకు గమనింపులను చేతనించు
+      disable_post_notifications: ఈ టపాకు గమనింపులను అచేతనించు
+      permalink: స్థిరలంకె
+      via: "<%= provider %> ద్వారా"
+      likes:
+        zero: "<%= count %> ఇష్టాలు"
+        one: "<%= count %> ఇష్టం"
+        other: "<%= count %> ఇష్టాలు"
+      reshares:
+        zero: "<%= count %> పంచుకోళ్ళు"
+        one: "<%= count %> పంచుకోలు"
+        other: "<%= count %> పంచుకోళ్ళు"
+      comments:
+        zero: "<%= count %> వ్యాఖ్యలు"
+        one: "<%= count %> వ్యాఖ్య"
+        other: "<%= count %> వ్యాఖ్యలు"
+      more_comments:
+        zero: మరో <%= count %> వ్యాఖ్యలను చూపించు
+        one: మరో <%= count %> వ్యాఖ్యను చూపించు
+        other: మరో <%= count %> వ్యాఖ్యలను చూపించు
+      followed_tag:
+        title: "#అనుసరించే కొసలు"
+        add_a_tag: ఒక కొత్త కొసను చేర్చండి
+        follow: అనుసరించు
+    header:
+      home: నివాసము
+      profile: ప్రవర
+      contacts: పరిచయాలు
+      settings: అమరికలు
+      help: సహాయం
+      admin: నిర్వాహకుడు
+      moderator: సమన్వయకర్త
+      log_out: నిష్క్రమించు
+      notifications: గమనికలు
+      conversations: సంభాషణలు
+      search: వెతుకు
+      recent_notifications: ఇటీవలి గమనికలు
+      mark_all_as_read: అన్నీ చదివినట్లుగా గుర్తుపెట్టు
+      view_all: అన్నీ వీక్షించండి
+      close: మూసివేయి
+    poll:
+      vote: వోటేయి
+      original_post: అసలు టపా
+      result: ఫలితం
+      count:
+        one: ప్రస్తుతానికి 1 వోటు
+        other: ప్రస్తుతానికి <%=count%> వోట్లు
+      show_result: ఫలితాన్ని చూపించు
+      close_result: ఫలితాన్ని దాయి

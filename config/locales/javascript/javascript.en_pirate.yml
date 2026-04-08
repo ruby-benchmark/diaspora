@@ -1,0 +1,51 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+en_pirate:
+  javascripts:
+    timeago:
+      prefixAgo: ''
+      suffixAgo: ''
+      suffixFromNow: ''
+      prefixFromNow: ''
+    aspect_dropdown:
+      add_to_aspect: Add to aspect
+      stopped_sharing_with: You have stopped sharing with <%= name %>.
+      started_sharing_with: You have started sharing with <%= name %>!
+      error: Couldn't start sharing with <%= name %>. Are you ignoring them?
+      toggle:
+        zero: Add to aspect
+        one: In <%= count %> aspect
+        other: In <%= count %> aspects
+    getting_started:
+      hey: Hey, <%= name %>!
+      preparing_your_stream: Preparing your personialized stream...
+    tags:
+      wasnt_that_interesting: 'OK, I suppose #<%= tagName %> wasn''t all that interesting...'
+    stream:
+      likes:
+        zero: "<%= count %> Likes"
+        one: "<%= count %> Like"
+        two: "<%= count %> Likes"
+        few: "<%= count %> Likes"
+        many: "<%= count %> Likes"
+        other: "<%= count %> Likes"
+      reshares:
+        zero: "<%= count %> Reshares"
+        one: "<%= count %> Reshare"
+        two: "<%= count %> Reshares"
+        few: "<%= count %> Reshares"
+        many: "<%= count %> Reshares"
+        other: "<%= count %> Reshares"
+      more_comments:
+        zero: Show <%= count %> more comments
+        one: Show <%= count %> more comment
+        two: Show <%= count %> more comments
+        few: Show <%= count %> more comments
+        many: Show <%= count %> more comments
+        other: Show <%= count %> more comments
+    header:
+      search: 'Find people or #tags'

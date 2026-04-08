@@ -1,0 +1,449 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+et:
+  settings: Seaded
+  profile: Profiil
+  account: Konto
+  privacy: Privaatsus
+  _services: Teenused
+  _applications: Rakendused
+  ok: Oki
+  cancel: Tühista
+  delete: Eemalda
+  username: Kasutajanimi
+  email: E-mail
+  are_you_sure: Oled kindel?
+  are_you_sure_delete_account: Oled kindel, et soovid oma konto kustutada? Kontot ei saa taastada!
+  public: Avalik
+  limited: Piiratud
+  search: Otsi
+  find_people: 'Otsi inimesi või #silte'
+  more: Veel
+  _statistics: Statistika
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            person:
+              invalid: on ebakorrektne.
+            username:
+              taken: on juba võetud.
+              invalid: on ebakorrektne. Lubatud vaid tähed, numbrid ja allakriipsutatud.
+            email:
+              taken: on juba võetud.
+        person:
+          attributes:
+            diaspora_handle:
+              taken: on juba võetud.
+        reshare:
+          attributes:
+            root_guid:
+              taken: Tore, mis? Sa juba jagasid seda postitust!
+  error_messages:
+    helper:
+      correct_the_following_errors_and_try_again: 'Palun paranda järgnevad vead ja proovi uuesti:'
+  admins:
+    admin_bar:
+      pages: Lehed
+      user_search: Kasutaja otsing
+      report: Aruanded
+    user_search:
+      are_you_sure_lock_account: Oled kindel, et soovid selle konto lukustada?
+      are_you_sure_unlock_account: Oled kindel, et soovid selle konto lahti lukustada?
+    stats:
+      week: Nädal
+      2weeks: 2 nädalat
+      month: Kuu
+      daily: Päevane
+      usage_statistic: Statistika
+      go: Mine
+  aspects:
+    edit:
+      confirm_remove_aspect: Oled kindel, et soovid selle aspekti kustutada?
+      rename: Nimeta ümber
+      update: Uuenda
+      updating: Uuendan...
+    no_contacts_message:
+      you_should_add_some_more_contacts: Peaksid lisama rohkem kontakte!
+    seed:
+      family: Pere
+      work: Töö
+      acquaintances: Tuttavad
+      friends: Sõbrad
+    index:
+      donate: Anneta
+      welcome_to_diaspora: Tere tulemast diaspora*, %{name}!
+      introduce_yourself: See on sinu voog. Hüppa sisse ja tutvusta end.
+      new_here:
+        title: Tere tulemast uued kasutajad
+        follow: Jälgi %{link} ja tervita uusi kasutajaid diasporas*!
+        learn_more: Uuri veel
+      help:
+        need_help: Vajad abi?
+        do_you: 'Kas soovid:'
+        tag_question: küsimus
+      services:
+        heading: Ühenda teenused
+        content: 'Saad ühendada järgnevad teenused diaspoerag*:'
+    aspect_stream:
+      stay_updated: Ole kursis
+  comments:
+    new_comment:
+      comment: Kommenteeri
+      commenting: Kommenteerib...
+  contacts:
+    index:
+      start_a_conversation: Alusta uut vestlust
+      no_contacts: Näib, et pead lisama mõned kontaktid!
+      my_contacts: Minu kontaktid
+      all_contacts: Kõik kontaktid
+      only_sharing_with_me: Jagab ainult minuga
+    spotlight:
+      suggest_member: Soovita kasutajat
+  conversations:
+    index:
+      conversations_inbox: Vestlused - Postkast
+      new_conversation: Uus vestlus
+      no_messages: Sõnumeid pole
+      inbox: Postkast
+    show:
+      reply: Vasta
+      replying: Vastab...
+      hide: Peida ja vaigista vestlus
+      delete: Kustuta vestlus
+    new:
+      to: Kellele
+      subject: Teema
+      send: Saada
+      sending: Saadab...
+    create:
+      sent: Sõnum saadetud
+      fail: Ebakorrektne sõnum
+    destroy:
+      delete_success: Vestlus edukalt kustutatud
+      hide_success: Vestlus edukalt peidetud
+  home:
+    default:
+      choose_your_audience: Vali oma publik
+  invitations:
+    new:
+      invite_someone_to_join: Kutsu kedagi diasporaga* liituma!
+      send_an_invitation: Saada kutse
+      paste_link: Jaga seda linki oma sõpradega kutsumaks neid diasporasse*, või e-postita link neile otse.
+  layouts:
+    header:
+      profile: Profiil
+      settings: Seaded
+      logout: Logi välja
+      code: Kood
+    application:
+      whats_new: Mis uudist?
+      public_feed: Avalik %{name} diaspora* voog
+      back_to_top: Tagasi üles
+  notifications:
+    index:
+      notifications: Teated
+      mark_all_as_read: Märgi kõik loetuks
+      mark_read: Märgi loetuks
+      mark_unread: Märgi mitteloetuks
+      show_all: Näita kõiki
+      show_unread: Näita lugemata
+      all_notifications: Kõik teavitused
+      also_commented: Samuti kommenteeritud
+      liked: Meeldis
+      mentioned: Mainitud postituses
+      reshared: Jagatud
+      started_sharing: Alustas jagamist
+      no_notifications: Sul ei ole veel teavitusi.
+      and_others:
+        zero: ja mitte keegi teine
+        one: ja üks veel
+        other: ja %{count} teist
+      and: ja
+  notifier:
+    a_post_you_shared: postitus.
+    a_private_message: Sulle on diasporas* uus privaatsõnum.
+    click_here: Kliki siia
+    hello: Tere %{name}!
+    thanks: Tänud,
+    started_sharing:
+      subject: "%{name} alustas sinuga diasporas* jagamist"
+      sharing: alustas sinuga jagmist!
+      view_profile: Kuva %{name} profiili
+    comment_on_post:
+      reply: Vasta või kuva %{name} postitus>
+    mentioned:
+      subject: "%{name} mainis sind diasporas*"
+    private_message:
+      reply_to_or_view: Vasta või kuva see postitus>
+    liked:
+      liked: "%{name} märkis sinu postituse meeldivaks"
+      view_post: Kuva postitus>
+    reshared:
+      reshared: "%{name} jagas sinu postitust"
+      view_post: Kuva postitus>
+    confirm_email:
+      subject: Palun aktiveeri oma uus eposti aadress %{unconfirmed_email}
+      click_link: 'Uue eposti aadressi aktiveerimiseks järgi seda linki %{unconfirmed_email}:'
+    report_email:
+      type:
+        post: Saada
+        comment: kommenteeri
+    invited_you: "%{name} kutsub sind diasporasse*"
+    invite:
+      message: |-
+        Tere!
+
+        Sind on kutsutud liituma diasporaga* %{user} poolt!
+
+        Alustamiseks vajuta seda linki
+
+        [%{invite_url}][1]
+
+        Või saad lisada %{diaspora_id} oma kontaktidele kui sul juba on konto.
+
+
+        Päikest,
+
+        Olen diaspora* eposti robot!
+
+        P.S. Kui sa ei tea (veel) mis diaspora* on siis [here] [2] on vastus!
+
+         [1] %{invite_url}
+         [2] %{diasporafoundation_url}
+  people:
+    person:
+      thats_you: See oled sina!
+    index:
+      results_for: "%{search_term}-ga sobivad kasutajad"
+      no_results: Hei! Sa pead midagi otsima.
+      couldnt_find_them: Ei leidnud neid?
+      search_handle: Kasuta nende diaspora* ID-d (username@pod.tld) oma sõprade leidmiseks.
+      send_invite: Ikka ei midagi? Saada kutse!
+      no_one_found: "...ja kedagi ei leitud."
+      searching: Otsib, palun ole kannatlik...
+      looking_for: Otsid postitusi sildiga %{tag_link}?
+    show:
+      has_not_shared_with_you_yet: "%{name} ei ole sinuga veel ühtegi postitust jaganud!"
+      does_not_exist: Isikut ei eksisteeri!
+      closed_account: See konto on suletud.
+    profile_sidebar:
+      bio: Biograafia
+      location: Asukoht
+      born: Sünnipäev
+    add_contact:
+      invited_by: Sind kutsub
+  photos:
+    create:
+      runtime_error: Foto üleslaadimine ebaõnnestus. Oled kindel, et su turvavöö on kinni?
+      integrity_error: Foto üleslaadimine ebaõnnestus. Oled kindel, et see oli pilt?
+      type_error: Foto üleslaadimine ebaõnnestus. Oled kindel, et pilt oli lisatud?
+    destroy:
+      notice: Foto kustutatud.
+    new_profile_photo:
+      upload: Lae üles uus profiilipilt!
+  posts:
+    presenter:
+      title: Postitus %{name} -lt
+    show:
+      photos_by:
+        zero: Pole fotosid %{author} -lt
+        one: Üks foto %{author} -lt
+        other: "%{count} fotot %{author} -lt"
+      reshare_by: Edasijagamine %{author} -lt
+  profiles:
+    edit:
+      basic: Minu peamine profiil
+      extended: Minu laiendatud profiil
+      settings: Profiili seaded
+      extended_visibility_text: 'Sinu laiendatud profiili nähtavus:'
+      public: Avalik
+      limited: Piiratud
+      basic_hint: Iga rida sinu profiilil on mittekohustuslik. Sinu peamine profiil on alati avalikult nähtav.
+      extended_hint: Klõpsa end laiendatud profiili teabe muutmiseks. Avalik tähendab, et ta on internetist nähtav, piiratud tähendab nähtavust vaid neile, kellega seda infot jagad.
+      your_name: Sinu nimi
+      first_name: Eesnimi
+      last_name: Perenimi
+      your_gender: Sinu sugu
+      your_birthday: Sinu sünnipäev
+      your_tags: Kirjelda end 5-e sõnaga
+      your_tags_placeholder: 'Meeldib #privaatsus #kassid #muusika #loodus'
+      your_bio: Sinu Biograafia
+      your_location: Sinu asukoht
+      your_photo: Sinu foto
+      update_profile: Uuenda profiili
+      allow_search: Luba inimestel sind diasporast* otsida
+      nsfw_explanation: NSFW ("tööjuures ebaturvaline") on kogukonna standard sisu kohta, mida ei ole soovitatav tööd tehes vaadata. Kui postitad sellist sisu tihti, palun vali see võimalus, et kõik mida postitad oleks varjatud inimeste uudisvoos v.a. kui nad soovivad seda vaadata.
+      nsfw_explanation2: 'Kui valid seda võimalust mitte kasutada, palun lisa #nsfw silt iga kord kui sellist sisu postitad.'
+      nsfw_check: Märgi kõik mida postitan kui NSFW
+    update:
+      updated: Profiil uuendatud
+      failed: Profiili uuendamine ebaõnnestus
+  registrations:
+    new:
+      enter_email: Sisesta oma e-posti aadress
+      enter_password: Sisesta parool (min kuus märki)
+      enter_password_again: Sisesta sama parool mis enne
+      sign_up: Loo konto
+      email: E-mail
+      username: Kasutajanimi
+      password: Parool
+    create:
+      success: Oled liitunud diasporag*!
+    invalid_invite: Kutsumise link mille edastasid ei ole enam kehtiv!
+  reshares:
+    reshare:
+      reshared_via: Jagatud läbi
+      reshare_confirmation: Jaga %{author} postitust?
+      deleted: Originaalpostitus autori poolt kustutatud.
+    comment_email_subject: "%{resharer} jagas %{author} postitust"
+  services:
+    index:
+      disconnect: Katkesta ühendus
+      logged_in_as: Sisse logitud %{nickname} -na.
+      really_disconnect: Katkesta ühendus %{service}?
+      edit_services: Muuda teenuseid
+  shared:
+    aspect_dropdown:
+      mobile_row_checked: "(eemalda) %{name}"
+      mobile_row_unchecked: "(lisa) %{name}"
+    publisher:
+      posting: Postitab...
+      share: Jaga
+      remove_location: Eemalda asukoht
+      whats_on_your_mind: Millest mõtled?
+      discard_post: Eira postitust
+      new_user_prefill:
+        hello: 'Tere kõigile.Olen %{new_user_tag} '
+        i_like: 'Olen huvitatud %{tags} '
+        invited_by: 'Tänan kutse eest, '
+    invitations:
+      invites: Kutsed
+      invite_your_friends: Kutsu oma sõpru
+      by_email: Kutsu inimesi e-postiga
+    public_explain:
+      control_your_audience: Halda oma auditooriumi
+      visibility_dropdown: Kasuta seda rippmenüüd muutmaks oma postituse nähtavust. (Soovitame selle esimese avalikuks määrata.)
+      share: Jaga
+      outside: Avalikud postitused on nähtavad väljaspool diasporad*.
+      logged_in: Sisse logitud %{service} -sse
+    stream_element:
+      via_mobile: Mobiililt
+  tags:
+    show:
+      follow: 'Jälgi #%{tag}'
+      stop_following: 'Lõpeta #%{tag} jälgimine'
+  streams:
+    aspects_stream: Aspektid
+    mentioned_stream: "@Mainimised"
+    followed_tags_stream: "#Järgitavad sildid"
+    mentions:
+      title: "@Mainimised"
+    comment_stream:
+      title: Kommenteeritud postitused
+    like_stream:
+      title: Meeldimiste voog
+    followed_tag:
+      title: "#Jälgitavad sildid"
+      add_a_tag: Lisa silt
+      follow: Jälgi
+      all: Kõik sildid
+    tags:
+      title: 'Postitused siltidega: %{tags}'
+    public:
+      title: Avalik tegevus
+    multi:
+      title: Voog
+    aspects:
+      title: Minu aspektid
+      all: Kõik aspektid
+    activity:
+      title: Minu tegevus
+    liked:
+      title: Meeldinud postitused
+    commented:
+      title: Kommenteeritud postitused
+  users:
+    edit:
+      edit_account: Muuda konto seadeid
+      change: Muuda
+      your_handle: Sinu diaspora* ID
+      your_email: Sinu meiliaadress
+      change_email: Muuda e-post
+      email_awaiting_confirmation: Saatsime aktiveerimislingi %{unconfirmed_email}. Seni kuni uue aadressi aktiveerimiseni jätkame vana %{email} aadressi kasutamist.
+      change_password: Muuda parool
+      new_password: Uus parool
+      current_password: Praegune salasõna
+      character_minimum_expl: peab olema vähemalt kuus märki
+      change_language: Muuda keel
+      close_account_text: Sulge konto
+      stream_preferences: Voo eelistused
+      following: Jagamise seaded
+      auto_follow_back: Jaga automaatselt kasutajatega kes alustavad sinuga jagamist
+      auto_follow_aspect: 'Aspekt kasutajatele kelleg automaatselt jagad:'
+      receive_email_notifications: 'Saa e-posti teavitusi kui:'
+      started_sharing: keegi alustab sinuga jagamist
+      mentioned: sind mainitakse postituses
+      liked: kellegile meeldib sinu postitus
+      reshared: keegi jagab sinu postitust
+      comment_on_post: keegi kommenteerib sinu postitust
+      also_commented: keegi kommenteerib postitust mida kommenteerisid
+      private_message: sulle on privaatsõnum
+      export_data: Ekspordi andmed
+      close_account:
+        dont_go: Ära palun mine!
+        lock_username: Sinu kasutajanimi lukustatakse. Sul ei ole võimalik luua siia uut kontot sama ID-ga.
+        no_turning_back: Tagasiteed ei ole! Kui oled täiesti kindel, siis sisesta enda parool allpool.
+    privacy_settings:
+      title: Privaatsuse seaded
+      strip_exif: Eemalda metadata nagu asukoht, autor ja kaamera mudel üleslaetavatelt piltidelt (soovitatav)
+      ignored_users: Ignoreeritud kasutajad
+      stop_ignoring: Lõpeta ignoreerimine
+    destroy:
+      no_password: Palun sisesta oma kehtiv parool konto sulgemiseks.
+      wrong_password: Sisestatud parool ei kattu kehtiva parooliga.
+    getting_started:
+      who_are_you: Kes sa oled?
+      what_are_you_in_to: Mis sulle meeldib?
+      hashtag_explanation: Sildid aitavad sul rääkida ja jälgida oma huvisid. Samuti on nad head leidmaks uusi inimesi diasporast*.
+      hashtag_suggestions: 'Proovi jälgida silte nagu #art, #movies, #eesti, #filmid, jne.'
+    update:
+      password_changed: Parool muudetud. Saad nüüd uue parooliga sisse logida.
+      password_not_changed: Parooli muutmine ebaõnnestus
+      language_changed: Keel muudetud
+      language_not_changed: Keele vahetamine ebaõnnestus
+      settings_updated: Seaded uuendatud
+      settings_not_updated: Seadete uuendamine ebaõnnestus
+      email_notifications_changed: E-post teavitused muudetud
+      unconfirmed_email_changed: E-post muudetud. Vajalik aktiveerimine.
+      unconfirmed_email_not_changed: E-posti muutmine ebaõnnestus
+      follow_settings_changed: Jälgimise seaded muudetud
+      follow_settings_not_changed: Jälgimise seadete muutmine ebaõnnestus.
+    public:
+      does_not_exist: Kasutajat %{username} ei eksisteeri!
+    confirm_email:
+      email_confirmed: E-post %{email} aktiveeritud
+      email_not_confirmed: E-posti ei saa aktiveerida. Vale link?
+  will_paginate:
+    previous_label: "&laquo; eelmine"
+    next_label: järgmine &raquo;
+  statistics:
+    name: Nimi
+    network: Võrk
+    services: Teenused
+    total_users: Kasutajaid kokku
+    active_users_halfyear: Aktiivseid kasutajaid poolaastas
+    active_users_monthly: Aktiivseid kasutajaid kuus
+    local_posts: Kohalikud postitused
+    local_comments: Kohalikud kommentaarid
+    version: Versioon
+    registrations: Registreeringuid
+    enabled: Saadaval
+    disabled: Pole saadaval
+    open: Avatud
+    closed: Suletud

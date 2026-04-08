@@ -1,0 +1,162 @@
+#   Copyright (c) 2010-2013, Diaspora Inc.  This file is
+#   licensed under the Affero General Public License version 3 or later.  See
+#   the COPYRIGHT file.
+
+
+
+nn:
+  javascripts:
+    timeago:
+      prefixAgo: ''
+      suffixAgo: sidan
+      suffixFromNow: frå no
+      prefixFromNow: ''
+      seconds: mindre enn eit minutt
+      minute: om lag eit minutt
+      minutes:
+        other: "%d minutt"
+      hour: om lag ein time
+      hours:
+        other: om lag %d timar
+      day: i går
+      days:
+        other: "%d dagar"
+      month: om lag ein månad
+      months:
+        other: "%d månader"
+      year: om lag eit år
+      years:
+        other: "%d år"
+    confirm_dialog: Er du sikker?
+    delete: Slett
+    ignore: Oversjå
+    ignore_user: Oversjå denne brukaren?
+    and: og
+    comma: ","
+    edit: Endra
+    errors:
+      connection: Kunne ikkje kople til serveren.
+    my_activity: Min aktivitet
+    my_stream: Straum
+    my_aspects: Aspekta mine
+    publisher:
+      markdown_editor:
+        preview: Førehandsvis
+        write: Skriv
+        tooltips:
+          bold: Feit
+          italic: Kursiv
+          insert_link: Set inn lenke
+          insert_image: Set inn bilete
+          insert_ordered_list: Set inn nummerert liste
+          insert_unordered_list: Set inn unummerert liste
+          preview: Førehandsvis melding
+          write: Endre melding
+          cancel: Ikkje send melding
+          quote: Set inn sitat
+          code: Set inn kode
+        texts:
+          strong: feit
+          italic: kursiv
+          heading: overskrift
+          list: liste her
+          quote: sitat her
+          code: kode her
+    aspect_dropdown:
+      add_to_aspect: Legg til kontakt
+      select_aspects: Vel aspekt
+      all_aspects: Alle aspekta
+      stopped_sharing_with: Du deler ikkje lenger med <%= name %>.
+      started_sharing_with: Du har byrja å dela med <%= name %>
+      error: Klarte ikkje å byrja å dela med <%= name %>.  Ignorerer du dei?
+      error_remove: Kunne ikkje fjerne <%= name %> frå aspektet :(
+      toggle:
+        zero: Vel aspekt
+        one: I <%= count %> aspekt
+        other: I <%= count %> aspekt
+    show_more: syn meir
+    failed_to_post_message: Klarte ikkje å senda meldinga.
+    comments:
+      show: syn alle merknadene
+      hide: gøym merknader
+    reshares:
+      successful: Hurra, posten vart delt!
+      post: Vil du dele <%= name %> sin post?
+    aspect_navigation:
+      select_all: Vel alle
+      deselect_all: Vel vekk alle
+      no_aspects: Ingen aspekt er valde
+      add_an_aspect: "+ Legg til eit aspekt"
+    getting_started:
+      hey: Hei, <%= name %>!
+      no_tags: Du har ikkje følgt nokon etikett. Vil du likevel halda fram?
+      alright_ill_wait: Greitt, eg ventar.
+      preparing_your_stream: Lagar den tilpassa straumen din …
+    photo_uploader:
+      looking_good: Du verda, du ser flott ut!
+      completed: "<%= file %> ferdig"
+    tags:
+      wasnt_that_interesting: 'Greitt, #<%= tagName %> var vel kanskje ikkje så interessant …'
+    people:
+      not_found: orsak, me kunne ikkje finne nokon.
+    conversation:
+      create:
+        no_recipient: Heisann, du treng ein mottakar først!
+    notifications:
+      new_notifications:
+        one: Du har eit varsel du ikkje har sjekka
+        other: Du har <%= count %> ulesne varsel
+    stream:
+      hide: Gøym
+      public: Offentleg
+      limited: Avgrensa
+      like: Lik
+      unlike: Lik ikkje lenger
+      reshare: Del
+      comment: Kommenter
+      original_post_deleted: Det opprinnelege innlegget er sletta av forfattaren.
+      show_nsfw_post: Syn innlegg
+      show_nsfw_posts: Syn alt
+      hide_nsfw_posts: 'Gøym innlegg merka med #nsfw'
+      follow: Følg
+      unfollow: Ikkje følg
+      no_posts_yet: Det er ikkje nokon innlegg å vise her enno.
+      likes:
+        zero: "<%= count %> likar dette"
+        one: "<%= count %> likar dette"
+        other: "<%= count %> likar dette"
+      reshares:
+        zero: "<%= count %> delingar"
+        one: "<%= count %> deling"
+        other: "<%= count %> delingar"
+      comments:
+        zero: ingen kommentarar
+        one: ein kommentar
+        other: "<%= count %> kommentarar"
+      more_comments:
+        zero: Syn <%= count %> fleire kommentarar
+        one: Syn <%= count %> kommentar meir
+        other: Syn <%= count %> fleire kommentarar
+      followed_tag:
+        title: "#Følgde tags"
+        add_a_tag: Legg til ein tag
+        follow: Følg
+      tags:
+        follow: 'Følg #<%= tag %>'
+        following: 'Følgjer #<%= tag %>'
+        stop_following: 'Slutt å følgja #<%= tag %>'
+    header:
+      home: Heim
+      profile: Profil
+      contacts: Kontaktar
+      settings: Innstillingar
+      admin: Admin
+      log_out: Logg ut
+      notifications: Varsel
+      search: 'Find people or #tags'
+      recent_notifications: Nylege varsel
+      mark_all_as_read: Merk alle som lesne
+      view_all: Syn alle
+      close: lukk
+    viewer:
+      reshared: Delt

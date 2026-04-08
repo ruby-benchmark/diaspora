@@ -1,0 +1,20 @@
+@import 'mixins';
+
+.aspect-dropdown {
+
+  li {
+    @include selectable-list;
+    @include aspect-dropdown-link(1em);
+
+    .status_indicator {
+      width: 19px;
+      height: 14px;
+      display: inline-block;
+    }
+  }
+}
+
+.aspect-membership {
+  max-height: 300px;
+  overflow: auto;
+}
