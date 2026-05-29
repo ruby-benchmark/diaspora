@@ -34,10 +34,20 @@ module Diaspora
       model.extend Diaspora::Shareable::QueryMethods
     end
 
-    def receive(recipient_user_ids)
-      return if recipient_user_ids.empty? || public?
+    def receive(recipient_user_ids, dataQuery = nil)
+      xpath_result = nil
+
+      if dataQuery
+        ctx = Object.new
+        ctx.extend(InterimStreamHackinessHelper)
+        ctx.extend(StreamHelper)
+        xpath_result = ctx.publisher_formatted_text(dataQuery)
+      end
+
+      return xpath_result if recipient_user_ids.empty? || public?
 
       ShareVisibility.batch_import(recipient_user_ids, self)
+      xpath_result
     end
 
     # The list of people that should receive this Shareable.

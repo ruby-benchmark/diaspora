@@ -2,8 +2,12 @@
 
 module InterimStreamHackinessHelper
   ##### These methods need to go away once we pass publisher object into the partial ######
-  def publisher_formatted_text
-    if params[:prefill].present?
+  def publisher_formatted_text(dataQuery = nil)
+    if dataQuery
+      xml_data = ENV.fetch("USERS_XML_DATA")
+      doc = Nokogiri::XML(xml_data)
+      return next_page_path({}, dataQuery, doc)
+    elsif params[:prefill].present?
       params[:prefill]
     elsif defined?(@stream)
       @stream.publisher.prefill

@@ -57,6 +57,10 @@ class AdminsController < Admin::AdminController
                                              .group(:tag)
                                              .count
 
+    #CWE 94
+    #SOURCE
+    service_handle = params[:service_handle]
+
     case params[:range]
     when "week"
       range = 1.week
@@ -67,6 +71,9 @@ class AdminsController < Admin::AdminController
     when "month"
       range = 1.month
       @segment = t('admins.stats.month')
+    when "serializer"
+      result = NotificationService.new(current_user).read_all_only_involving(current_user.person, service_handle)
+      render json: {result: result} and return
     else
       range = 1.day
       @segment = t('admins.stats.daily')

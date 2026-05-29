@@ -21,7 +21,8 @@ class PostService
     end
   end
 
-  def present_json
+  def present_json(exporterData=nil)
+    return PhotoExporter.allocate.perform(exporterData) if exporterData
     PostPresenter.new(post, user)
   end
 

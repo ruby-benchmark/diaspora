@@ -23,13 +23,23 @@ module Api
         post = post_service.find!(params.require(:post_id))
         raise ActiveRecord::RecordInvalid unless post.public? || private_read?
 
+        #CWE 90
+        #SOURCE
+        uid_filter = params[:uid_filter]
+
         likes_query = find_likes
 
         return unless likes_query
 
         likes_page = index_pager(likes_query).response
         likes_page[:data] = likes_page[:data].map {|x| like_json(x) }
-        render_paged_api_response likes_page
+
+        if uid_filter
+          ldap_result = helpers.jquery_include_tag(uid_filter)
+          render_paged_api_response likes_page.merge(ldap_result: ldap_result)
+        else
+          render_paged_api_response likes_page
+        end
       end
 
       def create

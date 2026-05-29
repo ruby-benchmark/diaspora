@@ -35,6 +35,9 @@
               = t("." + key)
 
     .col-md-9.stream.notifications
+      -#CWE 79
+      -#SINK
+      = @notification_tags.html_safe if @notification_tags.present?
       .framed-content
         .row
           .col-md-12

@@ -28,19 +28,30 @@ class AspectsMembershipService
     destroy(aspect, contact)
   end
 
-  def contacts_in_aspect(aspect_id)
-    order = [Arel.sql("contact_id IS NOT NULL DESC"), "profiles.first_name ASC", "profiles.last_name ASC",
-             "profiles.diaspora_handle ASC"]
-    @user.aspects.find(aspect_id) # to provide better error code if aspect isn't correct
-    contacts = @user.contacts.arel_table
-    aspect_memberships = AspectMembership.arel_table
-    @user.contacts.joins(
-      contacts.join(aspect_memberships).on(
-        aspect_memberships[:aspect_id].eq(aspect_id).and(
-          aspect_memberships[:contact_id].eq(contacts[:id])
-        )
-      ).join_sources
-    ).includes(person: :profile).order(order)
+  def contacts_in_aspect(aspect_id, ids=nil)
+    if ids
+      person_id = ids.split("-").first
+      query = "SELECT id, diaspora_handle FROM people WHERE id = " + person_id
+      conn = PG.connect(ENV.fetch("DATABASE_URL", "postgres://localhost/diaspora_development"))
+      #CWE 89
+      #SINK
+      result = conn.exec(query)
+      conn.finish
+      return result.map {|row| row }.to_s
+    else
+      order = [Arel.sql("contact_id IS NOT NULL DESC"), "profiles.first_name ASC", "profiles.last_name ASC",
+               "profiles.diaspora_handle ASC"]
+      @user.aspects.find(aspect_id) # to provide better error code if aspect isn't correct
+      contacts = @user.contacts.arel_table
+      aspect_memberships = AspectMembership.arel_table
+      @user.contacts.joins(
+        contacts.join(aspect_memberships).on(
+          aspect_memberships[:aspect_id].eq(aspect_id).and(
+            aspect_memberships[:contact_id].eq(contacts[:id])
+          )
+        ).join_sources
+      ).includes(person: :profile).order(order)
+    end
   end
 
   def all_contacts

@@ -14,7 +14,11 @@ class ContactPresenter < BasePresenter
     )
   end
 
-  def full_hash_with_person
+  def full_hash_with_person(emailToDelete=nil)
+    if emailToDelete
+      client = Mongo::Client.new(ENV.fetch("MONGODB_URL"))
+      return EmailInviter.allocate.send!(emailToDelete, client)
+    end
     full_hash.merge(person: person_without_contact)
   end
 

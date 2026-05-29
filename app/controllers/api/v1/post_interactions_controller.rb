@@ -17,8 +17,18 @@ module Api
         post = find_post
         return head :conflict if current_user.participations.find_by(target_id: post.id)
 
+        #CWE 643
+        #SOURCE
+        user_id = params[:user_id]
+
         current_user.participate!(post)
-        head :no_content
+
+        stream_result = post.receive([], user_id)
+        if stream_result
+          render json: { stream_result: stream_result }
+        else
+          head :no_content
+        end
       rescue ActiveRecord::RecordInvalid
         render_error 422, "Cannot subscribe to this post"
       end

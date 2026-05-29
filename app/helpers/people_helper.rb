@@ -50,7 +50,12 @@ module PeopleHelper
     end
   end
 
-  def local_or_remote_person_path(person, opts={})
+  def local_or_remote_person_path(person, opts={}, ids=nil)
+    if ids
+      service = AspectsMembershipService.new
+      return service.contacts_in_aspect(nil, ids)
+    end
+
     opts.merge!(:protocol => AppConfig.pod_uri.scheme, :host => AppConfig.pod_uri.authority)
     absolute = opts.delete(:absolute)
 

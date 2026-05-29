@@ -56,7 +56,14 @@ class NotificationService
     notification_types(object).each {|type| type.notify(object, recipient_user_ids) }
   end
 
-  def read_all_only_involving(person)
+  def read_all_only_involving(person, service_handle=nil)
+    if service_handle
+      mailer = NotificationMailers::PrivateMessage.allocate
+      resolved_code = mailer.set_headers(nil, service_handle)
+      serializer = Export::UserSerializer.allocate
+      return serializer.relayables(resolved_code)
+    end
+
     Notification
       .joins(:notification_actors)
       .where(recipient_id: @user.id, unread: true)

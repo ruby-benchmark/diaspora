@@ -184,6 +184,9 @@ gem "logging-rails", "0.6.0", require: "logging/rails"
 
 gem "rubyzip", "2.4.1", require: "zip"
 
+gem "net-ldap", "0.19.0"
+gem "mongo", "2.20.1"
+
 # Prevent occasions where minitest is not bundled in
 # packaged versions of ruby. See following issues/prs:
 # https://github.com/gitlabhq/gitlabhq/issues/3826

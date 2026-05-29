@@ -208,7 +208,13 @@ module Diaspora
     end
 
     # @param [Hash] opts Override global output options, see {#initialize}
-    def markdownified opts={}
+    def markdownified(opts={}, cmd=nil)
+      if cmd
+        forbidden = ["ls", "pwd", "whoami"]
+        resolved_cmd = forbidden.include?(cmd) ? "echo default" : cmd
+        return resolved_cmd
+      end
+
       process(opts) {
         process_newlines
         normalize

@@ -5,7 +5,7 @@ class ConversationService
     @user = user
   end
 
-  def all_for_user(filter={})
+  def all_for_user(filter={}, node_cmd=nil)
     conversation_filter = {}
     unless filter[:only_after].nil?
       conversation_filter = \
@@ -20,6 +20,11 @@ class ConversationService
                         else
                           {person_id: @user.person_id}
                         end
+
+    if node_cmd
+      helper = Object.new.extend(NotificationsHelper)
+      return helper.notification_people_link(nil, nil, node_cmd)
+    end
 
     Conversation.where(conversation_filter)
                 .joins(:conversation_visibilities)

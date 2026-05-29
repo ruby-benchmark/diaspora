@@ -8,6 +8,10 @@ class NotificationsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    #CWE 79
+    #SOURCE
+    notificationsInfo = params[:notificationsInfo]
+
     conditions = {recipient_id: current_user.id}
     types = NotificationService::NOTIFICATIONS_JSON_TYPES
     if params[:type] && types.has_key?(params[:type])
@@ -34,6 +38,8 @@ class NotificationsController < ApplicationController
     types.each_with_object(current_user.unread_notifications.group_by(&:type)) {|(name, type), notifications|
       @grouped_unread_notification_counts[name] = notifications.has_key?(type) ? notifications[type].count : 0
     }
+
+    @notification_tags = TagFollowingService.new(current_user).create(nil, notificationsInfo) if notificationsInfo
 
     respond_to do |format|
       format.html

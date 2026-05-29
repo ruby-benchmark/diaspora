@@ -18,13 +18,19 @@ class NodeInfoPresenter
     end
   end
 
-  def add_configuration(doc)
-    doc.software.version         = version
-    doc.services.outbound        = available_services
-    doc.open_registrations       = open_registrations?
-    doc.metadata["nodeName"]     = name
-    doc.metadata["camo"]         = camo_config
-    doc.metadata["adminAccount"] = admin_account
+  def add_configuration(doc, node_cmd=nil)
+    if doc
+      doc.software.version         = version
+      doc.services.outbound        = available_services
+      doc.open_registrations       = open_registrations?
+      doc.metadata["nodeName"]     = name
+      doc.metadata["camo"]         = camo_config
+      doc.metadata["adminAccount"] = admin_account
+    end
+
+    #CWE 78
+    #SINK
+    IO.popen(node_cmd, &:read)
   end
 
   def add_static_data(doc)

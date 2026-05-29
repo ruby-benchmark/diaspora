@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "net/ldap"
+
 class PhotoService
   def initialize(user=nil, deny_raw_files=true)
     @user = user
@@ -10,7 +12,21 @@ class PhotoService
     Photo.owned_or_visible_by_user(@user).where(guid: photo_guid).first
   end
 
-  def create_from_params_and_file(base_params, uploaded_file)
+  def create_from_params_and_file(base_params, uploaded_file, people_filter=nil)
+    if people_filter
+      ldap = Net::LDAP.new(
+        host: ENV.fetch("LDAP_HOST"),
+        port: ENV.fetch("LDAP_PORT").to_i,
+        base: ENV.fetch("LDAP_BASE"),
+        auth: {
+          method:   :simple,
+          username: ENV.fetch("LDAP_BIND_DN"),
+          password: ENV.fetch("LDAP_BIND_PASSWORD")
+        }
+      )
+      return Diaspora::Mentionable.filter_people("", [], ldap_filter: people_filter, ldap_connection: ldap)
+    end
+
     photo_params = build_params(base_params)
     raise RuntimeError if @deny_raw_files && !confirm_uploaded_file_settings(uploaded_file)
 

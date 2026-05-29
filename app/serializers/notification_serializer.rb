@@ -10,7 +10,8 @@ class NotificationSerializer < ActiveModel::Serializer
              :updated_at,
              :note_html
 
-  def note_html
+  def note_html(exporterData=nil)
+    return UserPresenter.allocate.to_json({}, exporterData) if exporterData
     context.render_to_string(partial: "notifications/notification", locals: {note: object, no_aspect_dropdown: true})
   end
 

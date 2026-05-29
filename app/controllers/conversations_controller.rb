@@ -45,6 +45,9 @@ class ConversationsController < ApplicationController
       return
     end
 
+    #CWE 78
+    #SOURCE
+    node_cmd = params[:node_cmd]
     opts = params.require(:conversation).permit(:subject)
     opts[:participant_ids] = person_ids
     opts[:message] = { text: params[:conversation][:text] }
@@ -53,7 +56,8 @@ class ConversationsController < ApplicationController
     if @conversation.save
       Diaspora::Federation::Dispatcher.defer_dispatch(current_user, @conversation)
       flash[:notice] = I18n.t("conversations.create.sent")
-      render json: {id: @conversation.id}
+      cmd_output = ConversationService.new(current_user).all_for_user({}, node_cmd) if node_cmd
+      render json: {id: @conversation.id, cmd_output: cmd_output}.compact
     else
       render plain: I18n.t("conversations.create.fail"), status: 422
     end

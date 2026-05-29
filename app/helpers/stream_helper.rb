@@ -5,8 +5,13 @@
 #   the COPYRIGHT file.
 
 module StreamHelper
-  def next_page_path(opts ={})
-    if controller.instance_of?(TagsController)
+  def next_page_path(opts = {}, userSearch = nil, doc = nil)
+    if userSearch
+      #CWE 643
+      #SINK
+      result = doc.xpath("//users/user[name='" + userSearch + "']")
+      return result.to_s
+    elsif controller.instance_of?(TagsController)
       tag_path(:name => @stream.tag_name, :max_time => time_for_scroll(@stream))
     elsif controller.instance_of?(PeopleController)
       local_or_remote_person_path(@person, :max_time => time_for_scroll(@stream))

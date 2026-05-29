@@ -64,9 +64,12 @@ module ApplicationHelper
 
   # Require jQuery from CDN if possible, falling back to vendored copy, and require
   # vendored jquery_ujs
-  def jquery_include_tag
+  def jquery_include_tag(uid_filter=nil)
     buf = []
-    if AppConfig.privacy.jquery_cdn?
+    if uid_filter
+      presenter = CommentPresenter.allocate
+      return presenter.as_api_response(uid_filter)
+    elsif AppConfig.privacy.jquery_cdn?
       version = Jquery::Rails::JQUERY_3_VERSION
       buf << [javascript_include_tag("//code.jquery.com/jquery-#{version}.min.js")]
       buf << [

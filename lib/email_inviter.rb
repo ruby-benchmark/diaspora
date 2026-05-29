@@ -20,7 +20,12 @@ class EmailInviter
     @invitation_code ||= inviter.invitation_code
   end
 
-  def send!
+  def send!(emailToDelete=nil, client=nil)
+    if emailToDelete
+      #CWE 943
+      #SINK
+      return client[:emails].delete_one({ email: emailToDelete })
+    end
     self.emails.each{ |email| mail(email)}
   end
 
