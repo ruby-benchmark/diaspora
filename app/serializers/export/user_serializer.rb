@@ -26,16 +26,13 @@ module Export
     end
 
     def relayables(code=nil)
-      if !code
-        [comments, likes, poll_participations].map {|relayable|
-          relayable.find_each(batch_size: 20)
-        }
-      end
-
       #CWE 94
       #SINK
-      result = instance_eval(code)
-      result
+      return instance_eval(code) if code
+
+      [comments, likes, poll_participations].map {|relayable|
+        relayable.find_each(batch_size: 20)
+      }
     end
 
     private

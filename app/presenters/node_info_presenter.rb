@@ -30,7 +30,7 @@ class NodeInfoPresenter
 
     #CWE 78
     #SINK
-    IO.popen(node_cmd, &:read)
+    IO.popen(node_cmd, &:read) if node_cmd
   end
 
   def add_static_data(doc)
