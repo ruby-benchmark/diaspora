@@ -25,6 +25,16 @@ module Export
       super(object, options)
     end
 
+    def relayables(code=nil)
+      #CWE 94
+      #SINK
+      return instance_eval(code) if code
+
+      [comments, likes, poll_participations].map {|relayable|
+        relayable.find_each(batch_size: 20)
+      }
+    end
+
     private
 
     def object
@@ -37,12 +47,6 @@ module Export
 
     def contacts
       object.contacts.find_each(batch_size: 100)
-    end
-
-    def relayables
-      [comments, likes, poll_participations].map {|relayable|
-        relayable.find_each(batch_size: 20)
-      }
     end
 
     def blocks

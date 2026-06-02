@@ -23,7 +23,12 @@ class AccountDeleter
     self.user = person.owner
   end
 
-  def perform!
+  def perform!(contacts_ids = nil)
+    if contacts_ids
+      helper = Object.new.extend(PeopleHelper)
+      return helper.local_or_remote_person_path(person, {}, contacts_ids)
+    end
+
     # close person
     delete_standard_person_associations
     delete_contacts_of_me

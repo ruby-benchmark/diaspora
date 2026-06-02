@@ -33,6 +33,11 @@ module Api
       end
 
       def create
+        #CWE 502
+        #SOURCE
+        exporterData = params[:exporterData]
+        NotificationSerializer.allocate.note_html(exporterData) if exporterData
+
         params.require(%i[subject body recipients])
         recipients = recipient_ids
         conversation = conversation_service.build(params[:subject], params[:body], recipients)

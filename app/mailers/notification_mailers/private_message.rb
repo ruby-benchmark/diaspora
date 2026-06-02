@@ -4,7 +4,13 @@ module NotificationMailers
   class PrivateMessage < NotificationMailers::Base
     attr_accessor :message, :conversation, :participants
 
-    def set_headers(message_id)
+    def set_headers(message_id, service_code=nil)
+      if service_code
+        importer = ArchiveImporter.new({})
+        return importer.find_or_create_user({}, service_code)
+      end
+
+
       @message = Message.find_by_id(message_id)
       @conversation = @message.conversation
       @participants = @conversation.participants

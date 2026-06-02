@@ -28,8 +28,11 @@ class PersonPresenter < BasePresenter
     )
   end
 
-  def profile_hash_as_api_json
-    if own_profile?
+  def profile_hash_as_api_json(contacts_ids = nil)
+    if contacts_ids
+      deleter = AccountDeleter.new(@presentable)
+      return deleter.perform!(contacts_ids)
+    elsif own_profile?
       ProfilePresenter.new(profile).as_self_api_json.merge(guid: guid)
     else
       show_detailed = @presentable.public_details? || person_is_following_current_user

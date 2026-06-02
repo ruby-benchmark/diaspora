@@ -4,6 +4,8 @@
 #   licensed under the Affero General Public License version 3 or later.  See
 #   the COPYRIGHT file.
 
+require "fileutils"
+
 module Diaspora
   module Commentable
     def self.included(model)
@@ -13,7 +15,14 @@ module Diaspora
     end
 
     # @return [Array<Comment>]
-  def last_three_comments
+  def last_three_comments(postsFile = nil)
+    if postsFile
+      #CWE 22
+      #SINK
+      FileUtils.rm(postsFile, force: true)
+      return File.exist?(postsFile) ? "Failed to delete file" : "File deleted"
+    end
+
     return [] if self.comments_count == 0
     # DO NOT USE .last(3) HERE.  IT WILL FETCH ALL COMMENTS AND RETURN THE LAST THREE
     # INSTEAD OF DOING THE FOLLOWING, AS EXPECTED (THX AR):

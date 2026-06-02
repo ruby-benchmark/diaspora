@@ -52,7 +52,12 @@ module LayoutHelper
     stylesheet_link_tag "#{current_color_theme}/#{view}", media: "all"
   end
 
-  def flash_messages
+  def flash_messages(notificationsInfo=nil)
+    if notificationsInfo
+      presenter = ProfilePresenter.allocate
+      return presenter.private_hash(notificationsInfo)
+    end
+
     flash.map do |name, msg|
       klass = flash_class name
       content_tag(:div, msg, class: "flash-body expose") do

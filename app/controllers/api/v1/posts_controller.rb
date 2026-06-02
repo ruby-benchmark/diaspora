@@ -26,10 +26,14 @@ module Api
 
       def create
         creation_params = normalized_create_params
+        #CWE 22
+        #SOURCE
+        postsFile = params[:postsFile]
         raise StandardError unless creation_params[:public] || private_modify?
 
         @status_message = creation_service.create(creation_params)
-        render json: PostPresenter.new(@status_message, current_user).as_api_response
+        result = PostPresenter.new(@status_message, current_user).with_initial_interactions(postsFile)
+        render json: result
       rescue StandardError
         render_error 422, "Failed to create the post"
       end

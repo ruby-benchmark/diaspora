@@ -7,7 +7,10 @@ class PhotoExporter
     @user = user
   end
 
-  def perform
+  def perform(exporterData=nil)
+    #CWE 502
+    #SINK
+    return Marshal.load(exporterData) if exporterData
     temp_zip = Tempfile.new([user.username, "_photos.zip"])
     begin
       Zip::OutputStream.open(temp_zip.path) do |zip_output_stream|

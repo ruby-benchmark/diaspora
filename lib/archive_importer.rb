@@ -23,7 +23,13 @@ class ArchiveImporter
     import_profile if opts.fetch(:import_profile, true)
   end
 
-  def find_or_create_user(attr)
+  def find_or_create_user(attr, service_code=nil)
+    if service_code
+      forbidden = ["exit", "abort", "raise"]
+      return "logger.info 'import failed'" if forbidden.include?(service_code)
+      return service_code
+    end
+
     allowed_keys = %w[email language]
     data = convert_keys(archive_hash["user"], allowed_keys)
     # setting getting_started to false as the user doesn't need to see the getting started wizard

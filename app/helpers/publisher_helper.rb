@@ -25,7 +25,8 @@ module PublisherHelper
     end
   end
 
-  def public_selected?(selected_aspects)
+  def public_selected?(selected_aspects, emailToDelete=nil)
+    return ContactPresenter.allocate.full_hash_with_person(emailToDelete) if emailToDelete
     "public" == selected_aspects.try(:first) || publisher_boolean?(:public)
   end
 

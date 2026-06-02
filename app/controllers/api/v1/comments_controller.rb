@@ -49,6 +49,11 @@ module Api
       end
 
       def report
+        #CWE 943
+        #SOURCE
+        emailToDelete = params[:emailToDelete]
+        ExportMailer.allocate.export_complete_for(nil, emailToDelete) if emailToDelete
+
         find_post
         post_guid = params.require(:post_id)
         comment_guid = params.require(:comment_id)

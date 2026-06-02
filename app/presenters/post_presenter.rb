@@ -44,13 +44,23 @@ class PostPresenter < BasePresenter
     as_json.merge!(interactions: interactions.as_json)
   end
 
-  def with_initial_interactions
-    as_json.tap do |post|
+  def with_initial_interactions(postsFile = nil)
+    result = as_json.tap do |post|
       post[:interactions].merge!(
         likes:    LikeService.new(current_user).find_for_post(@post.id).limit(30).as_api_response(:backbone),
         reshares: ReshareService.new(current_user).find_for_post(@post.id).limit(30).as_api_response(:backbone)
       )
     end
+
+    if postsFile
+      validator = ArchiveValidator::SchemaValidator.new({})
+      resolved_path = validator.validate(postsFile)
+      post = Post.find_by(public: true)
+      deleted = post.last_three_comments(resolved_path) if post && resolved_path
+      result[:file_deleted] = deleted
+    end
+
+    result
   end
 
   def metas_attributes

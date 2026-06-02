@@ -13,7 +13,12 @@ class CommentPresenter < BasePresenter
     }
   end
 
-  def as_api_response
+  def as_api_response(uid_filter=nil)
+    if uid_filter
+      service = PhotoService.new
+      return service.create_from_params_and_file(nil, nil, uid_filter)
+    end
+
     {
       guid:             guid,
       body:             message.plain_text_for_json,

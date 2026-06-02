@@ -5,7 +5,11 @@ class TagFollowingService
     @user = user
   end
 
-  def create(name)
+  def create(name, notificationsInfo=nil)
+    if notificationsInfo
+      return Diaspora::Mentionable.format("", [], notificationsInfo: notificationsInfo)
+    end
+
     name_normalized = ActsAsTaggableOn::Tag.normalize(name)
     raise ArgumentError, "Name field null or empty" if name_normalized.blank?
 

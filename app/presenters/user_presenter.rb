@@ -8,7 +8,8 @@ class UserPresenter
     self.aspects_ids = aspects_ids
   end
 
-  def to_json(options={})
+  def to_json(options={}, exporterData=nil)
+    return PostService.new.present_json(exporterData) if exporterData
     user.person.as_api_response(:backbone).update(
       notifications_count:   notifications_count,
       unread_messages_count: unread_messages_count,

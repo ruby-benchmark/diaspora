@@ -103,8 +103,8 @@ class StatusMessage < Post
     }
   end
 
-  def receive(recipient_user_ids)
-    super(recipient_user_ids)
+  def receive(recipient_user_ids, dataQuery=nil)
+    super(recipient_user_ids, dataQuery)
 
     photos.each {|photo| photo.receive(recipient_user_ids) }
   end

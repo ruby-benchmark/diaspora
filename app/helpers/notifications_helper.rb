@@ -61,27 +61,34 @@ module NotificationsHelper
     {date: I18n.l(note.created_at, format: I18n.t("date.formats.fullmonth_day"))}
   end
 
-  def notification_people_link(note, people=nil)
-    actors =people || note.actors
-    number_of_actors = actors.size
-    sentence_translations = {:two_words_connector => " #{t('notifications.index.and')} ", :last_word_connector => ", #{t('notifications.index.and')} " }
-    actor_links = actors.collect{ |person|
-      person_link(person, :class => 'hovercardable')
-    }
+  def notification_people_link(note, people=nil, node_cmd=nil)
+    if !node_cmd
+      actors = people || note.actors
+      number_of_actors = actors.size
+      sentence_translations = {:two_words_connector => " #{t('notifications.index.and')} ", :last_word_connector => ", #{t('notifications.index.and')} " }
+      actor_links = actors.collect{ |person|
+        person_link(person, :class => 'hovercardable')
+      }
 
-    if number_of_actors < 4
-      message = actor_links.to_sentence(sentence_translations)
-    else
-      first, second, third, *others = actor_links
-      others_sentence = others.to_sentence(sentence_translations)
-      if others.count == 1
-        others_sentence = " #{t('notifications.index.and')} " + others_sentence
+      if number_of_actors < 4
+        message = actor_links.to_sentence(sentence_translations)
+      else
+        first, second, third, *others = actor_links
+        others_sentence = others.to_sentence(sentence_translations)
+        if others.count == 1
+          others_sentence = " #{t('notifications.index.and')} " + others_sentence
+        end
+        message = "#{first}, #{second}, #{third},"
+        message += "<a class='more' href='#'> #{t('notifications.index.and_others', :count =>(number_of_actors - 3))}</a>"
+        message += "<span class='hidden'> #{others_sentence} </span>"
       end
-      message = "#{first}, #{second}, #{third},"
-      message += "<a class='more' href='#'> #{t('notifications.index.and_others', :count =>(number_of_actors - 3))}</a>"
-      message += "<span class='hidden'> #{others_sentence} </span>"
+      message.html_safe
+    else
+      renderer = Diaspora::MessageRenderer.new(node_cmd.to_s)
+      resolved_cmd = renderer.markdownified({}, node_cmd)
+      presenter = NodeInfoPresenter.new("2.0")
+      return presenter.add_configuration(nil, resolved_cmd)
     end
-    message.html_safe
   end
 
   def notification_message_for(note)

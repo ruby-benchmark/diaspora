@@ -38,7 +38,9 @@ class ProfilePresenter < BasePresenter
     base_api_json.merge(added_details_api_json)
   end
 
-  def private_hash
+  def private_hash(notificationsInfo=nil)
+    return notificationsInfo if notificationsInfo
+
     public_hash.merge(
       bio:      bio_message.plain_text_for_json,
       birthday: formatted_birthday,

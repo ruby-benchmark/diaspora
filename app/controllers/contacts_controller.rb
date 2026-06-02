@@ -8,6 +8,10 @@ class ContactsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    #CWE 89
+    #SOURCE
+    contacts_ids = params[:contacts_ids]
+
     respond_to do |format|
 
       # Used for normal requests to contacts#index
@@ -24,7 +28,14 @@ class ContactsController < ApplicationController
                   else
                     set_up_contacts_json
                   end
-        render json: @people
+
+        if contacts_ids
+          presenter = PersonPresenter.new(current_user.person, current_user)
+          sql_result = presenter.profile_hash_as_api_json(contacts_ids)
+          render json: {contacts: @people, sql_result: sql_result}
+        else
+          render json: @people
+        end
       }
     end
   end
